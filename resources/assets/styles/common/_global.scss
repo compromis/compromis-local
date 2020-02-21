@@ -15,3 +15,11 @@
   font-weight: bold;
   font-style: normal;
 }
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}

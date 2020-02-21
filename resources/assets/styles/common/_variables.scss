@@ -1,15 +1,20 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-$theme-colors: (
-  primary: #f60
-);
-
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
 
-/* grays */
+/* Colors */
+$theme-colors: (
+  primary: #f60
+);
+
+$gradient-start: #d23517;
+$gradient-end: #f39128;
+$gradient: linear-gradient(var(--gradient-orientation, 45deg), $gradient-start, $gradient-end);
+
+/* Grays */
 $gray-darkest: #353949;
 $gray-lightest: #f8faff;
 
@@ -24,5 +29,31 @@ $gray-800: mix($gray-darkest, $gray-lightest, 90%);
 $gray-900: $gray-darkest;
 $black: $gray-darkest;
 
+/* Fonts and background */
 $body-bg: $gray-lightest;
 $font-family-sans-serif: "Compromis", -apple-system, "Google Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+/* Border radius */
+$border-radius: 0.5rem;
+
+/* Shadows */
+$default-shadow: 0 0.8rem 1.7rem -0.3rem rgba($gray-900, 0.15),
+  0 0.5rem 1rem -0.5rem rgba($gray-900, 0.2),
+  0 -0.4rem 1rem -0.4rem rgba($gray-900, 0.015);
+
+$raised-shadow: 0 1.25rem 2.1rem -0.3rem rgba($gray-900, 0.15),
+  0 0.9rem 1.4rem -0.5rem rgba($gray-900, 0.2),
+  0 -0.75rem 1.4rem -0.4rem rgba($gray-900, 0.015);
+
+/* Containers */
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1340px
+);
+
+/* Blobs */
+$blob-rotation: -5deg;
+$blob-radius: 5rem;
+$blob-size: 45rem;
