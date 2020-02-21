@@ -8,3 +8,21 @@ $theme-colors: (
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+/* grays */
+$gray-darkest: #353949;
+$gray-lightest: #f8faff;
+
+$gray-100: mix($gray-darkest, $gray-lightest, 5%);
+$gray-200: mix($gray-darkest, $gray-lightest, 10%);
+$gray-300: mix($gray-darkest, $gray-lightest, 20%);
+$gray-400: mix($gray-darkest, $gray-lightest, 30%);
+$gray-500: mix($gray-darkest, $gray-lightest, 40%);
+$gray-600: mix($gray-darkest, $gray-lightest, 50%);
+$gray-700: mix($gray-darkest, $gray-lightest, 70%);
+$gray-800: mix($gray-darkest, $gray-lightest, 90%);
+$gray-900: $gray-darkest;
+$black: $gray-darkest;
+
+$body-bg: $gray-lightest;
+$font-family-sans-serif: "Compromis", -apple-system, "Google Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;

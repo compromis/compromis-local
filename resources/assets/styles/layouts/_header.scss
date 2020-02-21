@@ -5,3 +5,8 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.banner {
+  background: $white;
+  padding: 0.5rem;
+}
