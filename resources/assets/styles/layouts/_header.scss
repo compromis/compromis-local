@@ -69,6 +69,14 @@
   }
 }
 
+.admin-bar {
+  .banner {
+    &-container {
+      top: 32px;
+    }
+  }
+}
+
 /* blobs */
 .blob {
   position: absolute;

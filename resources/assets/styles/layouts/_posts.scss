@@ -1,0 +1,39 @@
+.post {
+  .updated {
+    color: $text-muted;
+  }
+
+  .entry-link {
+    overflow: hidden;
+    display: block;
+    color: $text-default;
+    padding: 1rem;
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $raised-shadow;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-0.5rem);
+    }
+
+    &:active {
+      transform: translateY(0.25rem);
+    }
+  }
+
+  .entry-title {
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+  }
+
+  .entry-thumbmail {
+    margin: -1rem -1rem 1rem -1rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
