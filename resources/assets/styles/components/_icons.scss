@@ -1,0 +1,35 @@
+$icons: (
+  "inici": "\f015",
+  "info": "\f05a",
+  "document": "\f15c",
+  "suma": "\f234",
+  "noticies": "\f1ea",
+  "arxiu": "\f187",
+  "contacte": "\f1d8",
+  "participa": "\f4b6",
+  "agenda": "\f073",
+  "videos": "\f144",
+  "enquesta": "\f732",
+  "misc": "\f055",
+  "bandera": "\f74c",
+  "urna": "\f735",
+  "megafon": "\f0a1"
+);
+
+[class^="icon-"] a {
+  display: flex;
+
+  &::before {
+    font-family: "Font Awesome 5 Pro", sans-serif;
+    display: block;
+    margin-right: 1rem;
+    text-align: center;
+    width: 1.25em;
+  }
+}
+
+@each $name, $glyph in $icons {
+  .icon-#{$name} a::before {
+    content: $glyph;
+  }
+}
