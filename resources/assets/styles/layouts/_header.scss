@@ -7,6 +7,8 @@
     right: 0;
     top: 0;
     z-index: 10;
+    overflow-y: scroll;
+    max-height: 100vh;
   }
 
   &-band {
@@ -14,13 +16,21 @@
     padding: 0.75rem 1rem;
     border-radius: 0 0 $border-radius $border-radius;
     box-shadow: $default-shadow;
+    overflow: hidden;
+
+    &-row {
+      display: flex;
+
+      &--nav {
+        margin: 1rem -1rem -0.75rem -1rem;
+      }
+    }
   }
 
   .brand {
     display: flex;
     align-items: center;
     color: $gray-600;
-    margin-left: auto;
 
     img {
       height: 1.75rem;
@@ -58,6 +68,12 @@
 
     a {
       color: $white;
+      transition: 0.25s ease-in-out;
+
+      &:hover {
+        text-decoration: none;
+        opacity: 0.75;
+      }
     }
 
     h1 {
@@ -69,10 +85,59 @@
   }
 }
 
+.drawer-nav {
+  width: 100%;
+  border-top: 1px $gray-200 solid;
+
+  &-toggle {
+    margin-left: auto;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 1rem;
+    color: $text-muted;
+    letter-spacing: 0.02em;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-network {
+    background: $gray-100;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+
+  .nav-primary {
+    padding: 2rem 1rem;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
 .admin-bar {
   .banner {
     &-container {
       top: 32px;
+      max-height: calc(100vh - 32px);
     }
   }
 }
@@ -100,6 +165,14 @@
 }
 
 @include media-breakpoint-down(md) {
+  .nav {
+    flex-direction: column;
+
+    &-open {
+      overflow: hidden;
+    }
+  }
+
   .banner {
     .local-name {
       h1 {
