@@ -7,8 +7,6 @@
     right: 0;
     top: 0;
     z-index: 10;
-    overflow-y: scroll;
-    max-height: 100vh;
   }
 
   &-band {
@@ -23,6 +21,9 @@
 
       &--nav {
         margin: 1rem -1rem -0.75rem -1rem;
+        max-height: calc(100vh - 100px);
+        overflow-y: scroll;
+        border-top: 1px $gray-200 solid;
       }
     }
   }
@@ -87,7 +88,6 @@
 
 .drawer-nav {
   width: 100%;
-  border-top: 1px $gray-200 solid;
 
   &-toggle {
     margin-left: auto;
@@ -147,7 +147,10 @@
   .banner {
     &-container {
       top: 32px;
-      max-height: calc(100vh - 32px);
+    }
+
+    &-band-row--nav {
+      max-height: calc(100vh - 110px);
     }
   }
 }
