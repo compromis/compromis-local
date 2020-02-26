@@ -5,21 +5,24 @@ export default {
     $(document).scroll(function() {
       if ($(document).scrollTop() >= 200) {
         brandLocal.removeClass('brand-local-hidden');
-      } else {
+      } else if (!$('body').hasClass('nav-open')) {
         brandLocal.addClass('brand-local-hidden');
       }
     });
 
-    $('.drawer-nav-toggle').on('click', (e) => {
+    $('.drawer-nav-toggle').on('click', function (e) {
       e.preventDefault();
       const body = $('body');
       const drawerNav = $('.drawer-nav');
       const brandLocal = $('.brand-local');
+      const toggle = $(this);
+      const expanded = toggle.attr('aria-expanded') === 'true';
 
       drawerNav.slideToggle().toggleClass('open');
       body.toggleClass('nav-open');
+      toggle.attr('aria-expanded', !expanded);
 
-      if (drawerNav.hasClass('open')) {
+      if (!expanded) {
         brandLocal.removeClass('brand-local-hidden');
       } else if ($(document).scrollTop() < 200) {
         brandLocal.addClass('brand-local-hidden');
