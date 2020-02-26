@@ -129,4 +129,18 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+
+    /**
+     * Header image
+     */
+    $args = array(
+        'default-image' => get_template_directory_uri() . '/assets/images/default.jpg',
+        'default-text-color' => '000',
+        'width'              => 1800,
+        'height'             => 350,
+        'flex-width'         => true,
+        'flex-height'        => true,
+    );
+
+    add_theme_support('custom-header', $args);
 });

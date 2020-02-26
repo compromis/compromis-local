@@ -1,5 +1,5 @@
 <header class="banner">
-  <div class="banner-local-image" style="background: url(https://images.unsplash.com/photo-1563273410-979e8ec6bbb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2467&q=80)">
+  <div class="banner-local-image" style="background-image: url(<?php header_image(); ?>)">
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
