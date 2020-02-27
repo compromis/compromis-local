@@ -1,7 +1,7 @@
 <h2 class="network-name"><a href="">compromís.net</a></h2>
 
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-lg-3 col-md-6">
     <h3>PARTITS</h3>
     <ul>
       <li><a href="">BLOC</a></li>
@@ -16,7 +16,7 @@
       <li><a href="">Joves Verds-Equo</a></li>
     </ul>
   </div>
-  <div class="col-md-3">
+  <div class="col-lg-3 col-md-6">
     <h3>INSTITUCIONS</h3>
     <ul>
       <li><a href="">Corts Valencianes</a></li>
@@ -28,7 +28,7 @@
       <li><a href="">FVMP</a></li>
     </li>
   </div>
-  <div class="col-md-6">
+  <div class="col-lg-6 col-md-12 mt-2 mt-md-0">
     <h3>COMPROMÍS AL TEU MUNICIPI</h3>
     <form class="search-form">
       <label for="municipality" class="sr-only">Municipi</label>

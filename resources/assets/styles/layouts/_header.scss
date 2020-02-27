@@ -38,6 +38,7 @@
   &-local-name {
     position: relative;
     height: 20rem;
+    height: calc(16rem + 13vh);
     display: flex;
     align-items: flex-end;
     z-index: 1;
@@ -123,6 +124,11 @@
     [class^="icon-"] a::before {
       margin-right: 0.5rem;
     }
+
+    li.current-menu-item a {
+      font-weight: bold;
+      color: $gray-900;
+    }
   }
 
   &-network {
@@ -178,6 +184,10 @@
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: -0.02em;
+
+      &:hover {
+        color: $gray-900;
+      }
     }
   }
 
@@ -232,6 +242,15 @@
 
     &:hover {
       background: $gray-100;
+    }
+
+    &:active {
+      background: $gray-200;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: inset 0 0 0 3px rgba($primary, 0.4);
     }
 
     .far {
