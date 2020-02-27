@@ -1,19 +1,18 @@
 /** Search form */
 .search-form {
-  @extend .form-inline;
-}
+  position: relative;
 
-.search-form label {
-  @extend .form-group;
+  .search-field {
+    padding-left: 2.25em;
+  }
 
-  font-weight: normal;
-}
-
-.search-form .search-field {
-  @extend .form-control;
-}
-
-.search-form .search-submit {
-  @extend .btn;
-  @extend .btn-secondary;
+  .fa-search {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    color: $gray-600;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+  }
 }

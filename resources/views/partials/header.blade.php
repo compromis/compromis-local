@@ -36,10 +36,6 @@
       <a href="{{ home_url('/') }}">
         <h1>{!! App::get_localinfo()->name !!}</h1>
       </a>
-      <button>
-        <i class="far fa-chevron-down"></i>
-        <span class="sr-only">Tots els municipis</span>
-      </button>
     </div>
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
