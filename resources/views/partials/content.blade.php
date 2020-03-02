@@ -6,13 +6,15 @@
           {{ the_post_thumbnail('large') }}
         </div>
       @endif
-      <h2 class="entry-title">{!! get_the_title() !!}</h2>
-      @if(!has_post_thumbnail())
-        <p class="entry-excerpt">{!! wp_trim_excerpt() !!}</p>
-      @endif
-      <div class="entry-bottom">
-        @include('partials/entry-meta')
-        <span class="entry-more"><fa class="far fa-arrow-right"></i></span>
+      <div class="entry-info">
+        <h2 class="entry-title">{!! get_the_title() !!}</h2>
+        @if(!has_post_thumbnail())
+          <p class="entry-excerpt">{!! wp_trim_excerpt() !!}</p>
+        @endif
+        <div class="entry-bottom">
+          @include('partials/entry-meta')
+          <span class="entry-more"><fa class="far fa-arrow-right"></i></span>
+        </div>
       </div>
     </header>
   </a>
