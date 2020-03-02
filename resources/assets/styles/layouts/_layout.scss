@@ -1,0 +1,14 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "content content sidebar";
+  gap: 2rem;
+
+  main {
+    grid-area: content;
+  }
+
+  aside {
+    grid-area: sidebar;
+  }
+}
