@@ -1,0 +1,11 @@
+.single {
+  .banner-local-name {
+    height: calc(20rem + 14vh);
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    margin-top: -10rem;
+  }
+}

@@ -1,0 +1,60 @@
+.widget {
+  padding: var(--card-padding);
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $default-shadow;
+  margin-bottom: 2rem;
+  overflow: hidden;
+
+  h3 {
+    color: $gray-600;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+  }
+
+  & > ul {
+    list-style: none;
+    margin: calc(var(--card-padding) * -1);
+    margin-top: 0;
+    padding: 0;
+
+    li {
+      padding: 0.75rem var(--card-padding);
+      border-bottom: 1px $gray-100 solid;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &_media_image {
+    position: relative;
+    padding: 0;
+
+    h3 {
+      position: absolute;
+      padding: var(--card-padding);
+      bottom: -0.5rem;
+      left: 0;
+      right: 0;
+      color: $white;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+      pointer-events: none;
+      text-transform: none;
+      letter-spacing: 0;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_search {
+    padding: 0;
+  }
+}
