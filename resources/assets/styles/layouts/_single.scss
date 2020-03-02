@@ -3,7 +3,7 @@
     height: calc(20rem + 14vh);
   }
 
-  article {
+  .post {
     position: relative;
     z-index: 1;
     margin-top: -10rem;
@@ -11,5 +11,58 @@
     padding: 2rem;
     border-radius: $card-radius;
     box-shadow: $default-shadow;
+  }
+
+  .entry-nav {
+    display: flex;
+    flex-direction: row;
+    border-top: 1.5px solid $gray-200;
+    margin: 2rem -2rem -2rem;
+
+    a {
+      padding: 0.75rem 2rem;
+      display: flex;
+      color: $gray-700;
+      width: 100%;
+      align-items: center;
+      transition: 0.25s ease-in-out;
+
+      .nav-icon {
+        position: relative;
+        font-size: 3rem;
+        margin-right: 0.75rem;
+        top: -2px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background-color: $gray-100;
+        color: $gray-900;
+      }
+    }
+  }
+
+  .footer-prev,
+  .footer-next {
+    width: 50%;
+  }
+
+  .footer-next {
+    display: flex;
+    border-left: 1px solid $gray-300;
+    justify-content: flex-end;
+
+    a {
+      justify-content: flex-end;
+
+      span {
+        text-align: right;
+
+        &.nav-icon {
+          margin-left: 0.75rem;
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
