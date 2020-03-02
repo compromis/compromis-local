@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "content content sidebar";
-  gap: 2rem;
+  gap: $card-gap;
 
   main {
     grid-area: content;
