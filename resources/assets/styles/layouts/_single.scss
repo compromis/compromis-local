@@ -3,9 +3,13 @@
     height: calc(20rem + 14vh);
   }
 
-  .content {
+  article {
     position: relative;
     z-index: 1;
     margin-top: -10rem;
+    background: $white;
+    padding: 2rem;
+    border-radius: $card-radius;
+    box-shadow: $default-shadow;
   }
 }
