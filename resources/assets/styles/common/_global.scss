@@ -9,3 +9,9 @@ body {
 .hidden {
   display: none;
 }
+
+a:focus {
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba($primary, 0.5);
+  border-radius: 4px;
+}
