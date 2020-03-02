@@ -1,12 +1,16 @@
 .single {
   .banner-local-name {
-    height: calc(20rem + 14vh);
+    height: calc(18rem + 14vh);
+
+    a {
+      margin-bottom: 4rem;
+    }
   }
 
   .post {
     position: relative;
     z-index: 1;
-    margin-top: -10rem;
+    margin-top: -6rem;
     background: $white;
     padding: 2rem;
     border-radius: $card-radius;
@@ -64,5 +68,9 @@
         }
       }
     }
+  }
+
+  .blob-1 {
+    bottom: -30rem;
   }
 }
