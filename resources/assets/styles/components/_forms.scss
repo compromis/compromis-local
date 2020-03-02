@@ -1,10 +1,12 @@
 /** Search form */
 .search-form {
   position: relative;
+
   @extend .form-inline;
 
   .search-field {
     padding-left: 2.25em;
+
     @extend .form-control;
   }
 
