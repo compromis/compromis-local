@@ -7,6 +7,7 @@
     @php the_content() @endphp
   </div>
   <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+    {!! previous_post_link('<span class="nav-icon">&lt;</span><span>%link</span>') !!}
+    {!! next_post_link('<span>%link</span><span class="nav-icon">&gt;</span>') !!}
   </footer>
 </article>
