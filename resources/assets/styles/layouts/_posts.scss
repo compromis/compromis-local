@@ -10,16 +10,24 @@
     padding: 1rem;
     background: $white;
     border-radius: $border-radius;
-    box-shadow: $raised-shadow;
+    box-shadow: $default-shadow;
     transition: 0.25s ease-in-out;
 
     &:hover {
       text-decoration: none;
       transform: translateY(-0.5rem);
+      box-shadow: $raised-shadow;
     }
 
     &:active {
       transform: translateY(0.25rem);
+      box-shadow: $raised-shadow;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 4px rgba($primary, 0.5), $raised-shadow;
+      border-radius: 4px;
     }
   }
 
