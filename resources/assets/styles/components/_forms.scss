@@ -4,8 +4,15 @@
 
   @extend .form-inline;
 
+  label {
+    @extend .form-group;
+
+    font-weight: normal;
+  }
+
   .search-field {
     padding-left: 2.25em;
+    width: 100%;
 
     @extend .form-control;
   }
@@ -20,7 +27,7 @@
     margin-top: -0.5em;
   }
 
-  .search-form .search-submit {
+  .search-submit {
     @extend .btn;
     @extend .btn-secondary;
   }

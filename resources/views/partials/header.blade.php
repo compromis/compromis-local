@@ -1,5 +1,8 @@
+@php
+  $imageUrl = (has_post_thumbnail()) ? get_the_post_thumbnail_url() : get_header_image();
+@endphp
 <header class="banner">
-  <div class="banner-local-image" style="background-image: url(<?php header_image(); ?>)">
+  <div class="banner-local-image" style="background-image: url({{ $imageUrl }})">
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
@@ -34,7 +37,11 @@
     </div>
     <div class="banner-local-name container">
       <a href="{{ home_url('/') }}">
-        <h1>{!! App::get_localinfo()->name !!}</h1>
+        @if(is_single())
+          <h1>{!! get_the_title() !!}</h1>
+        @else
+          <h1>{!! App::get_localinfo()->name !!}</h1>
+        @endif
       </a>
     </div>
     <div class="blob blob-1"></div>
