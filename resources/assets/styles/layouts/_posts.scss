@@ -5,13 +5,18 @@
 
   .entry-link {
     overflow: hidden;
-    display: block;
+    display: flex;
     color: $text-default;
     padding: 1rem;
     background: $white;
     border-radius: $border-radius;
     box-shadow: $default-shadow;
     transition: 0.25s ease-in-out;
+
+    header {
+      display: flex;
+      flex-direction: column;
+    }
 
     &:hover {
       text-decoration: none;
@@ -32,7 +37,7 @@
   }
 
   .entry-title {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     font-weight: bold;
     letter-spacing: -0.03em;
   }
@@ -42,6 +47,21 @@
 
     img {
       width: 100%;
+      height: auto;
+    }
+  }
+
+  .entry-excerpt {
+    margin-bottom: 1rem;
+    color: $gray-600;
+  }
+
+  .entry-bottom {
+    display: flex;
+    margin-top: auto;
+
+    .entry-more {
+      margin-left: auto;
     }
   }
 }
