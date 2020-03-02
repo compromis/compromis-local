@@ -1,9 +1,11 @@
 /** Search form */
 .search-form {
   position: relative;
+  @extend .form-inline;
 
   .search-field {
     padding-left: 2.25em;
+    @extend .form-control;
   }
 
   .fa-search {
@@ -14,5 +16,10 @@
     width: 1em;
     height: 1em;
     margin-top: -0.5em;
+  }
+
+  .search-form .search-submit {
+    @extend .btn;
+    @extend .btn-secondary;
   }
 }

@@ -7,7 +7,7 @@
     overflow: hidden;
     display: flex;
     color: $text-default;
-    padding: 1rem;
+    padding: var(--card-padding, 1rem);
     background: $white;
     border-radius: $border-radius;
     box-shadow: $default-shadow;
