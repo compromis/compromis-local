@@ -1,9 +1,18 @@
 .single {
   .banner-local-name {
     height: calc(18rem + 14vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .social-nav {
+    font-size: 1.35rem;
+    margin-bottom: 4.25rem;
 
     a {
-      margin-bottom: 4rem;
+      padding-right: 1.25rem;
     }
   }
 
@@ -15,6 +24,26 @@
     padding: 2rem;
     border-radius: $card-radius;
     box-shadow: $default-shadow;
+  }
+
+  .entry-header {
+    display: flex;
+    flex-direction: row;
+    color: $gray-600;
+    margin-bottom: 1.25rem;
+
+    .updated {
+      width: 50%;
+      justify-content: flex-end;
+      text-align: right;
+      margin-left: 3rem;
+    }
+
+    a {
+      display: flex;
+      width: 50%;
+      margin-right: 3rem;
+    }
   }
 
   .entry-nav {

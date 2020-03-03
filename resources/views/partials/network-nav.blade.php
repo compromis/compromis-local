@@ -36,24 +36,24 @@
       <input type="submit" name="municipality_filter" class="sr-only" />
       <i class="far fa-search"></i>
     </form>
-    <ul class="territorial">
-      <li><a href="">Alacantí</a></li>
-      <li><a href="">Alcoià - Comtat - Foies</a></li>
-      <li><a href="">Camp de Morverdre - Alt Palància</a></li>
-      <li><a href="">Camp de Túria - Serrans - Racó d'Ademús</a></li>
-      <li><a href="">Comarcas del Interior</a></li>
-      <li><a href="">Costera - Canal de Navarrés</a></li>
-      <li><a href="">Horta Nord</a></li>
-      <li><a href="">Maestrat - Ports</a></li>
-      <li><a href="">Marina Alta</a></li>
-      <li><a href="">Marina Baixa</a></li>
-      <li><a href="">Plana Alta - Alcalatén</a></li>
-      <li><a href="">Ribera Alta</a></li>
-      <li><a href="">Ribera Baixa</a></li>
-      <li><a href="">Safor - Valldigna</a></li>
-      <li><a href="">València</a></li>
-      <li><a href="">Vall d'Albaida</a></li>
-      <li><a href="">Vinalopó - Segura</a></li>
+    <ul class="territorial pill-list mt-2">
+      <li><a class="pill" href="">Alacantí</a></li>
+      <li><a class="pill" href="">Alcoià - Comtat - Foies</a></li>
+      <li><a class="pill" href="">Camp de Morverdre - Alt Palància</a></li>
+      <li><a class="pill" href="">Camp de Túria - Serrans - Racó d'Ademús</a></li>
+      <li><a class="pill" href="">Comarcas del Interior</a></li>
+      <li><a class="pill" href="">Costera - Canal de Navarrés</a></li>
+      <li><a class="pill" href="">Horta Nord</a></li>
+      <li><a class="pill" href="">Maestrat - Ports</a></li>
+      <li><a class="pill" href="">Marina Alta</a></li>
+      <li><a class="pill" href="">Marina Baixa</a></li>
+      <li><a class="pill" href="">Plana Alta - Alcalatén</a></li>
+      <li><a class="pill" href="">Ribera Alta</a></li>
+      <li><a class="pill" href="">Ribera Baixa</a></li>
+      <li><a class="pill" href="">Safor - Valldigna</a></li>
+      <li><a class="pill" href="">València</a></li>
+      <li><a class="pill" href="">Vall d'Albaida</a></li>
+      <li><a class="pill" href="">Vinalopó - Segura</a></li>
     </ul>
   </div>
 </div>

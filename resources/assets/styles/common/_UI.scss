@@ -1,0 +1,35 @@
+//Pills
+.pill-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2.25;
+
+  a.pill {
+    background: $white;
+    border-radius: 2rem;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.75rem;
+    white-space: nowrap;
+    font-size: 0.85rem;
+
+    &:hover {
+      background: $gradient;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  a.pill-secondary {
+    background: $gray-200;
+    color: $gray-700;
+
+    &:hover {
+      background: $gray-300;
+      color: $gray-900;
+    }
+  }
+}
+

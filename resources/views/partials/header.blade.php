@@ -36,13 +36,20 @@
       </div>
     </div>
     <div class="banner-local-name container">
-      <a href="{{ home_url('/') }}">
         @if(is_single())
           <h1>{!! get_the_title() !!}</h1>
+          <div class="social-nav">
+            <a href=#><i class="far fa-link"></i></a>
+            <a href=#><i class="fab fa-facebook"></i></a>
+            <a href=#><i class="fab fa-twitter"></i></a>
+          </div>
+        @elseif(is_page())
+          <h1>{!! get_the_title() !!}</h1>
         @else
+        <a href="{{ home_url('/') }}">
           <h1>{!! App::get_localinfo()->name !!}</h1>
+        </a>
         @endif
-      </a>
     </div>
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
