@@ -1,0 +1,49 @@
+.page-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: block;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    background: $white;
+    margin: 0.75rem 0;
+    border-radius: $border-radius;
+
+    &:hover {
+      text-decoration: none;
+      background: $gradient;
+      color: $white;
+    }
+  }
+
+  .current_page_item a {
+    position: relative;
+    background: $gray-800;
+    color: $white;
+    font-weight: bold;
+    z-index: 5;
+
+    &:hover {
+      background: $gray-900;
+
+      &::before {
+        background: $gray-900;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 2.25rem;
+      height: 2.25rem;
+      background: $gray-800;
+      position: absolute;
+      top: 0.3rem;
+      left: -0.7rem;
+      border-radius: $border-radius;
+      transform: rotate(45deg);
+      z-index: -1;
+    }
+  }
+}

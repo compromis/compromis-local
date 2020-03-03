@@ -1,10 +1,15 @@
-.single {
+.single,
+.page {
   .banner-local-name {
     height: calc(18rem + 14vh);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+  }
+
+  .brand-local-hidden {
+    opacity: 1 !important;
   }
 
   .social-nav {
@@ -16,14 +21,14 @@
     }
   }
 
-  .post {
+  .post,
+  .page-card {
     position: relative;
     z-index: 1;
     margin-top: -6rem;
-    background: $white;
     padding: 2rem;
-    border-radius: $card-radius;
-    box-shadow: $default-shadow;
+
+    @extend .card;
   }
 
   .entry-header {
@@ -101,5 +106,13 @@
 
   .blob-1 {
     bottom: -30rem;
+  }
+}
+
+.page {
+  .banner-local-name {
+    h1 {
+      margin-bottom: 4.25rem;
+    }
   }
 }

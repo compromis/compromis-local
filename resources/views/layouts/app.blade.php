@@ -16,6 +16,10 @@
           <aside class="sidebar">
             @include('partials.sidebar')
           </aside>
+        @else
+          <aside class="sidebar">
+            @yield('sidebar')
+          </aside>
         @endif
       </div>
     </div>

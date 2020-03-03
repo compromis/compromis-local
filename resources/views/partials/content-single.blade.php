@@ -6,7 +6,7 @@
   <div class="entry-content">
     @php the_content() @endphp
   </div>
-  <ul class="pill-list">
+  <ul class="pill-list mb-0">
     <li><a class="pill pill-secondary" href="#">Primary</a></li>
     <li><a class="pill pill-secondary" href="#">Primary</a></li>
     <li><a class="pill pill-secondary" href="#">Primary</a></li>

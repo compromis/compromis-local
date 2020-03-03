@@ -1,4 +1,12 @@
-//Pills
+// Cards
+.card {
+  background: $white;
+  padding: 1rem;
+  border-radius: $card-radius;
+  box-shadow: $default-shadow;
+}
+
+// Pills
 .pill-list {
   list-style: none;
   margin: 1rem 0;

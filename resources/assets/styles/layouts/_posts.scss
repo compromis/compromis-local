@@ -9,10 +9,9 @@
     display: flex;
     color: $text-default;
     padding: var(--card-padding, 1rem);
-    background: $white;
-    border-radius: $border-radius;
-    box-shadow: $default-shadow;
     transition: 0.25s ease-in-out;
+
+    @extend .card;
 
     header {
       display: flex;
@@ -55,6 +54,47 @@
   .entry-excerpt {
     margin-bottom: 1rem;
     color: $gray-600;
+  }
+
+  .entry-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .wp-block-image {
+      margin: 1rem -2rem;
+      max-width: fit-content;
+    }
+
+    .wp-block-gallery {
+      .blocks-gallery-item {
+        border-radius: $border-radius;
+        overflow: hidden;
+      }
+    }
+
+    .wp-block-quote {
+      border-top: 2px $gray-200 solid;
+      border-bottom: 2px $gray-200 solid;
+      padding: 1.25rem 0;
+      margin: 2rem 0;
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      cite {
+        color: $gray-700;
+        font-style: normal;
+        font-size: 0.85rem;
+      }
+    }
   }
 
   .entry-bottom {
