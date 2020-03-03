@@ -42,6 +42,7 @@
             <a href=#><i class="far fa-link"></i></a>
             <a href=#><i class="fab fa-facebook"></i></a>
             <a href=#><i class="fab fa-twitter"></i></a>
+            <a href=#><i class="fab fa-whatsapp"></i></a>
           </div>
         @elseif(is_page())
           <h1>{!! get_the_title() !!}</h1>
