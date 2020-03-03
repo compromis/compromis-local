@@ -1,5 +1,5 @@
 @php
-  $imageUrl = (has_post_thumbnail()) ? get_the_post_thumbnail_url() : get_header_image();
+  $imageUrl = ((is_single() || is_page()) && has_post_thumbnail()) ? get_the_post_thumbnail_url() : get_header_image();
 @endphp
 <header class="banner">
   <div class="banner-local-image" style="background-image: url({{ $imageUrl }})">
@@ -8,7 +8,9 @@
         <div class="banner-band-row">
           <a class="brand" href="{{ home_url('/') }}">
             <img src="https://compromis.net/wp-content/themes/Compromis/images/logo.svg" alt="Compromís" />
-            <span class="brand-local brand-local-hidden">{!! App::get_localinfo()->name !!}</span>
+            <span class="brand-local brand-local-hidden">
+              {!! App::get_localinfo()->name !!}
+            </span>
           </a>
           <nav class="nav-shortcut d-none d-lg-flex">
             @if (has_nav_menu('primary_navigation'))
@@ -47,9 +49,9 @@
         @elseif(is_page())
           <h1>{!! get_the_title() !!}</h1>
         @else
-        <a href="{{ home_url('/') }}">
-          <h1>{!! App::get_localinfo()->name !!}</h1>
-        </a>
+          <a href="{{ home_url('/') }}">
+            <h1>{!! App::get_localinfo()->name !!}</h1>
+          </a>
         @endif
     </div>
     <div class="blob blob-1"></div>

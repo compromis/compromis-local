@@ -21,6 +21,11 @@
   grid-template-columns: repeat(2, 1fr);
   gap: $card-gap;
 
+  li {
+    display: flex;
+    align-items: stretch;
+  }
+
   li:first-child {
     grid-column: 1/-1;
 
@@ -45,15 +50,21 @@
 
     .entry-info {
       position: absolute;
-      color: white;
+      color: $white;
+      bottom: 2rem;
+      left: 1rem;
+      right: 1rem;
+    }
+
+    .entry-bottom {
+      position: absolute;
+      color: $white;
       bottom: 1rem;
       left: 1rem;
       right: 1rem;
 
-      .entry-bottom {
-        .updated {
-          color: $gray-100;
-        }
+      .updated {
+        color: rgba($white, 0.75);
       }
     }
   }

@@ -11,10 +11,10 @@
         @if(!has_post_thumbnail())
           <p class="entry-excerpt">{!! wp_trim_excerpt() !!}</p>
         @endif
-        <div class="entry-bottom">
-          @include('partials/entry-meta')
-          <span class="entry-more"><fa class="far fa-arrow-right"></i></span>
-        </div>
+      </div>
+      <div class="entry-bottom">
+        @include('partials/entry-meta')
+        <span class="entry-more"><fa class="far fa-arrow-right"></i></span>
       </div>
     </header>
   </a>
