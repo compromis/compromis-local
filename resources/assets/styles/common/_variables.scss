@@ -7,7 +7,7 @@ $navbar-light-toggler-icon-bg: none;
 
 /* Colors */
 $primary: #f60;
-
+$link-hover-color: $primary;
 $gradient-start: #d23517;
 $gradient-end: #f39128;
 $gradient: linear-gradient(var(--gradient-orientation, 45deg), $gradient-start, $gradient-end);
