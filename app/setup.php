@@ -90,6 +90,21 @@ add_action('widgets_init', function () {
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
+
+    /**
+     * Add social widget
+     */
+    include('Widgets/Social.php');
+    register_widget('WP_Widget_Social');
+
+    /**
+     * Disable unwanted widgets
+     */
+    unregister_widget('WP_Widget_RSS');
+    unregister_widget('WP_Widget_Search');
+    unregister_widget('WP_Widget_Meta');
+    unregister_widget('WP_Widget_Media_Audio');
+    unregister_widget('WP_Widget_Media_Video');
 });
 
 /**
