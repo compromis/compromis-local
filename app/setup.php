@@ -158,4 +158,21 @@ add_action('after_setup_theme', function () {
     );
 
     add_theme_support('custom-header', $args);
+
+    /**
+     * Create archive page
+     */
+    $archive_exists = get_page_by_path('arxiu');
+
+    if (!$archive_exists) {
+        $archive_page = array(
+            'post_type'     => 'page',
+            'post_title'    => 'Arxiu de notícies',
+            'post_slug'     => 'arxiu',
+            'post_content'  => '',
+            'post_status'   => 'publish'
+        );
+
+        wp_insert_post($archive_page);
+    }
 });

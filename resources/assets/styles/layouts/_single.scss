@@ -1,5 +1,5 @@
 .single,
-.page {
+.page:not(.page-arxiu-data) { // find better solution to this
   .banner-local-name {
     height: calc(18rem + 14vh);
     display: flex;

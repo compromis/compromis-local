@@ -9,20 +9,14 @@
     </div>
     {!! get_search_form(false) !!}
   @endif
-  Home
+  Archive
   <ul class="home-posts">
-  @php $i = 0; @endphp
-  @while (have_posts())
-    @php
-      $i++;
-      if($i > 5) break;
-      the_post();
-    @endphp
+  @while (have_posts()) @php the_post() @endphp
     <li>
       @include('partials.content-'.get_post_type())
     </li>
   @endwhile
   </ul>
 
-  <a href="/arxiu">Arxiu</a>
+  {!! get_the_posts_navigation() !!}
 @endsection
