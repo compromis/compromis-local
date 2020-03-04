@@ -39,7 +39,15 @@
     </div>
     <div class="banner-local-name container">
         @if(is_single())
-          <h1>{!! get_the_title() !!}</h1>
+        @php
+          $title = get_the_title();
+          $minFontSize = 2.5;
+          $maxFontSize = 4.5;
+          $maxLength = 200;
+          $size = strlen($title) / $maxLength;
+          $fontSize = $maxFontSize + $size * ($minFontSize - $maxFontSize);
+        @endphp
+          <h1 style="font-size: {{ $fontSize }}rem">{!! $title !!}</h1>
           <div class="social-nav">
             <a href=#><i class="far fa-link"></i></a>
             <a href=#><i class="fab fa-facebook"></i></a>
@@ -57,4 +65,5 @@
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
   </div>
+  @yield('filter')
 </header>
