@@ -3,6 +3,10 @@
   padding: 0;
   list-style: none;
 
+  ul {
+    list-style: none;
+  }
+
   a {
     display: block;
     font-size: 1.25rem;
@@ -18,7 +22,7 @@
     }
   }
 
-  .current_page_item a {
+  .current_page_item > a {
     position: relative;
     background: $gray-800;
     color: $white;
@@ -36,7 +40,7 @@
     &::before {
       content: "";
       width: 2.25rem;
-      height: 2.25rem;
+      height: 2.3rem;
       background: $gray-800;
       position: absolute;
       top: 0.3rem;
