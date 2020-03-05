@@ -1,3 +1,5 @@
+import ClipboardJS from 'clipboard'
+
 export default {
   init() {
     const brandLocal = $('.brand-local');
@@ -28,6 +30,15 @@ export default {
         brandLocal.addClass('brand-local-hidden');
       }
     });
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('#copy-link').on('click', function (e) {
+      e.preventDefault();
+      $(this).attr('data-original-title', 'Enllaç copiat!').tooltip('show');
+    });
+
+    new ClipboardJS('#copy-link');
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

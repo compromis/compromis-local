@@ -44,16 +44,11 @@
           $minFontSize = 2.5;
           $maxFontSize = 4.5;
           $maxLength = 200;
-          $size = strlen($title) / $maxLength;
-          $fontSize = $maxFontSize + $size * ($minFontSize - $maxFontSize);
+          $length = strlen($title) / $maxLength;
+          $fontSize = $maxFontSize + $length * ($minFontSize - $maxFontSize);
         @endphp
           <h1 style="font-size: {{ $fontSize }}rem">{!! $title !!}</h1>
-          <div class="social-nav">
-            <a href=#><i class="far fa-link"></i></a>
-            <a href=#><i class="fab fa-facebook"></i></a>
-            <a href=#><i class="fab fa-twitter"></i></a>
-            <a href=#><i class="fab fa-whatsapp"></i></a>
-          </div>
+          @include('partials.social')
         @elseif(is_page())
           <h1>{!! get_the_title() !!}</h1>
         @else
