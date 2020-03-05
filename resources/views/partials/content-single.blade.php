@@ -1,15 +1,25 @@
 <article @php post_class() @endphp>
   <header class="entry-header">
-    <a href="#">Categoria del post</a>
+    <div class="categories">
+      @php $categories = get_the_category(); @endphp
+      @if(!empty($categories))
+        @foreach($categories as $category)
+          <a href="{{ get_category_link($category) }}">{{ $category->name }}</a>
+        @endforeach
+      @endif
+    </div>
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
     @php the_content() @endphp
   </div>
   <ul class="pill-list mb-0">
-    <li><a class="pill pill-secondary" href="#">Primary</a></li>
-    <li><a class="pill pill-secondary" href="#">Primary</a></li>
-    <li><a class="pill pill-secondary" href="#">Primary</a></li>
+    @php $tags = get_the_tags(); @endphp
+    @if(!empty($tags))
+      @foreach($tags as $tag)
+        <li><a class="pill pill-secondary" href="{{ get_tag_link($tag) }}">{{ $tag->name }}</a></li>
+      @endforeach
+    @endif
   </ul>
   <footer class="entry-nav">
     <div class="footer-prev">
