@@ -38,6 +38,10 @@ export default {
       $(this).attr('data-original-title', 'Enllaç copiat!').tooltip('show');
     });
 
+    $('#copy-link').on('mouseout', function () {
+      $(this).attr('data-original-title', 'Copiar enllaç');
+    });
+
     new ClipboardJS('#copy-link');
   },
   finalize() {
