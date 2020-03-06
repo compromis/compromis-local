@@ -25,4 +25,6 @@
   </ul>
 
   <a href="/arxiu">Arxiu</a>
+
+  @include('partials.compromis-posts')
 @endsection
