@@ -2,6 +2,27 @@
 
 @section('content')
   @include('partials.page-header')
+  <div class="card archive-nav">
+    <div class="archive-month">
+      <label for="months">Per mes</label>
+      <select id="months">
+        <option value="Octubre">Octubre</option>
+        <option value="Novembre">Novembre</option>
+        <option value="Desembre">Desembre</option>
+      </select>
+    </div>
+    <div class="archive-category">
+      <label for="category">Per categoria</label>
+      <select id="category">
+        <option value="Economia">Economia</option>
+        <option value="Feminisme">Feminisme</option>
+      </select>
+    </div>
+    <div class="archive-search">
+      <label for="keyword">Per paraula clau</label>
+      <input type="text" for="keyword"></input>
+    </div>
+  </div>
 
   @if (!have_posts())
     <div class="alert alert-warning">
