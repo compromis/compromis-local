@@ -67,7 +67,7 @@ export default {
             .then(data => { this.locals = data });
         },
         filter () {
-          console.log(this.filterValue);
+          this.filteredResults = '';
         },
       },
     });

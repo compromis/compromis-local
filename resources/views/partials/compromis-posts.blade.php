@@ -1,6 +1,6 @@
 <h3>Posts</h3>
 
-<div id="compromis-posts" id="compromis-posts">
+<div id="compromis-posts">
   <ul class="post-list">
     <li v-for="post in posts" v-bind:key="post.id">
       <a class="post-link" v-bind:href="post.link" target="_blank" rel="noopener">
