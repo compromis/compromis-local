@@ -12,7 +12,7 @@ export default {
       },
       methods: {
         loadPosts () {
-          fetch('https://compromis.net/wp-json/wp/v2/posts/?_fields=title,link,_links.wp:featuredmedia&per_page=5&_embed&categories_exclude=1939')
+          fetch('https://compromis.net/wp-json/wp/v2/posts/?_fields=title,link,_links.wp:featuredmedia&per_page=4&_embed&categories_exclude=1939')
             .then(response => { return response.json() })
             .then(data => { this.posts = data })
         },
