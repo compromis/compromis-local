@@ -2,7 +2,7 @@
   <a href="{{ get_permalink() }}" class="entry-link">
     <header>
       @if(has_post_thumbnail())
-        <div class="entry-thumbmail">
+        <div class="entry-thumbnail">
           {{ the_post_thumbnail('large') }}
         </div>
       @endif
