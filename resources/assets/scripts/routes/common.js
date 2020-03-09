@@ -14,7 +14,7 @@ export default {
       }
     });
 
-    $('.drawer-nav-toggle').on('click', function (e) {
+    $('.drawer-nav-toggle, .banner-overlay').on('click', function (e) {
       e.preventDefault();
       const body = $('body');
       const drawerNav = $('.drawer-nav');

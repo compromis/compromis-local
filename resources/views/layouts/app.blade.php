@@ -26,5 +26,6 @@
     @php do_action('get_footer') @endphp
     @include('partials.footer')
     @php wp_footer() @endphp
+    <div class="overlay banner-overlay"></div>
   </body>
 </html>
