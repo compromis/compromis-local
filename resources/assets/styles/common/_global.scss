@@ -32,3 +32,12 @@ h4 {
   color: $gray-700;
   margin: 1.5rem 0;
 }
+
+.nav-open .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}

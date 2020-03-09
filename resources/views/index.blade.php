@@ -9,7 +9,6 @@
     </div>
     {!! get_search_form(false) !!}
   @endif
-  Home
   <ul class="home-posts">
   @php $i = 0; @endphp
   @while (have_posts())

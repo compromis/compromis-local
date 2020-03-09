@@ -70,6 +70,10 @@
   }
 }
 
+.compromis-posts {
+  margin-top: 5rem;
+}
+
 @include media-breakpoint-down(lg) {
   .home-posts {
     grid-template-columns: 1fr;

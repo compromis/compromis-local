@@ -1,5 +1,6 @@
-<h4>Notícies de Compromis.net</h4>
-<div id="compromis-posts">
+<div id="compromis-posts" class="compromis-posts">
+  <h4>{{ __('Notícies de Compromís', 'sage') }}</h4>
+
   <ul class="post-list">
     <li v-for="post in posts" v-bind:key="post.id">
       <a class="post-link" v-bind:href="post.link" target="_blank" rel="noopener">
@@ -13,5 +14,7 @@
     </li>
   </ul>
 
-  <a class="apple-link" href="https://compromis.net" target="_blank" rel="noopener"><span>{{ __('Més notícies en compromis.net', 'sage') }}</span></a>
+  <a class="apple-link" href="https://compromis.net" target="_blank" rel="noopener">
+    <span>{{ __('Més notícies en compromís.net', 'sage') }}</span>
+  </a>
 </div>
