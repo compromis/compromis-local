@@ -69,6 +69,35 @@
     object-fit: cover;
   }
 }
+//apple link
+
+a.apple-link {
+  display: block;
+  position: relative;
+  margin-top: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $gray-700;
+  opacity: 0.75;
+
+  span {
+    transition: 0.25s ease-in-out;
+    border-bottom: 2px solid transparent;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $gray-900;
+
+    span {
+      border-color: $gray-900;
+    }
+  }
+
+  &::after {
+    content: " >";
+  }
+}
 
 // Pills
 .pill-list {

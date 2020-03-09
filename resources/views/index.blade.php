@@ -24,7 +24,7 @@
   @endwhile
   </ul>
 
-  <a href="/arxiu">Arxiu</a>
+  <a href="/arxiu" class="apple-link"><span>Arxiu</span></a>
 
   @include('partials.compromis-posts')
 @endsection

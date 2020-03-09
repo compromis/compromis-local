@@ -19,3 +19,16 @@ a:focus {
   box-shadow: 0 0 0 4px rgba($primary, 0.5);
   border-radius: 4px;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  letter-spacing: -0.03em;
+}
+
+h4 {
+  color: $gray-700;
+  margin: 1.5rem 0;
+}

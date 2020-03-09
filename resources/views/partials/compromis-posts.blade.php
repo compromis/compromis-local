@@ -1,4 +1,4 @@
-<h3>Posts</h3>
+<h4>Notícies de Compromis.net</h4>
 <div id="compromis-posts"
   x-data="{ posts: [] }"
   x-init="
@@ -21,5 +21,5 @@
     </template>
   </ul>
 
-  <a href="https://compromis.net" target="_blank" rel="noopener">{{ __('Més notícies en compromis.net', 'sage') }}</a>
+  <a class="apple-link" href="https://compromis.net" target="_blank" rel="noopener"><span>{{ __('Més notícies en compromis.net', 'sage') }}</span></a>
 </div>
