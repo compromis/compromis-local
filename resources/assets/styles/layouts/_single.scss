@@ -84,6 +84,13 @@
         top: -2px;
       }
 
+      .nav-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
       &:hover {
         text-decoration: none;
         background-color: $gray-100;
