@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import ClipboardJS from 'clipboard'
 
 export default {
@@ -43,6 +44,33 @@ export default {
     });
 
     new ClipboardJS('#copy-link');
+
+    new Vue({
+      el: '#locals',
+      data: {
+        locals: [],
+        filterValue: '',
+        filteredResults: [],
+      },
+      mounted () {
+        this.fetchLocals();
+      },
+      watch: {
+        filterValue: function () {
+          this.filter();
+        },
+      },
+      methods: {
+        fetchLocals () {
+          fetch('https://compromis.net/common/json_municipis.php')
+            .then(response => { return response.json() })
+            .then(data => { this.locals = data });
+        },
+        filter () {
+          this.filteredResults = '';
+        },
+      },
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
