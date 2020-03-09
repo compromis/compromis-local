@@ -32,13 +32,14 @@
     <h3>COMPROMÍS AL TEU MUNICIPI</h3>
     <form class="search-form" v-on:submit="filter">
       <label for="municipality" class="sr-only">Municipi</label>
-      <input type="search" name="municipality" id="municipality" class="form-control search-field" placeholder="Escriu el teu municipi" v-model="filterValue" />
+      <input type="search" name="municipality" id="municipality" class="form-control search-field" placeholder="Escriu el teu municipi" v-on:input="(e) => { territorialText = ''; filterValue = e.target.value; }" v-bind:value="territorialText ? territorialText : filterValue" />
       <input type="submit" name="municipality_filter" class="sr-only" />
       <i class="far fa-search"></i>
     </form>
     <ul class="territorial pill-list mt-2">
-      <li v-for="local in filteredResults" v-bind:key="local.id">
-        <a class="pill" v-bind:href="local.url"><span v-text="local.name"></span></a>
+      <li v-for="website in filteredResults" v-bind:key="website.id">
+        <a class="pill" v-bind:href="website.url" target="_blank" v-if="website.hasOwnProperty('territori_id')"><span v-text="website.name"></span></a>
+        <a class="pill" href="#" v-on:click.prevent="setTerritory(website)" v-else><span v-text="website.name"></a>
       </li>
     </ul>
   </div>
