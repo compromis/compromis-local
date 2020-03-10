@@ -21,7 +21,6 @@
       &--nav {
         margin: 0;
         max-height: calc(100vh - 100px);
-        overflow-y: scroll;
         border-top: 1px $gray-200 solid;
       }
     }
