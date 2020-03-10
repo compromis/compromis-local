@@ -162,13 +162,13 @@ add_action('after_setup_theme', function () {
     /**
      * Create archive page
      */
-    $archive_exists = get_page_by_path('arxiu');
+    $archive_exists = get_page_by_path('arxiu-de-noticies');
 
     if (!$archive_exists) {
         $archive_page = array(
             'post_type'     => 'page',
             'post_title'    => 'Arxiu de notícies',
-            'post_slug'     => 'arxiu',
+            'post_slug'     => 'arxiu-de-noticies',
             'post_content'  => '',
             'post_status'   => 'publish'
         );
