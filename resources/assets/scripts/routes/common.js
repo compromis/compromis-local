@@ -19,7 +19,7 @@ export default {
       const body = $('body');
       const drawerNav = $('.drawer-nav');
       const brandLocal = $('.brand-local');
-      const toggle = $(this);
+      const toggle = $('.drawer-nav-toggle');
       const expanded = toggle.attr('aria-expanded') === 'true';
 
       drawerNav.slideToggle().toggleClass('open');
