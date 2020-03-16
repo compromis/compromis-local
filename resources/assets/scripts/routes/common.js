@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import localNetwork from '../components/local-network.js';
-import ClipboardJS from 'clipboard'
 
 export default {
   init() {
+    // Nav
     const brandLocal = $('.brand-local');
 
     $(document).scroll(function() {
@@ -33,19 +33,24 @@ export default {
       }
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
-
-    $('#copy-link').on('click', function (e) {
-      e.preventDefault();
-      $(this).attr('data-original-title', 'Enllaç copiat!').tooltip('show');
+    // Archive
+    $('#cat').on('change', (event) => {
+      const category = event.target.value;
+      if (category > 0) {
+        window.location = '/?cat=' + category;
+      } else {
+        window.location = '/arxiu-de-noticies';
+      }
     });
 
-    $('#copy-link').on('mouseout', function () {
-      $(this).attr('data-original-title', 'Copiar enllaç');
+    $('#months').on('change', (event) => {
+      const url = event.target.value;
+      if (url) {
+        window.location = url;
+      }
     });
 
-    new ClipboardJS('#copy-link');
-
+    // Local network
     new Vue(localNetwork);
   },
   finalize() {
