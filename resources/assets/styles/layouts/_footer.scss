@@ -1,3 +1,52 @@
 .footer {
   margin: 4rem 0;
+
+  &-info {
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  &-address {
+    order: 0;
+
+    &-title {
+      font-size: 1.25rem;
+    }
+
+    ul {
+      display: flex;
+      margin: 1rem 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-right: 1rem;
+      color: $gray-700;
+    }
+
+    a {
+      color: $gray-700;
+      text-decoration: underline;
+
+      &:hover {
+        color: $gray-900;
+      }
+    }
+  }
+
+  &-logo {
+    order: 1;
+    margin-left: auto;
+
+    img {
+      width: 180px;
+      opacity: 0.75;
+      transition: 0.25s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
