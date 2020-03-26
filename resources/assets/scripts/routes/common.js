@@ -47,6 +47,8 @@ export default {
       const url = event.target.value;
       if (url) {
         window.location = url;
+      } else {
+        window.location = '/arxiu-de-noticies';
       }
     });
 
