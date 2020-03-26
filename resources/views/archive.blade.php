@@ -1,16 +1,18 @@
+@php
+  $isArchive = true;
+@endphp
 @extends('layouts.app')
 
 @section('content')
   @include('partials.archive-nav')
 
   @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
+    <div class="mt-4 alert alert-warning">
+      {{ __('No hem trobat cap notícia amb aquests paràmetres', 'sage') }}
     </div>
-    {!! get_search_form(false) !!}
   @endif
-  Archive
-  <ul class="home-posts">
+  
+  <ul class="archive-posts">
   @while (have_posts()) @php the_post() @endphp
     <li>
       @include('partials.content-'.get_post_type())

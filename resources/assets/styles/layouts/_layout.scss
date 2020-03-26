@@ -13,11 +13,30 @@
   }
 }
 
+body:not(.sidebar-primary) {
+  .content {
+    grid-template-columns: auto 900px auto;
+    grid-template-areas: "sidebar content filler";
+  }
+
+  .banner-local-name h1 {
+    margin-bottom: 4rem;
+  }
+}
+
 @include media-breakpoint-down(md) {
   .content {
     grid-template-columns: 1fr;
     grid-template-areas:
       "content"
       "sidebar";
+  }
+
+  body:not(.sidebar-primary) {
+    .content {
+      grid-template-columns: 1fr;
+      grid-template-areas: "content";
+      grid-gap: 0;
+    }
   }
 }
