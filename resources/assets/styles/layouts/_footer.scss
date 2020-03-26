@@ -18,9 +18,11 @@
       margin: 1rem 0;
       padding: 0;
       list-style: none;
+      flex-wrap: wrap;
     }
 
     li {
+      flex-shrink: 0;
       margin-right: 1rem;
       color: $gray-700;
     }
@@ -47,6 +49,18 @@
       &:hover {
         opacity: 1;
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .footer {
+    &-info {
+      flex-direction: column;
+    }
+
+    &-logo {
+      margin-left: 0;
     }
   }
 }
