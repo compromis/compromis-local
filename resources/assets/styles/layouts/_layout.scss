@@ -1,6 +1,6 @@
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.25fr 1.25fr 1fr;
   grid-template-areas: "content content sidebar";
   gap: $card-gap;
 
@@ -13,7 +13,7 @@
   }
 }
 
-body:not(.sidebar-primary) {
+body:not(.sidebar-primary):not(.page):not(.post) {
   .content {
     grid-template-columns: auto 900px auto;
     grid-template-areas: "sidebar content filler";

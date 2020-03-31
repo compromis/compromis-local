@@ -8,7 +8,7 @@
           <img v-bind:src="post._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url" alt="" />
         </div>
         <p class="post-content">
-          <span class="post-title" v-text="post.title.rendered"></span>
+          <span class="post-title" v-html="post.title.rendered"></span>
         </p>
       </a>
     </li>
