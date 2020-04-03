@@ -165,14 +165,36 @@ add_action('after_setup_theme', function () {
     $archive_exists = get_page_by_path('arxiu-de-noticies');
 
     if (!$archive_exists) {
-        $archive_page = array(
+        $archive_page = [
             'post_type'     => 'page',
             'post_title'    => 'Arxiu de notícies',
             'post_slug'     => 'arxiu-de-noticies',
             'post_content'  => '',
             'post_status'   => 'publish'
-        );
+        ];
 
         wp_insert_post($archive_page);
     }
+});
+
+/**
+ * Register regidors custom post type
+ */
+add_action('init', function () {
+    $labels = [
+        'name' => 'Regidors/es',
+        'singular_name' => 'Regidor/a',
+    ];
+
+    $args = [
+        'labels' => $labels,
+        'public' => true,
+        'rewrite' => ['slug' => 'regidor'],
+        'capability_type' => 'page',
+        'has_archive' => false,
+        'hierarchical' => false,
+        'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
+    ];
+
+    register_post_type('regidor', $args);
 });
