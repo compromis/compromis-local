@@ -180,21 +180,5 @@ add_action('after_setup_theme', function () {
 /**
  * Register regidors custom post type
  */
-add_action('init', function () {
-    $labels = [
-        'name' => 'Regidors/es',
-        'singular_name' => 'Regidor/a',
-    ];
+include 'CustomPostTypes/regidor.php';
 
-    $args = [
-        'labels' => $labels,
-        'public' => true,
-        'rewrite' => ['slug' => 'regidor'],
-        'capability_type' => 'page',
-        'has_archive' => false,
-        'hierarchical' => false,
-        'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
-    ];
-
-    register_post_type('regidor', $args);
-});
