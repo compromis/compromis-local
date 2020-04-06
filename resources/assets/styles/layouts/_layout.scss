@@ -13,7 +13,7 @@
   }
 }
 
-body:not(.sidebar-primary):not(.page):not(.post) {
+body:not(.sidebar-primary):not(.page):not(.single) {
   .content {
     grid-template-columns: auto 900px auto;
     grid-template-areas: "sidebar content filler";

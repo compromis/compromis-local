@@ -137,7 +137,7 @@ function display_sidebar()
     isset($display) || $display = in_array(true, [
       // The sidebar will be displayed if any of the following return true
       is_front_page(),
-      is_single(),
+      (is_single() && get_post_type() != 'regidor'),
       is_404()
     ]);
 
