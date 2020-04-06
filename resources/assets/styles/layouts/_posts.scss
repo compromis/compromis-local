@@ -54,6 +54,12 @@
 
   &-thumbnail {
     margin: -1rem 1rem -1rem -1rem;
+    background: $gray-300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: $gray-500;
 
     img {
       width: 100%;
