@@ -5,58 +5,44 @@
 @extends('layouts.app')
 
 @section('content')
-  @while(have_posts()) @php the_post() @endphp
-    <section class="page">
-      <ul class="card-list card-list-regidors">
+  <section class="page">
+    <ul class="card-list card-list-regidors">
+      @foreach($regidors as $regidor)
+      @php
+        $postMeta = get_post_meta($regidor->ID);
+      @endphp
         <li class="card card-regidor">
-          <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
+          @if(has_post_thumbnail($regidor->ID))
+            <a href="{{ get_permalink($regidor->ID) }}">
+              <img class="card-regidor-img" src="{{ get_the_post_thumbnail_url($regidor->ID, 'medium') }}" alt="" />
+            </a>
+          @endif
           <div class="card-regidor-info">
-            <div class="card-regidor-info-name">Doggy McDogface</div>
-            <div class="card-regidor-info-description">Regidog de cultura</div>
+            <h2 class="card-regidor-info-name">
+              <a href="{{ get_permalink($regidor->ID) }}">{{ $regidor->post_title }}</a>
+            </h2>
+            @if(isset($postMeta['_regidor_description']))
+              <p class="card-regidor-info-description">
+                {{ $postMeta['_regidor_description'][0] }}
+              </p>
+            @endif
             <ul class="card-regidor-info-social">
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              @if(isset($postMeta['_regidor_email']))
+                <li><a href="mailto:{{ $postMeta['_regidor_email'][0] }}" target="_blank" rel="noopener"><i class="far fa-envelope"></i></a></li>
+              @endif
+              @if(isset($postMeta['_regidor_twitter']))
+                <li><a href="{{ $postMeta['_regidor_twitter'][0] }}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+              @endif
+              @if(isset($postMeta['_regidor_facebook']))
+                <li><a href="{{ $postMeta['_regidor_facebook'][0] }}" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li>
+              @endif
+              @if(isset($postMeta['_regidor_instagram']))
+                <li><a href="{{ $postMeta['_regidor_instagram'][0] }}" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+              @endif
             </ul>
           </div>
         </li>
-        <li class="card card-regidor">
-          <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
-          <div class="card-regidor-info">
-            <div class="card-regidor-info-name">Doggy McDogface</div>
-            <div class="card-regidor-info-description">Regidog de cultura</div>
-            <ul class="card-regidor-info-social">
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="card card-regidor">
-          <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
-          <div class="card-regidor-info">
-            <div class="card-regidor-info-name">Doggy McDogface</div>
-            <div class="card-regidor-info-description">Regidog de cultura</div>
-            <ul class="card-regidor-info-social">
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="card card-regidor">
-          <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
-          <div class="card-regidor-info">
-            <div class="card-regidor-info-name">Doggy McDogface</div>
-            <div class="card-regidor-info-description">Regidog de cultura</div>
-            <ul class="card-regidor-info-social">
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </section>
-  @endwhile
+      @endforeach
+    </ul>
+  </section>
 @endsection

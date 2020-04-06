@@ -25,9 +25,14 @@
       justify-content: flex-start;
 
       &-name {
-        font-size: 1.4rem;
         margin-bottom: 0.25rem;
-        line-height: 1.3;
+
+        a {
+          font-size: 1.4rem;
+          line-height: 1.3;
+          font-weight: normal;
+          color: $gray-900;
+        }
       }
 
       &-description {
