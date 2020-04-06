@@ -28,6 +28,7 @@ body:not(.sidebar-primary):not(.page):not(.post) {
   .content {
     grid-template-columns: 1fr;
     grid-template-areas: "content";
+    gap: 0;
   }
 }
 
@@ -43,7 +44,7 @@ body:not(.sidebar-primary):not(.page):not(.post) {
     .content {
       grid-template-columns: 1fr;
       grid-template-areas: "content";
-      grid-gap: 0;
+      gap: 0;
     }
   }
 }

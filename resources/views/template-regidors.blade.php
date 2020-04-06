@@ -12,7 +12,43 @@
           <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
           <div class="card-regidor-info">
             <div class="card-regidor-info-name">Doggy McDogface</div>
-            <div class="card-regidor-info-charge">Regidog de cultura</div>
+            <div class="card-regidor-info-description">Regidog de cultura</div>
+            <ul class="card-regidor-info-social">
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card card-regidor">
+          <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
+          <div class="card-regidor-info">
+            <div class="card-regidor-info-name">Doggy McDogface</div>
+            <div class="card-regidor-info-description">Regidog de cultura</div>
+            <ul class="card-regidor-info-social">
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card card-regidor">
+          <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
+          <div class="card-regidor-info">
+            <div class="card-regidor-info-name">Doggy McDogface</div>
+            <div class="card-regidor-info-description">Regidog de cultura</div>
+            <ul class="card-regidor-info-social">
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="card card-regidor">
+          <img class="card-regidor-img" src="https://source.unsplash.com/k1LNP6dnyAE" /> 
+          <div class="card-regidor-info">
+            <div class="card-regidor-info-name">Doggy McDogface</div>
+            <div class="card-regidor-info-description">Regidog de cultura</div>
             <ul class="card-regidor-info-social">
               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
               <li><a href="#"><i class="fab fa-facebook"></i></a></li>
