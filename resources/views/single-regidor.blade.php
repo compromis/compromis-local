@@ -7,9 +7,9 @@
 @endsection
 
 @section('sidebar')
-  <ul>
+  <ul class="page-menu">
   @foreach($regidors as $regidor)
-    <li class="{{ ($regidor->ID === get_the_ID()) ? 'active' : '' }}">
+    <li class="page_item {{ ($regidor->ID === get_the_ID()) ? 'current_page_item' : '' }}">
       <a href="{{ get_permalink($regidor->ID) }}">
         @if(has_post_thumbnail($regidor->ID))
           <img src="{{ get_the_post_thumbnail_url($regidor->ID, 'medium') }}" alt="">
