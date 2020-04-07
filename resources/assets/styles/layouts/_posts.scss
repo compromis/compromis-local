@@ -289,3 +289,20 @@
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .compromis-posts {
+    .post-list {
+      .post-link {
+        grid-template-columns: 100px 1fr;
+
+        .post-title {
+          font-size: 0.8rem;
+        }
+
+        .post-content {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
