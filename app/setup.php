@@ -83,8 +83,12 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
+        'name'          => __('Barra lateral', 'sage'),
         'id'            => 'sidebar-primary'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Idioma', 'sage'),
+        'id'            => 'sidebar-language'
     ] + $config);
     register_sidebar([
         'name'          => __('Footer', 'sage'),
