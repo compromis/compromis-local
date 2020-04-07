@@ -136,3 +136,32 @@
     }
   }
 }
+
+@include media-breakpoint-down (sm) {
+  .single,
+  .page:not(.page-arxiu-data) {
+    .entry-header {
+      font-size: 0.9rem;
+    }
+
+    .entry-content {
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .entry-nav {
+      a {
+        justify-content: center;
+
+        .nav-icon {
+          margin-right: 0;
+        }
+
+        .nav-text {
+          display: none;
+        }
+      }
+    }
+  }
+}
