@@ -83,8 +83,12 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
+        'name'          => __('Barra lateral', 'sage'),
         'id'            => 'sidebar-primary'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Idioma', 'sage'),
+        'id'            => 'sidebar-language'
     ] + $config);
     register_sidebar([
         'name'          => __('Footer', 'sage'),
@@ -96,6 +100,12 @@ add_action('widgets_init', function () {
      */
     include('Widgets/Social.php');
     register_widget('WP_Widget_Social');
+
+    /**
+     * Add language switcher widget
+     */
+    include('Widgets/LanguageSwitcher.php');
+    register_widget('WP_Widget_LanguageSwitcher');
 
     /**
      * Disable unwanted widgets

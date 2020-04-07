@@ -1,0 +1,23 @@
+.widget > ul.language-switcher {
+  display: flex;
+  margin-top: calc(var(--card-padding) * -1);
+
+  li {
+    width: 50%;
+    border-bottom: 0;
+
+    &:first-child {
+      border-right: 1px $gray-200 solid;
+    }
+
+    a {
+      text-align: center;
+    }
+
+    &.active {
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
     position: relative;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 140px 1fr;
     color: $text-default;
     padding: var(--card-padding, 1rem);
     transition: 0.25s ease-in-out;
