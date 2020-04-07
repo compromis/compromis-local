@@ -1,0 +1,30 @@
+.tnp {
+  &-email {
+    background: $white !important;
+    border-radius: $border-radius;
+    margin-bottom: 0.5rem;
+    font-size: 1rem !important;
+    border: 1px $gray-300 solid !important;
+
+    @extend .form-control;
+
+    &:focus {
+      border-color: $primary !important;
+    }
+  }
+
+  &-submit {
+    background: $gray-300 !important;
+    color: $gray-900 !important;
+    border-radius: $border-radius !important;
+    font-weight: bold;
+
+    @extend .btn;
+    @extend .btn-secondary;
+
+    &:hover {
+      background: $gray-400 !important;
+    }
+  }
+}
+
