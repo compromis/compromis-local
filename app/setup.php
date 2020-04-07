@@ -98,6 +98,12 @@ add_action('widgets_init', function () {
     register_widget('WP_Widget_Social');
 
     /**
+     * Add language switcher widget
+     */
+    include('Widgets/LanguageSwitcher.php');
+    register_widget('WP_Widget_LanguageSwitcher');
+
+    /**
      * Disable unwanted widgets
      */
     unregister_widget('WP_Widget_RSS');
