@@ -305,4 +305,18 @@
       }
     }
   }
+
+  .archive-posts {
+    .post .entry-link header {
+      grid-template-columns: auto;
+      grid-template-areas:
+        "thumbnail"
+        "info"
+        "bottom";
+    }
+
+    .entry-thumbnail {
+      margin: -1rem -1rem 1rem -1rem;
+    }
+  }
 }
