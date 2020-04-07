@@ -317,14 +317,6 @@
     }
   }
 
-  .banner {
-    .local-name {
-      h1 {
-        font-size: 4rem;
-      }
-    }
-  }
-
   .blob {
     &-1 {
       left: -34rem;
@@ -334,6 +326,12 @@
     &-2 {
       right: -33rem;
       top: -36rem;
+    }
+  }
+
+  .banner-local-name {
+    h1 {
+      font-size: 4rem;
     }
   }
 }
