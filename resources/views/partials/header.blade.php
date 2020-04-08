@@ -53,7 +53,7 @@
           $length = strlen($title) / $maxLength;
           $fontSize = $maxFontSize + $length * ($minFontSize - $maxFontSize);
         @endphp
-          <h1 style="font-size: {{ $fontSize }}rem">{!! $title !!}</h1>
+          <h1 style="--font-size: {{ $fontSize }}">{!! $title !!}</h1>
           @include('partials.social')
         @elseif(is_page())
           <h1>{!! get_the_title() !!}</h1>
