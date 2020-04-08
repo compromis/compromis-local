@@ -14,11 +14,11 @@
       <div class="footer-address">
         <p class="footer-address-title"><strong>Compromís per {!! $localInfo->name !!}</strong></p>
         <ul>
-          @if($localInfo->address_grup)
-            <li><i class="far fa-building"></i> <strong>Grup municipal</strong>: {!! $localInfo->address_grup !!}</li>
-          @endif
           @if($localInfo->address_seu)
             <li><i class="far fa-home"></i> <strong>Seu local</strong>: {!! $localInfo->address_seu !!}</li>
+          @endif
+          @if($localInfo->address_grup)
+            <li><i class="far fa-building"></i> <strong>Grup municipal</strong>: {!! $localInfo->address_grup !!}</li>
           @endif
           @if($localInfo->email)
             <li><i class="far fa-envelope"></i> <a href="mailto:{!! $localInfo->email !!}">{!! $localInfo->email !!}</a></li>
