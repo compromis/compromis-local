@@ -132,6 +132,10 @@
       list-style: none;
     }
 
+    li {
+      display: flex;
+    }
+
     li:nth-child(n+5) {
       display: none;
     }

@@ -23,7 +23,9 @@
   @endwhile
   </ul>
 
-  <a href="/arxiu-de-noticies" class="apple-link"><span>Arxiu</span></a>
+  <a href="/arxiu-de-noticies" class="apple-link">
+    <span>{{ __('Arxiu de notícies', 'sage') }}</span>
+  </a>
 
   @include('partials.compromis-posts')
 @endsection
