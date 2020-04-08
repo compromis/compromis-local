@@ -37,10 +37,11 @@
   }
 
   &-title {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-weight: bold;
     letter-spacing: -0.03em;
     font-size: 1.2rem;
+    line-height: 1.5;
   }
 
   &-excerpt {
@@ -296,11 +297,7 @@
         grid-template-columns: 100px 1fr;
 
         .post-title {
-          font-size: 0.8rem;
-        }
-
-        .post-content {
-          margin: 0;
+          font-size: 1rem;
         }
       }
     }

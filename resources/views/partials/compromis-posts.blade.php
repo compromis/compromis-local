@@ -8,9 +8,7 @@
           <img v-if="post.hasOwnProperty('_embedded')" v-bind:src="post._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url" alt="" />
           <i class="far fa-newspaper" v-else></i>
         </div>
-        <p class="post-content">
-          <span class="post-title" v-html="post.title.rendered"></span>
-        </p>
+        <h5 class="post-title" v-html="post.title.rendered"></h5>
       </a>
     </li>
   </ul>
