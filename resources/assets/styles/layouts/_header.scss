@@ -358,7 +358,22 @@
     }
   }
 
-  .nav-primary ul {
-    grid-template-columns: 1fr;
+  .nav {
+    &-primary {
+      padding: 1rem;
+
+      ul {
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
+      }
+
+      .widget {
+        margin: -1rem -1rem 1rem -1rem;
+      }
+    }
+
+    &-network {
+      padding: 1rem;
+    }
   }
 }
