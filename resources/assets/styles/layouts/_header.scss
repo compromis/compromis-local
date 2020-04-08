@@ -54,6 +54,7 @@
     z-index: 5;
     padding: 1rem;
     text-shadow: 0 0 10px rgba($black, 0.5);
+    line-height: 1;
 
     a {
       color: $white;
@@ -91,17 +92,23 @@
   }
 
   &-local {
+    display: inline-block;
     font-size: 1.25rem;
     letter-spacing: -0.3px;
-    line-height: 1;
+    line-height: 1.5;
     margin-left: 0.5rem;
     transition: 0.25s ease-in-out;
     opacity: 1;
+    max-width: 16.25rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &-compact {
     .brand-local {
       opacity: 0;
+      max-width: 0;
     }
   }
 
@@ -340,7 +347,7 @@
 
   .banner-local-name {
     h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
 }
@@ -348,12 +355,26 @@
 @include media-breakpoint-down(sm) {
   .brand {
     &-logo {
-      width: 30px;
+      width: 1.875rem;
+    }
+
+    &-local {
+      max-width: 12.5rem;
+
+      &--long {
+        max-width: 7.5rem;
+        max-height: 1.875rem;
+        white-space: normal;
+        text-overflow: normal;
+        font-size: 0.85rem;
+        line-height: 1;
+        padding: 2px 0;
+      }
     }
 
     &-compact {
       .brand-logo {
-        width: 170px;
+        width: 10.75rem;
       }
     }
   }
