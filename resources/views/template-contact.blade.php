@@ -9,15 +9,49 @@
 
 @section('content')
 @while(have_posts()) @php the_post() @endphp
-  <section class="page-card">
+  <section class="page-card contact-page">
     @include('partials.content-page')
-
-    <ul>
+    <h2>Per internet o telèfon</h2>
+    <ul class="contact-list-social">
+      @if($localInfo->email)
+        <li>
+          <i class="far fa-envelope"></i> 
+          <a class="apple-link" href="mailto:{{ $localInfo->email }}"><span>{{ $localInfo->email }}</span></a>
+        </li>
+      @endif
+      @if($localInfo->telf)
+        <li><i class="far fa-phone"></i> <span>{{ $localInfo->telf }}</span></li>
+      @endif
+      @if($localInfo->facebook)
+        <li>
+          <i class="fab fa-facebook"></i> 
+          <a class="apple-link" href="{{ $localInfo->facebook }}" target="_blank" rel="noopener"><span>Compromís {{ $localInfo->name }}</span></a>
+        </li>
+      @endif
+      @if($localInfo->twitter)
+        <li>
+          <i class="fab fa-twitter"></i>
+          <a class="apple-link" href="https://twitter.com/{{ $localInfo->twitter }}" target="_blank" rel="noopener"><span>{{ '@' . $localInfo->twitter }}</span></a>
+        </li>
+      @endif
+      @if($localInfo->instagram)
+        <li>
+          <i class="fab fa-instagram"></i> 
+          <a class="apple-link" href="https://instagram.com/{{ $localInfo->instagram }}" target="_blank" rel="noopener"><span>{{ '@' . $localInfo->instagram }}</span></a>
+        </li>
+      @endif
+    </ul>
+    <h2>Presencial</h2>
+    <ul class="address-list">
       @if($localInfo->address_seu)
         <li>
-          <p>
-            <i class="far fa-home"></i> <strong>Seu local</strong>: {{ $localInfo->address_seu }}
-          </p>
+          <div class="address-list-item">
+            <i class="far fa-home"></i> 
+            <div>
+              <strong>Seu local</strong> 
+              <p>{{ $localInfo->address_seu }}</p>
+            </div>
+          </div>
           <iframe
             width="100%"
             height="300"
@@ -29,7 +63,13 @@
       @endif
       @if($localInfo->address_grup)
         <li>
-          <p><i class="far fa-building"></i> <strong>Grup municipal</strong>: {{ $localInfo->address_grup }}</p>
+          <div class="address-list-item">
+            <i class="far fa-building"></i> 
+            <div>
+              <strong>Grup municipal</strong> 
+              <p>{{ $localInfo->address_grup }}</p>
+            </div>
+          </div>
           <iframe
             width="100%"
             height="300"
@@ -38,33 +78,6 @@
             scrolling="no">
           </iframe>
         </li>
-      @endif
-      @if($localInfo->email)
-        <li><i class="far fa-envelope"></i> <a href="mailto:{{ $localInfo->email }}">{{ $localInfo->email }}</a></li>
-      @endif
-      @if($localInfo->telf)
-        <li><i class="far fa-phone"></i> {{ $localInfo->telf }}</li>
-      @endif
-      @if($localInfo->facebook)
-        <li>
-          <a href="{{ $localInfo->facebook }}" target="_blank" rel="noopener">
-            <i class="fab fa-facebook"></i> Compromís {{ $localInfo->name }}
-          </a>
-        </li>
-      @endif
-      @if($localInfo->twitter)
-        <li>
-          <a href="https://twitter.com/{{ $localInfo->twitter }}" target="_blank" rel="noopener">
-            <i class="fab fa-twitter"></i> {{ '@' . $localInfo->twitter }}</li>
-          </a>
-        </li>
-      @endif
-      @if($localInfo->instagram)
-      <li>
-        <a href="https://instagram.com/{{ $localInfo->instagram }}" target="_blank" rel="noopener">
-          <i class="fab fa-instagram"></i> {{ '@' . $localInfo->instagram }}</li>
-        </a>
-      </li>
       @endif
     </ul>
   </section>
