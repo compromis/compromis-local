@@ -196,3 +196,9 @@ include 'CustomPostTypes/regidor.php';
  * Register settings page
  */
 include 'Settings/collectiu.php';
+
+/**
+ * Dashboard
+ */
+include 'Dashboard/custom-logo.php';
+include 'Dashboard/reset-dashboard.php';
