@@ -6,6 +6,10 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+
+    h1 {
+      font-size: calc(var(--font-size) * 0.9rem);
+    }
   }
 
   .brand-local-hidden {
@@ -137,9 +141,34 @@
   }
 }
 
+@include media-breakpoint-down (lg) {
+  .single,
+  .page:not(.page-arxiu-data) {
+    .banner-local-name {
+      h1 {
+        font-size: calc(var(--font-size) * 0.65rem);
+      }
+    }
+
+    .blob-1 {
+      bottom: -38rem;
+    }
+
+    .blob-2 {
+      top: -39rem;
+    }
+  }
+}
+
 @include media-breakpoint-down (sm) {
   .single,
   .page:not(.page-arxiu-data) {
+    .banner-local-name {
+      h1 {
+        font-size: calc(var(--font-size) * 0.45rem);
+      }
+    }
+
     .entry-header {
       font-size: 0.9rem;
     }
