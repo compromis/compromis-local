@@ -44,7 +44,7 @@
       </div>
     </div>
     <div class="banner-local-name container">
-        @if(is_single())
+        @if(is_single() || is_page())
         @php
           $title = get_the_title();
           $minFontSize = 2.5;
@@ -54,9 +54,9 @@
           $fontSize = $maxFontSize + $length * ($minFontSize - $maxFontSize);
         @endphp
           <h1 style="--font-size: {{ $fontSize }}">{!! $title !!}</h1>
-          @include('partials.social')
-        @elseif(is_page())
-          <h1>{!! get_the_title() !!}</h1>
+          @if (is_single())
+            @include('partials.social')
+          @endif
         @else
           <a href="{{ home_url('/') }}">
             <h1>{{ $localName }}</h1>
