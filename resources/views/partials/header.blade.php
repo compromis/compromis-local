@@ -6,9 +6,11 @@
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
-          <a class="brand" href="{{ home_url('/') }}">
-            <img src="https://compromis.net/wp-content/themes/Compromis/images/logo.svg" alt="Compromís" />
-            <span class="brand-local brand-local-hidden">
+          <a class="brand brand-compact" href="{{ home_url('/') }}">
+            <span class="brand-logo">
+              <img src="https://compromis.net/wp-content/themes/Compromis/images/logo.svg" alt="Compromís" />
+            </span>
+            <span class="brand-local">
               {!! App::get_localinfo()->name !!}
             </span>
           </a>
