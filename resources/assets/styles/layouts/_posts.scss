@@ -194,13 +194,18 @@
   li {
     display: flex;
     align-items: stretch;
+
+    .post {
+      width: 100%;
+    }
   }
 
   li:first-child {
     grid-column: 1/-1;
 
-    .post {
-      width: 100%;
+    .entry-link {
+      min-height: 250px;
+      background-color: $gray-800;
     }
 
     .entry-thumbnail {
