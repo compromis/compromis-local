@@ -60,16 +60,16 @@
         <input type="text" name="telf" id="telf" value="<?php echo $info->telf; ?>" size="70" />
     </div>
     <div class="field">
-        <label for="facebook">Facebook</label>
-        <input type="url" placeholder="https://" name="facebook" id="facebook" value="<?php echo $info->facebook; ?>" size="70" />
+        <label for="facebook">Pàgina de Facebook</label>
+        <input type="url" placeholder="https://facebook.com/compromisvalencia" name="facebook" id="facebook" value="<?php echo $info->facebook; ?>" size="70" />
     </div>
     <div class="field">
-        <label for="twitter">Twitter</label>
-        <input type="url" placeholder="https://" name="twitter" id="twitter" value="<?php echo $info->twitter; ?>" size="70" />
+        <label for="twitter">Usuari de Twitter</label>
+        @<input type="text" placeholder="compromisVLC" name="twitter" id="twitter" value="<?php echo $info->twitter; ?>" size="40" />
     </div>
     <div class="field">
-        <label for="instagram">Instagram</label>
-        <input type="url" placeholder="https://" name="instagram" id="instagram" value="<?php echo $info->instagram; ?>" size="70" />
+        <label for="instagram">Usuari de Instagram</label>
+        @<input type="text" placeholder="compromisVLC" name="instagram" id="instagram" value="<?php echo $info->instagram; ?>" size="40" />
     </div>
     <?php submit_button(); ?>
 </form>
