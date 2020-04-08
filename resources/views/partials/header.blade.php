@@ -1,5 +1,6 @@
 @php
   $imageUrl = ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor') ? get_the_post_thumbnail_url() : get_header_image();
+  $localName = App::get_localinfo()->name;
 @endphp
 <header class="banner">
   <div class="banner-local-image" style="background-image: url({{ $imageUrl }})">
@@ -10,8 +11,8 @@
             <span class="brand-logo">
               <img src="https://compromis.net/wp-content/themes/Compromis/images/logo.svg" alt="Compromís" />
             </span>
-            <span class="brand-local">
-              {!! App::get_localinfo()->name !!}
+            <span class="brand-local {{ strlen($localName) > 14 && count(explode(' ', $localName)) > 1 ? 'brand-local--long' : '' }}">
+              {{ $localName }}
             </span>
           </a>
           <nav class="nav-shortcut d-none d-lg-flex">
@@ -58,7 +59,7 @@
           <h1>{!! get_the_title() !!}</h1>
         @else
           <a href="{{ home_url('/') }}">
-            <h1>{!! App::get_localinfo()->name !!}</h1>
+            <h1>{{ $localName }}</h1>
           </a>
         @endif
     </div>
