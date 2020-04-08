@@ -39,15 +39,15 @@
   span {
     font-size: 1.4rem;
     margin: 0;
-    color: $orange;
+    color: $primary;
     font-weight: bold;
-    border-color: $orange;
+    border-color: $primary;
 
     &:hover {
-      color: $orange;
+      color: $primary;
 
       span {
-        border-color: $orange;
+        border-color: $primary;
       }
     }
   }
