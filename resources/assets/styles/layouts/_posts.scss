@@ -306,6 +306,14 @@
     }
   }
 
+  .home-posts {
+    .post {
+      .entry-title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   .archive-posts {
     .post .entry-link header {
       grid-template-columns: auto;
