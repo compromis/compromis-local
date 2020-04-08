@@ -4,13 +4,13 @@ import localNetwork from '../components/local-network.js';
 export default {
   init() {
     // Nav
-    const brandLocal = $('.brand-local');
+    const brand = $('.brand');
 
     $(document).scroll(function() {
       if ($(document).scrollTop() >= 200) {
-        brandLocal.removeClass('brand-local-hidden');
+        brand.removeClass('brand-compact');
       } else if (!$('body').hasClass('nav-open')) {
-        brandLocal.addClass('brand-local-hidden');
+        brand.addClass('brand-compact');
       }
     });
 
@@ -18,7 +18,7 @@ export default {
       e.preventDefault();
       const body = $('body');
       const drawerNav = $('.drawer-nav');
-      const brandLocal = $('.brand-local');
+      const brand = $('.brand');
       const toggle = $('.drawer-nav-toggle');
       const expanded = toggle.attr('aria-expanded') === 'true';
 
@@ -27,9 +27,9 @@ export default {
       toggle.attr('aria-expanded', !expanded);
 
       if (!expanded) {
-        brandLocal.removeClass('brand-local-hidden');
+        brand.removeClass('brand-compact');
       } else if ($(document).scrollTop() < 200) {
-        brandLocal.addClass('brand-local-hidden');
+        brand.addClass('brand-compact');
       }
     });
 

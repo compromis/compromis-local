@@ -21,3 +21,27 @@
     }
   }
 }
+
+.nav-primary .widget {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px $gray-200 solid;
+  margin: -2rem -2rem 1rem -2rem;
+
+  & > ul.language-switcher {
+    li {
+      padding: 0;
+    }
+
+    a {
+      font-size: 1rem;
+      font-weight: normal;
+      width: 100%;
+      padding: 0.5rem;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}

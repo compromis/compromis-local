@@ -80,8 +80,14 @@
   color: $gray-600;
   padding: 0 1rem;
 
-  img {
-    height: 1.75rem;
+  &-logo {
+    display: inline-block;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+
+    img {
+      height: 1.75rem;
+    }
   }
 
   &-local {
@@ -91,8 +97,10 @@
     margin-left: 0.5rem;
     transition: 0.25s ease-in-out;
     opacity: 1;
+  }
 
-    &-hidden {
+  &-compact {
+    .brand-local {
       opacity: 0;
     }
   }
@@ -267,18 +275,6 @@
   }
 }
 
-.admin-bar {
-  .banner {
-    &-container {
-      top: 32px;
-    }
-
-    &-band-row--nav {
-      max-height: calc(100vh - 110px);
-    }
-  }
-}
-
 /* blobs */
 .blob {
   position: absolute;
@@ -299,6 +295,19 @@
   &-2 {
     right: -20rem;
     top: -35rem;
+  }
+}
+
+/* admin bar */
+.admin-bar {
+  .banner {
+    &-container {
+      top: 32px;
+    }
+
+    &-band-row--nav {
+      max-height: calc(100vh - 110px);
+    }
   }
 }
 
@@ -332,6 +341,39 @@
   .banner-local-name {
     h1 {
       font-size: 4rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .brand {
+    &-logo {
+      width: 30px;
+    }
+
+    &-compact {
+      .brand-logo {
+        width: 170px;
+      }
+    }
+  }
+
+  .nav {
+    &-primary {
+      padding: 1rem;
+
+      ul {
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
+      }
+
+      .widget {
+        margin: -1rem -1rem 1rem -1rem;
+      }
+    }
+
+    &-network {
+      padding: 1rem;
     }
   }
 }
