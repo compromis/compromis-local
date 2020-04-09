@@ -87,6 +87,10 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
+        'name'          => __('Banner principal', 'sage'),
+        'id'            => 'sidebar-hero'
+    ] + $config);
+    register_sidebar([
         'name'          => __('Idioma', 'sage'),
         'id'            => 'sidebar-language'
     ] + $config);

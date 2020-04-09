@@ -200,7 +200,7 @@
     }
   }
 
-  li:first-child {
+  &.home-has-highlight li:first-child {
     grid-column: 1/-1;
 
     .entry-link {
