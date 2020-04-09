@@ -5,11 +5,12 @@ export default {
   init() {
     // Nav
     const brand = $('.brand');
+    const isSingle = $('body').hasClass('single') || $('body').hasClass('page');
 
     $(document).scroll(function() {
       if ($(document).scrollTop() >= 200) {
         brand.removeClass('brand-compact');
-      } else if (!$('body').hasClass('nav-open')) {
+      } else if (!$('body').hasClass('nav-open') && !isSingle) {
         brand.addClass('brand-compact');
       }
     });
@@ -21,6 +22,7 @@ export default {
       const brand = $('.brand');
       const toggle = $('.drawer-nav-toggle');
       const expanded = toggle.attr('aria-expanded') === 'true';
+      const isSingle = $('body').hasClass('single') || $('body').hasClass('page');
 
       drawerNav.slideToggle().toggleClass('open');
       body.toggleClass('nav-open');
@@ -28,7 +30,7 @@ export default {
 
       if (!expanded) {
         brand.removeClass('brand-compact');
-      } else if ($(document).scrollTop() < 200) {
+      } else if ($(document).scrollTop() < 200 && !isSingle) {
         brand.addClass('brand-compact');
       }
     });

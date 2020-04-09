@@ -7,7 +7,7 @@
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
-          <a class="brand brand-compact" href="{{ home_url('/') }}">
+          <a class="brand {{ !is_single() && !is_page() ? 'brand-compact' : '' }}" href="{{ home_url('/') }}">
             <span class="brand-logo">
               <img src="https://compromis.net/wp-content/themes/Compromis/images/logo.svg" alt="Compromís" />
             </span>
