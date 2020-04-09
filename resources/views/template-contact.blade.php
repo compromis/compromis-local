@@ -15,42 +15,51 @@
     <ul class="contact-list-social">
       @if($localInfo->email)
         <li>
-          <i class="far fa-envelope"></i> 
+          <i class="far fa-envelope"></i>
+          <span class="sr-only">{{ __('E-mail', 'sage') }}</span>
           <a class="apple-link" href="mailto:{{ $localInfo->email }}"><span>{{ $localInfo->email }}</span></a>
         </li>
       @endif
       @if($localInfo->telf)
-        <li><i class="far fa-phone"></i> <span>{{ $localInfo->telf }}</span></li>
+        <li>
+          <i class="far fa-phone"></i>
+          <span class="sr-only">{{ __('Telèfon', 'sage') }}</span>
+          <span>{{ $localInfo->telf }}</span>
+        </li>
       @endif
       @if($localInfo->facebook)
         <li>
-          <i class="fab fa-facebook"></i> 
+          <i class="fab fa-facebook"></i>
+          <span class="sr-only">Facebook</span>
           <a class="apple-link" href="{{ $localInfo->facebook }}" target="_blank" rel="noopener"><span>Compromís {{ $localInfo->name }}</span></a>
         </li>
       @endif
       @if($localInfo->twitter)
         <li>
           <i class="fab fa-twitter"></i>
+          <span class="sr-only">Twitter</span>
           <a class="apple-link" href="https://twitter.com/{{ $localInfo->twitter }}" target="_blank" rel="noopener"><span>{{ '@' . $localInfo->twitter }}</span></a>
         </li>
       @endif
       @if($localInfo->instagram)
         <li>
-          <i class="fab fa-instagram"></i> 
+          <i class="fab fa-instagram"></i>
+          <span class="sr-only">Instagram</span>
           <a class="apple-link" href="https://instagram.com/{{ $localInfo->instagram }}" target="_blank" rel="noopener"><span>{{ '@' . $localInfo->instagram }}</span></a>
         </li>
       @endif
     </ul>
+
     <h2>Presencial</h2>
     <ul class="address-list">
       @if($localInfo->address_seu)
         <li>
           <div class="address-list-item">
             <i class="far fa-home"></i> 
-            <div>
-              <strong>Seu local</strong> 
+            <address>
+              <strong>{{ __('Seu local', 'sage') }}</strong>
               <p>{{ $localInfo->address_seu }}</p>
-            </div>
+            </address>
           </div>
           <iframe
             width="100%"
@@ -65,10 +74,10 @@
         <li>
           <div class="address-list-item">
             <i class="far fa-building"></i> 
-            <div>
-              <strong>Grup municipal</strong> 
+            <address>
+              <strong>{{ __('Grup municipal', 'sage') }}</strong>
               <p>{{ $localInfo->address_grup }}</p>
-            </div>
+            </address>
           </div>
           <iframe
             width="100%"
