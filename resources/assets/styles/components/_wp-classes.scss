@@ -54,3 +54,16 @@
   @extend .sr-only;
   @extend .sr-only-focusable;
 }
+
+/** Embeds */
+.wp-has-aspect-ratio .wp-block-embed__wrapper {
+  @extend .embed-responsive;
+}
+
+.wp-embed-aspect-16-9 .wp-block-embed__wrapper {
+  @extend .embed-responsive-16by9;
+}
+
+.wp-block-embed__wrapper iframe {
+  @extend .embed-responsive-item;
+}

@@ -29,12 +29,68 @@
   .post,
   .page-card,
   .regidor {
+    --card-padding: 2rem;
+
     position: relative;
     z-index: 10;
     margin-top: -6rem;
-    padding: 2rem;
+    padding: var(--card-padding);
 
     @extend .card;
+  }
+
+  .entry-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .wp-block-image,
+    .wp-block-embed {
+      margin: 1rem calc(var(--card-padding) * -1);
+
+      figcaption {
+        padding: 0 1rem;
+        font-size: 0.85rem;
+        color: $gray-700;
+      }
+    }
+
+    .wp-block-image {
+      max-width: fit-content;
+    }
+
+    .wp-block-gallery {
+      .blocks-gallery-item {
+        border-radius: $border-radius;
+        overflow: hidden;
+      }
+    }
+
+    .wp-block-quote {
+      border-top: 2px $gray-200 solid;
+      border-bottom: 2px $gray-200 solid;
+      padding: 1.25rem 0;
+      margin: 2rem 0;
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      cite {
+        color: $gray-700;
+        font-style: normal;
+        font-size: 0.85rem;
+      }
+    }
   }
 
   .entry-header {
@@ -168,6 +224,10 @@
       h1 {
         font-size: calc(var(--font-size) * 0.45rem);
       }
+    }
+
+    .post {
+      --card-padding: 1.5rem;
     }
 
     .entry-header {
