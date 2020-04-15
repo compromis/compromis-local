@@ -206,3 +206,4 @@ include 'Settings/collectiu.php';
  */
 include 'Dashboard/custom-logo.php';
 include 'Dashboard/reset-dashboard.php';
+include 'Dashboard/guide-widget.php';

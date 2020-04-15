@@ -15,6 +15,7 @@
     transition: 0.25s ease-in-out;
     margin-bottom: 1rem;
     height: 100%;
+    min-height: 125px;
 
     @extend .card;
 
@@ -40,7 +41,7 @@
     margin-bottom: 0;
     font-weight: bold;
     letter-spacing: -0.03em;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     line-height: 1.5;
   }
 

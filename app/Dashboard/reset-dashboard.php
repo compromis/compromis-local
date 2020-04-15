@@ -2,6 +2,8 @@
 add_action('wp_dashboard_setup', function () {
     global $wp_meta_boxes;
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['health_check_status']);
     unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
     unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
@@ -9,4 +11,3 @@ add_action('wp_dashboard_setup', function () {
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 }); 
-
