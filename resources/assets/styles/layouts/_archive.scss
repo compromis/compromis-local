@@ -88,6 +88,42 @@
   }
 }
 
+.nav-links {
+  .nav-previous,
+  .nav-next {
+    a {
+      display: block;
+      position: relative;
+      margin-top: 1.25rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $gray-700;
+      opacity: 0.75;
+
+      &:hover {
+        text-decoration: none;
+        color: $gray-900;
+      }
+    }
+  }
+
+  .nav-next {
+    a {
+      &::before {
+        content: "< ";
+      }
+    }
+  }
+
+  .nav-previous {
+    a {
+      &::after {
+        content: " >";
+      }
+    }
+  }
+}
+
 @include media-breakpoint-down(md) {
   .archive-nav {
     grid-template-columns: 1fr;
