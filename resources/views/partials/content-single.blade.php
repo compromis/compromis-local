@@ -11,6 +11,7 @@
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
+    @include('partials/youtube')
     @php the_content() @endphp
   </div>
   <ul class="pill-list mb-0">
