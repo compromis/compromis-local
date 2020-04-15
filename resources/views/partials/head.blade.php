@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   @php wp_head() @endphp
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="@asset('images/favicons/favicon.ico')">
+  <link rel="icon" type="image/png" sizes="32x32" href="@asset('images/favicons/favicon-32x32.png')">
+  <link rel="icon" type="image/png" sizes="16x16" href="@asset('images/favicons/favicon-16x16.png')">
+  <link rel="mask-icon" type="image/x-icon" href="@asset('images/favicons/safari-pinned-tab.svg')" color="#ff6720">
+
   <!-- Metatags -->
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="compromis, {{ $localInfo->name }}, valencianisme, municipalisme, ecologisme, ecosocialisme, elecciones, eleccions, locales, locals, municipales, municipals" />
