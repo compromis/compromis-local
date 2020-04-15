@@ -401,6 +401,11 @@
 
     &-network {
       padding: 1rem;
+
+      .row {
+        margin-left: -1rem;
+        margin-right: -1rem;
+      }
     }
   }
 }
