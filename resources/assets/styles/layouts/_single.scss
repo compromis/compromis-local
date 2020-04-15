@@ -161,6 +161,10 @@
     }
   }
 
+  .regidor .card-regidor {
+    padding: 0;
+  }
+
   .footer-prev,
   .footer-next {
     width: 50%;
@@ -218,15 +222,19 @@
 }
 
 @include media-breakpoint-down (sm) {
-  .single,
-  .page:not(.page-arxiu-data) {
+  .single {
     .banner-local-name {
       h1 {
         font-size: calc(var(--font-size) * 0.45rem);
       }
     }
+  }
 
-    .post {
+  .single,
+  .page:not(.page-arxiu-data) {
+    .post,
+    .page-card,
+    .regidor {
       --card-padding: 1.5rem;
     }
 

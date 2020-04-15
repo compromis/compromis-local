@@ -1,12 +1,14 @@
 {{--
-  Template Name: Custom Template
+  Template Name: Pàgina ampla
 --}}
 
 @extends('layouts.app')
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
-    @include('partials.content-page')
+    <section class="page-card is-wide">
+      @include('partials.content-page')
+    </section>
   @endwhile
 @endsection
+
