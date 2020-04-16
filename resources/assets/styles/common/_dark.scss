@@ -3,7 +3,7 @@
   :root {
     --text-color: #{$white};
     --text-muted: #{$gray-300};
-    --gray-lightest: #{darken($gray-900, 10)};
+    --gray-lightest: #{darken($gray-900, 7)};
     --gray-100: #{$gray-900};
     --gray-200: #{$gray-800};
     --gray-300: #{$gray-700};
@@ -15,5 +15,9 @@
     --gray-900: #{$gray-100};
     --white: #{$gray-900};
     --black: #{$white};
+  }
+
+  .nav-network {
+    background: $gray-800;
   }
 }

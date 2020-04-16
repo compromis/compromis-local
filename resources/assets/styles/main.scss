@@ -14,7 +14,6 @@
 /** Import theme styles */
 @import "common/fonts";
 @import "common/global";
-@import "common/dark";
 @import "components/cards";
 @import "components/pills";
 @import "components/buttons";
@@ -33,3 +32,4 @@
 @import "layouts/single";
 @import "layouts/archive";
 @import "layouts/tinymce";
+@import "common/dark";
