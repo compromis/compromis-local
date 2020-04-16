@@ -1,15 +1,15 @@
 {
-  "name": "sage",
-  "version": "9.0.9",
-  "author": "Roots <team@roots.io>",
-  "homepage": "https://roots.io/sage/",
+  "name": "compromis-local",
+  "version": "2.0",
+  "author": "Compromís <tecnic@compromis.net>",
+  "homepage": "https://compromis.net",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/sage.git"
+    "url": "git://github.com/compromis/compromis-local.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/sage/issues"
+    "url": "https://github.com/compromis/compromis-local/issues"
   },
   "licenses": [
     {

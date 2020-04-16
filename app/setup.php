@@ -166,10 +166,10 @@ add_action('after_setup_theme', function () {
     $args = array(
         'default-image' => get_template_directory_uri() . '/assets/images/default.jpg',
         'default-text-color' => '000',
-        'width'              => 1800,
-        'height'             => 350,
-        'flex-width'         => true,
-        'flex-height'        => true,
+        'width' => 1800,
+        'height' => 500,
+        'flex-width' => true,
+        'flex-height' => true,
     );
 
     add_theme_support('custom-header', $args);
@@ -182,7 +182,7 @@ add_action('after_setup_theme', function () {
     if (!$archive_exists) {
         $archive_page = [
             'post_type'     => 'page',
-            'post_title'    => 'Arxiu de notícies',
+            'post_title'    => 'Notícies',
             'post_slug'     => 'arxiu-de-noticies',
             'post_content'  => '',
             'post_status'   => 'publish'
