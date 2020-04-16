@@ -21,4 +21,12 @@
   .nav-network {
     background: $gray-800;
   }
+
+  .entry-nav a:hover {
+    background: $gray-800 !important;
+  }
+
+  a.apple-link {
+    opacity: 1;
+  }
 }

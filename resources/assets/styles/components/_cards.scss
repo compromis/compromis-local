@@ -5,6 +5,7 @@
   border-radius: $card-radius;
   box-shadow: $default-shadow;
   border: 0;
+  overflow: hidden;
 
   &-regidor {
     padding: 1.5rem;
