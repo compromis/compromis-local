@@ -11,7 +11,7 @@
     display: flex;
     font-size: 1.25rem;
     padding: 0.75rem 1rem;
-    background: $white;
+    background: var(--white);
     margin: 0.75rem 0;
     border-radius: $border-radius;
     line-height: 1.25;
@@ -20,7 +20,7 @@
     &:hover {
       text-decoration: none;
       background: $gradient;
-      color: $white;
+      color: var(--white);
     }
   }
 
@@ -34,13 +34,13 @@
 
   .current_page_item > a {
     position: relative;
-    background: $gray-800;
-    color: $white;
+    background: var(--gray-800);
+    color: var(--white);
     font-weight: bold;
     z-index: 5;
 
     &:hover {
-      background: $gray-900;
+      background: var(--gray-900);
     }
   }
 }

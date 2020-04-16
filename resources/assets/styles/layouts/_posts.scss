@@ -47,7 +47,7 @@
 
   &-excerpt {
     font-size: 0.9rem;
-    color: $gray-700;
+    color: var(--gray-700);
 
     p {
       margin: 0;
@@ -56,12 +56,12 @@
 
   &-thumbnail {
     margin: -1rem 1rem -1rem -1rem;
-    background: $gray-300;
+    background: var(--gray-300);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    color: $gray-500;
+    color: var(--gray-500);
 
     img {
       width: 100%;
@@ -123,7 +123,7 @@
 
   .entry-excerpt {
     margin-bottom: 1rem;
-    color: $gray-600;
+    color: var(--gray-600);
   }
 
   .entry-bottom {
@@ -162,7 +162,7 @@
 
     .entry-link {
       min-height: 250px;
-      background-color: $gray-800;
+      background-color: var(--gray-800);
     }
 
     .entry-thumbnail {
@@ -186,7 +186,7 @@
 
     .entry-info {
       position: absolute;
-      color: $white;
+      color: var(--white);
       bottom: 2rem;
       left: 1rem;
       right: 1rem;
@@ -194,13 +194,13 @@
 
     .entry-bottom {
       position: absolute;
-      color: $white;
+      color: var(--white);
       bottom: 1rem;
       left: 1rem;
       right: 1rem;
 
       .updated {
-        color: rgba($white, 0.75);
+        color: rgba(var(--white), 0.75);
       }
     }
   }

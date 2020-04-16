@@ -10,7 +10,7 @@
   }
 
   &-band {
-    background: $white;
+    background: var(--white);
     border-radius: 0 0 $border-radius $border-radius;
     box-shadow: $default-shadow;
     overflow: hidden;
@@ -21,7 +21,7 @@
       &--nav {
         margin: 0;
         max-height: calc(100vh - 100px);
-        border-top: 1px $gray-200 solid;
+        border-top: 1px var(--gray-200) solid;
       }
     }
   }
@@ -57,7 +57,7 @@
     line-height: 1;
 
     a {
-      color: $white;
+      color: var(--white);
       transition: 0.25s ease-in-out;
 
       &:hover {
@@ -68,7 +68,7 @@
 
     h1 {
       font-size: 5rem;
-      color: $white;
+      color: var(--white);
       font-weight: bold;
       letter-spacing: -0.03em;
       line-height: 1;
@@ -80,7 +80,7 @@
 .brand {
   display: flex;
   align-items: center;
-  color: $gray-600;
+  color: var(--gray-600);
   padding: 0 1rem;
 
   &-logo {
@@ -116,7 +116,7 @@
 
   &:hover {
     text-decoration: none;
-    color: $gray-600;
+    color: var(--gray-600);
   }
 }
 
@@ -143,11 +143,11 @@
     }
 
     a {
-      color: $gray-600;
+      color: var(--gray-600);
       padding: 0.5rem;
 
       &:hover {
-        color: $gray-900;
+        color: var(--gray-900);
         text-decoration: none;
       }
     }
@@ -158,12 +158,12 @@
 
     li.current-menu-item a {
       font-weight: bold;
-      color: $gray-900;
+      color: var(--gray-900);
     }
   }
 
   &-network {
-    background: $gray-100;
+    background: var(--gray-100);
     padding: 1rem 2rem;
     padding-bottom: 1rem;
   }
@@ -183,7 +183,7 @@
     a {
       font-size: 1.75rem;
       font-weight: bold;
-      color: $gray-900;
+      color: var(--gray-900);
       letter-spacing: -0.025em;
       width: fit-content;
       transition: 0.25s ease-in-out;
@@ -215,13 +215,13 @@
     margin-bottom: 1rem;
 
     a {
-      color: $gray-700;
+      color: var(--gray-700);
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: -0.02em;
 
       &:hover {
-        color: $gray-900;
+        color: var(--gray-900);
       }
     }
   }
@@ -246,19 +246,19 @@
   }
 
   &-toggle {
-    background: $white;
+    background: var(--white);
     border: 0;
-    border-left: 1px $gray-200 solid;
-    color: $gray-600;
+    border-left: 1px var(--gray-200) solid;
+    color: var(--gray-600);
     padding: 0.75rem 1rem;
     font-size: 1.25rem;
 
     &:hover {
-      background: $gray-100;
+      background: var(--gray-100);
     }
 
     &:active {
-      background: $gray-200;
+      background: var(--gray-200);
     }
 
     &:focus {

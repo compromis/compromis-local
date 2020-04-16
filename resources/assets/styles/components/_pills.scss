@@ -7,7 +7,7 @@
   line-height: 2.25;
 
   a.pill {
-    background: $white;
+    background: var(--white);
     border-radius: 2rem;
     padding: 0.25rem 0.75rem;
     margin-right: 0.75rem;
@@ -16,18 +16,18 @@
 
     &:hover {
       background: $gradient;
-      color: $white;
+      color: var(--white);
       text-decoration: none;
     }
   }
 
   a.pill-secondary {
-    background: $gray-200;
-    color: $gray-700;
+    background: var(--gray-200);
+    color: var(--gray-700);
 
     &:hover {
-      background: $gray-300;
-      color: $gray-900;
+      background: var(--gray-300);
+      color: var(--gray-900);
     }
   }
 }
