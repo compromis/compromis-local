@@ -9,7 +9,7 @@
         <div class="banner-band-row">
           <a class="brand {{ !is_single() && !is_page() ? 'brand-compact' : '' }}" href="{{ home_url('/') }}">
             <span class="brand-logo">
-              <img src="https://compromis.net/wp-content/themes/Compromis/images/logo.svg" alt="Compromís" />
+              @include('partials/logo')
             </span>
             <span class="brand-local {{ strlen($localName) > 14 && count(explode(' ', $localName)) > 1 ? 'brand-local--long' : '' }}">
               {{ $localName }}

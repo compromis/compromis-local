@@ -1,17 +1,19 @@
 :root {
   --card-padding: 1rem;
-  --gray-lightest: #{darken($gray-900, 10)};
-  --gray-100: #{$gray-900};
-  --gray-200: #{$gray-800};
-  --gray-300: #{$gray-700};
-  --gray-400: #{$gray-600};
+  --text-color: #{$gray-900};
+  --text-muted: #{$gray-700};
+  --gray-lightest: #{$gray-lightest};
+  --gray-100: #{$gray-100};
+  --gray-200: #{$gray-200};
+  --gray-300: #{$gray-300};
+  --gray-400: #{$gray-400};
   --gray-500: #{$gray-500};
-  --gray-600: #{$gray-400};
-  --gray-700: #{$gray-300};
-  --gray-800: #{$gray-200};
-  --gray-900: #{$gray-100};
-  --white: #{$gray-900};
-  --black: #fff;
+  --gray-600: #{$gray-600};
+  --gray-700: #{$gray-700};
+  --gray-800: #{$gray-800};
+  --gray-900: #{$gray-900};
+  --white: #{$white};
+  --black: #{$gray-900};
 }
 
 html,
@@ -20,6 +22,7 @@ body {
   font-size: 14px;
   margin: 0;
   padding: 0;
+  color: var(--text-color);
 }
 
 .hidden {
@@ -76,10 +79,10 @@ a.apple-link {
 
   &:hover {
     text-decoration: none;
-    color: var(--gray-900);
+    color: var(--text-color);
 
     span {
-      border-color: var(--gray-900);
+      border-color: var(--text-color);
     }
   }
 
