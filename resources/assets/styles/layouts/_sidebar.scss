@@ -64,6 +64,37 @@
   }
 }
 
+.zoom-instagram-widget {
+  & > ul {
+    display: grid;
+    justify-content: center;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-rows: repeat(auto-fit, 100px);
+    gap: 0.5rem;
+
+    li {
+      padding: 0;
+      margin: 0 !important;
+      border-bottom: 0 var(--gray-200) solid;
+
+      a {
+        width: 100px !important;
+        height: 100px !important;
+      }
+    }
+  }
+
+  &-user-info {
+    padding-bottom: 0.5rem;
+  }
+
+  &-user-info .zoom-instagram-widget-user-info-username {
+    font-weight: normal;
+    font-size: 0.9rem;
+  }
+}
+
 .hero-banner {
   .widget_media_image h3 {
     font-size: 2rem;
