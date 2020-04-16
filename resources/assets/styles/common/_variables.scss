@@ -33,6 +33,9 @@ $font-family-sans-serif: "Compromis", -apple-system, "Google Sans", "Segoe UI", 
 $text-muted: var(--text-muted);
 $text-default: var(--text-default);
 $text-supermuted: var(--text-supermuted);
+$input-color: $text-default;
+$input-bg: var(--white);
+$input-border-color: var(--gray-300);
 
 /* Border radius */
 $border-radius: 0.5rem;

@@ -5,6 +5,7 @@
     margin-bottom: 0.5rem;
     font-size: 1rem !important;
     border: 1px var(--gray-300) solid !important;
+    color: $text-default !important;
 
     @extend .form-control;
 

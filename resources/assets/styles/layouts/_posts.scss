@@ -23,6 +23,12 @@
       text-decoration: none;
       transform: translateY(-0.25rem);
       box-shadow: $raised-shadow;
+
+      h5 {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     &:active {

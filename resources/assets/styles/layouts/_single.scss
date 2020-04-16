@@ -127,7 +127,7 @@
   .entry-nav {
     display: flex;
     flex-direction: row;
-    border-top: 1.5px solid var(--gray-200);
+    border-top: 1px solid var(--gray-200);
     margin: 2rem -2rem -2rem;
 
     a {
@@ -172,7 +172,7 @@
 
   .footer-next {
     display: flex;
-    border-left: 1px solid var(--gray-300);
+    border-left: 1px solid var(--gray-200);
     justify-content: flex-end;
 
     a {
