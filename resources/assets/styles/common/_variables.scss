@@ -30,8 +30,9 @@ $black: $gray-darkest;
 /* Fonts and background */
 $body-bg: var(--gray-lightest);
 $font-family-sans-serif: "Compromis", -apple-system, "Google Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-$text-muted: var(--gray-600);
-$text-default: var(--gray-900);
+$text-muted: var(--text-muted);
+$text-default: var(--text-default);
+$text-supermuted: var(--text-supermuted);
 
 /* Border radius */
 $border-radius: 0.5rem;

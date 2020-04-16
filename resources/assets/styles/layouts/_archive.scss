@@ -82,7 +82,7 @@
 
     label {
       font-size: 1rem;
-      color: var(--gray-700);
+      color: $text-muted;
       text-transform: uppercase;
     }
   }
@@ -97,12 +97,12 @@
       margin-top: 1.25rem;
       font-size: 1.2rem;
       font-weight: 700;
-      color: var(--gray-700);
+      color: $text-muted;
       opacity: 0.75;
 
       &:hover {
         text-decoration: none;
-        color: var(--text-color);
+        color: $text-default;
       }
     }
   }

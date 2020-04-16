@@ -1,7 +1,7 @@
 .contact-page {
   h2 {
     font-weight: 400;
-    color: var(--gray-500);
+    color: $text-supermuted;
     margin-bottom: 1rem;
   }
 }
@@ -25,7 +25,7 @@
   i {
     font-size: 2.4rem;
     margin-right: 1rem;
-    color: var(--gray-500);
+    color: $text-supermuted;
   }
 
   li {
@@ -61,7 +61,7 @@
     padding: 1.5rem;
 
     strong {
-      color: var(--gray-500);
+      color: $text-supermuted;
     }
   }
 
@@ -74,7 +74,7 @@
       display: block;
       font-size: 2.75rem;
       margin-right: 1rem;
-      color: var(--gray-500);
+      color: $text-supermuted;
     }
 
     address {

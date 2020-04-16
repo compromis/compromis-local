@@ -1,8 +1,9 @@
 /* stylelint-disable */
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #{$white};
+    --text-default: #{$white};
     --text-muted: #{$gray-300};
+    --text-supermuted: #{$gray-400};
     --gray-lightest: #{darken($gray-900, 7)};
     --gray-100: #{$gray-900};
     --gray-200: #{$gray-800};

@@ -29,15 +29,15 @@
     li {
       flex-shrink: 0;
       margin-right: 1rem;
-      color: var(--gray-700);
+      color: $text-muted;
     }
 
     a {
-      color: var(--gray-700);
+      color: $text-muted;
       text-decoration: underline;
 
       &:hover {
-        color: var(--text-color);
+        color: $text-default;
       }
     }
   }

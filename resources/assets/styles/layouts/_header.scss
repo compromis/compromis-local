@@ -80,14 +80,14 @@
 .brand {
   display: flex;
   align-items: center;
-  color: var(--gray-600);
+  color: $text-supermuted;
   padding: 0 1rem;
 
   &-logo {
     display: inline-block;
     overflow: hidden;
     transition: 0.25s ease-in-out;
-    color: var(--text-color);
+    color: $text-default;
 
     svg {
       width: auto;
@@ -118,7 +118,7 @@
 
   &:hover {
     text-decoration: none;
-    color: var(--gray-600);
+    color: $text-muted;
   }
 }
 
@@ -145,11 +145,11 @@
     }
 
     a {
-      color: var(--gray-600);
+      color: $text-supermuted;
       padding: 0.5rem;
 
       &:hover {
-        color: var(--text-color);
+        color: $text-default;
         text-decoration: none;
       }
     }
@@ -160,7 +160,7 @@
 
     li.current-menu-item a {
       font-weight: bold;
-      color: var(--text-color);
+      color: $text-default;
     }
   }
 
@@ -185,7 +185,7 @@
     a {
       font-size: 1.75rem;
       font-weight: bold;
-      color: var(--text-color);
+      color: $text-default;
       letter-spacing: -0.025em;
       width: fit-content;
       transition: 0.25s ease-in-out;
@@ -217,13 +217,13 @@
     margin-bottom: 1rem;
 
     a {
-      color: var(--gray-700);
+      color: $text-muted;
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: -0.02em;
 
       &:hover {
-        color: var(--text-color);
+        color: $text-default;
       }
     }
   }
@@ -251,7 +251,7 @@
     background: var(--white);
     border: 0;
     border-left: 1px var(--gray-200) solid;
-    color: var(--gray-600);
+    color: $text-muted;
     padding: 0.75rem 1rem;
     font-size: 1.25rem;
 

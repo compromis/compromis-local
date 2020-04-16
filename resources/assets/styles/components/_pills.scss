@@ -23,11 +23,11 @@
 
   a.pill-secondary {
     background: var(--gray-200);
-    color: var(--gray-700);
+    color: $text-muted;
 
     &:hover {
       background: var(--gray-300);
-      color: var(--text-color);
+      color: $text-default;
     }
   }
 }

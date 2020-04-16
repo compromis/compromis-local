@@ -15,7 +15,7 @@
 
   &-submit {
     background: var(--gray-300) !important;
-    color: var(--text-color) !important;
+    color: $text-default !important;
     border-radius: $border-radius !important;
     font-weight: bold;
 
