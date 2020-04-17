@@ -90,37 +90,42 @@
 }
 
 .nav-links {
+  display: flex;
+  margin-top: 1.25rem;
+
   .nav-previous,
   .nav-next {
+    width: 50%;
+
     a {
-      display: block;
-      position: relative;
-      margin-top: 1.25rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: $text-muted;
-      opacity: 0.75;
+      @extend .apple-link;
+
+      display: inline-block;
+      width: fit-content;
+      border-bottom: 2px transparent solid;
 
       &:hover {
-        text-decoration: none;
-        color: $text-default;
+        border-color: $text-default;
       }
     }
   }
 
   .nav-next {
-    a {
-      &::before {
-        content: "< ";
-      }
+    a::before {
+      content: "< ";
+    }
+
+    a::after {
+      content: "";
     }
   }
 
   .nav-previous {
-    a {
-      &::after {
-        content: " >";
-      }
+    margin-left: auto;
+    text-align: right;
+
+    a::after {
+      content: " >";
     }
   }
 }
