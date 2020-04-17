@@ -97,6 +97,12 @@
       text-decoration: none;
       transform: translateY(-0.25rem);
       box-shadow: $raised-shadow;
+
+      .entry-title {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     &:active {
@@ -168,7 +174,13 @@
 
     .entry-link {
       min-height: 250px;
-      background-color: var(--gray-800);
+      background-color: $gray-800;
+
+      &:hover {
+        .entry-title {
+          -webkit-text-fill-color: $white;
+        }
+      }
     }
 
     .entry-thumbnail {
@@ -192,7 +204,7 @@
 
     .entry-info {
       position: absolute;
-      color: var(--white);
+      color: $white;
       bottom: 2rem;
       left: 1rem;
       right: 1rem;
@@ -200,13 +212,13 @@
 
     .entry-bottom {
       position: absolute;
-      color: var(--white);
+      color: $white;
       bottom: 1rem;
       left: 1rem;
       right: 1rem;
 
       .updated {
-        color: rgba(var(--white), 0.75);
+        color: rgba($white, 0.75);
       }
     }
   }

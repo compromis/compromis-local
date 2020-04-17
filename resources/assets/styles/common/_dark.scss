@@ -41,4 +41,8 @@
   .footer-logo img {
     filter: invert(1) brightness(100);
   }
+
+  .drawer-nav-toggle:hover {
+    background: var(--gray-200);
+  }
 }

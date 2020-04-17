@@ -5,7 +5,7 @@
     <li v-for="post in posts" v-bind:key="post.id">
       <a class="post-link" v-bind:href="post.link" target="_blank" rel="noopener">
         <div class="post-thumbnail">
-          <img v-if="post.hasOwnProperty('_embedded')" v-bind:src="post._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url" alt="" />
+          <img v-if="post.hasOwnProperty('_embedded')" v-bind:src="post._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url" width="200" loading="lazy" alt="" />
           <i class="far fa-newspaper" v-else></i>
         </div>
         <h5 class="post-title" v-html="post.title.rendered"></h5>
