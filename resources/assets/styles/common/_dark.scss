@@ -18,6 +18,14 @@
     --black: #{$white};
   }
 
+  .dark-only {
+    display: block;
+  }
+
+  .light-only {
+    display: none;
+  }
+
   .nav-network {
     background: $gray-800;
   }
@@ -28,5 +36,9 @@
 
   a.apple-link {
     opacity: 1;
+  }
+
+  .footer-logo img {
+    filter: invert(1) brightness(100);
   }
 }

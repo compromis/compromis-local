@@ -17,9 +17,10 @@ class WP_Widget_Social extends WP_Widget {
     $username = $instance['username'];
     echo $args['before_widget'];
     if ($network === 'facebook') {
-      echo '<div class="fb-page" data-href="https://www.facebook.com/' . $username . '/" data-tabs="" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/' . $username . '/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/' . $username . '/">' . $username . '</a></blockquote></div>';
+      echo '<div class="fb-page" data-href="https://www.facebook.com/' . $username . '/" data-tabs="" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/' . $username . '/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/' . $username . '/">' . $username . '</a></blockquote></div>';
     } else if($network === 'twitter') {
-      echo '<a class="twitter-timeline" data-height="500" data-chrome="noborders nofooter transparent" data-dnt="true" href="https://twitter.com/' . $username . '">Tweets by ' . $username . '</a>';
+      echo '<div class="dark-only"><a class="twitter-timeline" data-height="500" data-chrome="noborders nofooter transparent" data-theme="dark" data-dnt="true" href="https://twitter.com/' . $username . '">Tweets by ' . $username . '</a></div>';
+      echo '<div class="light-only"><a class="twitter-timeline" data-height="500" data-chrome="noborders nofooter transparent" data-dnt="true" href="https://twitter.com/' . $username . '">Tweets by ' . $username . '</a></div>';
     }
     echo $args['after_widget'];
  }
