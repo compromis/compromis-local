@@ -19,7 +19,7 @@
                 facebook=%s,
                 twitter=%s,
                 instagram=%s
-            WHERE id=%d
+            WHERE blogid=%d
         ", $address_grup, $address_seu, $telf, $email, $facebook, $twitter, $instagram, $blog_id));
 
         $success = true;
