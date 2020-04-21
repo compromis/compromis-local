@@ -1,6 +1,6 @@
 <?php
 
-function icons_custom_field($item_id) {
+function icons_custom_field($item_id, $item) {
     $icons = [
         'document', 'inici', 'info', 'representant', 'suma',
         'noticies', 'arxiu', 'contacte', 'participa', 'agenda',
