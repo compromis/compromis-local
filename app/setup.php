@@ -177,13 +177,13 @@ add_action('after_setup_theme', function () {
     /**
      * Create archive page
      */
-    $archive_exists = get_page_by_path('arxiu-de-noticies');
+    $archive_exists = get_page_by_path('noticies');
 
     if (!$archive_exists) {
         $archive_page = [
             'post_type'     => 'page',
             'post_title'    => 'Notícies',
-            'post_slug'     => 'arxiu-de-noticies',
+            'post_slug'     => 'noticies',
             'post_content'  => '',
             'post_status'   => 'publish'
         ];
