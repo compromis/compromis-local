@@ -1,5 +1,5 @@
 @php
-  $imageUrl = ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor') ? get_the_post_thumbnail_url() : get_header_image();
+  $imageUrl = ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor') ? get_the_post_thumbnail_url(null, 'large') : get_header_image();
   $localName = App::get_localinfo()->name;
 @endphp
 <header class="banner">

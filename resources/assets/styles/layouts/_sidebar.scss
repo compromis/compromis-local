@@ -101,6 +101,14 @@
   }
 }
 
+.footer {
+  .widget {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .hero-banner {
     .widget_media_image h3 {
