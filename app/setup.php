@@ -198,6 +198,11 @@ add_action('after_setup_theme', function () {
 include 'CustomPostTypes/regidor.php';
 
 /**
+ * Register custom fields
+ */
+include 'CustomFields/menu.php';
+
+/**
  * Register settings page
  */
 include 'Settings/collectiu.php';
