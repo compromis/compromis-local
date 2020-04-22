@@ -4,6 +4,8 @@
 
 @extends('layouts.app')
 
+@php the_post() @endphp
+
 @section('content')
   <section class="page">
     <ul class="card-list card-list-regidors">
@@ -11,5 +13,10 @@
         @include('partials.regidor')
       @endforeach
     </ul>
+    @if(get_the_content())
+      <div class="card mt-4">
+        {!! the_content() !!}
+      </div>
+    @endif
   </section>
 @endsection
