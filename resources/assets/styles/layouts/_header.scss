@@ -140,7 +140,7 @@
       display: flex;
     }
 
-    li:nth-child(n+5) {
+    li:nth-child(n+6) {
       display: none;
     }
 
@@ -333,7 +333,7 @@
 }
 
 @include media-breakpoint-down(lg) {
-  .nav-shortcut li:nth-child(n+4) {
+  .nav-shortcut li:nth-child(n+5) {
     display: none;
   }
 }

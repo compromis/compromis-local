@@ -110,7 +110,7 @@
     }
   }
 
-  .nav-next {
+  .nav-previous {
     a::before {
       content: "< ";
     }
@@ -120,7 +120,7 @@
     }
   }
 
-  .nav-previous {
+  .nav-next {
     margin-left: auto;
     text-align: right;
 

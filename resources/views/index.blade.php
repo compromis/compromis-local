@@ -31,7 +31,7 @@
     </ul>
   @endif
 
-  <a href="/arxiu-de-noticies" class="apple-link">
+  <a href="/noticies" class="apple-link">
     <span>{{ __('Arxiu de notícies', 'sage') }}</span>
   </a>
 

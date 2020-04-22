@@ -41,7 +41,7 @@ export default {
       if (category > 0) {
         window.location = '/?cat=' + category;
       } else {
-        window.location = '/arxiu-de-noticies';
+        window.location = '/noticies';
       }
     });
 
@@ -50,7 +50,7 @@ export default {
       if (url) {
         window.location = url;
       } else {
-        window.location = '/arxiu-de-noticies';
+        window.location = '/noticies';
       }
     });
 
