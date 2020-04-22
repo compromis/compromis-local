@@ -35,7 +35,7 @@ class WP_Widget_Social extends WP_Widget {
     if (isset($instance['network'])) {
       $network = $instance['network'];
     } else {
-      $network = __('', 'sage');
+      $network = 'facebook';
     }
 
     if (isset($instance['username'])) {
