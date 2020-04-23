@@ -5,7 +5,30 @@
   border-radius: $card-radius;
   box-shadow: $default-shadow;
   border: 0;
-  overflow: hidden;
+
+  &-index-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.25s ease-in-out;
+    padding: 2.5rem;
+    text-decoration: none;
+    color: $text-default;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    i {
+      margin-right: 1.25rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-0.5rem);
+      box-shadow: $raised-shadow;
+      color: $primary;
+      text-decoration: none;
+    }
+  }
 
   &-regidor {
     padding: 1.5rem;
@@ -67,6 +90,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 1rem;
+    margin-top: -6rem;
+    position: relative;
+    z-index: 30;
+  }
+
+  &-index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
     margin-top: -6rem;
     position: relative;
     z-index: 30;
