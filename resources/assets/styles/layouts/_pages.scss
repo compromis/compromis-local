@@ -12,15 +12,17 @@
     font-size: 1.25rem;
     padding: 0.75rem 1rem;
     background: var(--white);
+    color: var(--gray-900);
     margin: 0.75rem 0;
     border-radius: $border-radius;
     line-height: 1.25;
     align-items: center;
+    transition: 0.1s ease-in-out;
+    box-shadow: inset 0 0 0 1px var(--gray-200);
 
     &:hover {
       text-decoration: none;
-      background: $gradient;
-      color: $white;
+      color: var(--primary);
     }
   }
 
@@ -34,13 +36,15 @@
 
   .current_page_item > a {
     position: relative;
-    background: var(--gray-800);
-    color: var(--white);
+    background: $gradient;
+    color: $white;
     font-weight: bold;
     z-index: 5;
+    box-shadow: none;
 
     &:hover {
-      background: var(--gray-900);
+      color: $white;
+      background: $gradient;
     }
   }
 }

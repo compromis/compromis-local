@@ -8,11 +8,21 @@
 
 @section('content')
   <section class="page">
-    <ul class="card-list card-list-index">
-      <li><a class="card card-index-link" href="#"><i class="far fa-dog"></i>Menu Item</a></li>
-      <li><a class="card card-index-link" href="#"><i class="far fa-hippo"></i>Menu Item</a></li>
-      <li><a class="card card-index-link" href="#"><i class="far fa-spider"></i>Menu Item</a></li>
-      <li><a class="card card-index-link" href="#"><i class="far fa-cat"></i>Menu Item</a></li>
-    </ul>
+    @if($children)
+      <ul class="card-list card-list-index">
+        @foreach($children as $page)
+          <li>
+            <a class="card card-index-link" href="{{ get_permalink($page->ID) }}">
+              <span>
+                @if($icon = get_post_meta($page->ID, 'page_icon', true))
+                  <i class="far fa-{{ $icon }}"></i>
+                @endif
+                {{ $page->post_title }}
+              </span>
+            </a>
+          </li>
+        @endforeach
+      </ul>
+    @endif
   </section>
 @endsection
