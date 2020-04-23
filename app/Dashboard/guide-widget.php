@@ -59,10 +59,10 @@ function xarxa_guide_render () {
     <div class="xarxa-section xarxa-collectiu">
         <h4>👥 Regidors i regidores</h4>
         <p>
-            A la pestanya <a href="edit.php?post_type=regidor">Regidors/es</a> podeu
+            A la pestanya <a href="edit.php?post_type=regidor">Perfils</a> podeu
             afegir els regidors/es del col·lectiu. Per mostrar-los a la web, heu
             de <a href="post-new.php?post_type=page">crear una nova pàgina</a> amb
-            <i>Plantilla regidors</i>.
+            <i>Llistat de perfils</i>.
         </p>
     </div>
     <div class="xarxa-section xarxa-help">

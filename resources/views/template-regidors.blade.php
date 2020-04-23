@@ -1,5 +1,5 @@
 {{--
-  Template Name: Regidors
+  Template Name: Llistat de perfils
 --}}
 
 @extends('layouts.app')

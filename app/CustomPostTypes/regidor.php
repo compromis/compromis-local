@@ -7,7 +7,7 @@ add_action('init', function () {
     register_post_type('regidor', [
         'labels' => [
           'name' => 'Perfils',
-          'singular_name' => 'Perfil',
+          'singular_name' => 'Perfil'
         ],
         'public' => true,
         'rewrite' => ['slug' => 'regidor'],
@@ -15,6 +15,7 @@ add_action('init', function () {
         'capability_type' => 'page',
         'has_archive' => false,
         'hierarchical' => false,
+        'menu_icon' => 'dashicons-admin-users',
         'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
     ]);
 
@@ -136,7 +137,7 @@ add_action('save_post', 'regidors_metabox_save');
  */
 function register_regidors_category_metabox () {
   add_meta_box(
-      'regidors-category',
+      'regidors-list',
       'Llistat de perfils',
       'regidors_category_metabox_callback',
       'page',
@@ -154,13 +155,27 @@ function regidors_category_metabox_callback ($post) {
     wp_nonce_field('regidors_category_save_meta_box_data', 'regidors_category_meta_box_nonce' );
     $selectedCategory = get_post_meta($post->ID, '_regidors_category', true);
     $categories = get_terms(['taxonomy' => 'type', 'hide_empty' => false]);
-    echo '<select name="_regidors_category">';
+    echo '<select name="_regidors_category" style="width: 100%;box-sizing: border-box;">';
     echo '<option value="">Tots els perfils</option>';
     foreach($categories as $category) {
       $selected = ($selectedCategory == $category->term_id) ? 'selected' : '';
       echo '<option value="' . $category->term_id . '" ' . $selected . '>' . $category->name . '</option>';
     }
     echo '</select>';
+    echo "
+    <script>
+      jQuery(window).load(function () {
+        var select = jQuery('.editor-page-attributes__template select');
+        var template = select[0].value;
+        jQuery('#regidors-list').toggle(template === 'views/template-regidors.blade.php');
+
+        jQuery('.editor-page-attributes__template select').change(function (e) {
+          var template = e.target.value;
+          jQuery('#regidors-list').toggle(template === 'views/template-regidors.blade.php');
+        });
+      });
+    </script>
+    ";
 }
 
 /**
