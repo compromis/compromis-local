@@ -19,6 +19,7 @@ class SingleRegidor extends Controller
         return get_posts([
             'post_type' => 'regidor',
             'orderby' => 'menu_order',
+            'nopaging' => true,
             'tax_query' => $tax_query
         ]);
     }
