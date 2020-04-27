@@ -10,6 +10,6 @@ class TemplateIndexPage extends Controller
     {
         global $post;
 
-        return get_pages(['child_of' => $post->ID]);
+        return get_pages(['child_of' => $post->ID, 'sort_column' => 'menu_order']);
     }
 }
