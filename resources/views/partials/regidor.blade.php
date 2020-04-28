@@ -20,7 +20,7 @@
     @endif
     <ul class="card-regidor-info-social">
       @if(isset($postMeta['_regidor_email']) && $postMeta['_regidor_email'][0])
-        <li><a href="mailto:{{ $postMeta['_regidor_email'][0] }}" target="_blank" rel="noopener"><i class="far fa-envelope"></i></a></li>
+        <li><a href="mailto:{!! antispambot($postMeta['_regidor_email'][0]) !!}" target="_blank" rel="noopener"><i class="far fa-envelope"></i></a></li>
       @endif
       @if(isset($postMeta['_regidor_twitter']) && $postMeta['_regidor_twitter'][0])
         <li><a href="{{ $postMeta['_regidor_twitter'][0] }}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>

@@ -17,7 +17,7 @@
         <li>
           <i class="far fa-envelope"></i>
           <span class="sr-only">{{ __('E-mail', 'sage') }}</span>
-          <a class="apple-link" href="mailto:{{ $localInfo->email }}"><span>{{ $localInfo->email }}</span></a>
+          <a class="apple-link" href="mailto:{!! antispambot($localInfo->email) !!}"><span>{!! antispambot($localInfo->email) !!}</span></a>
         </li>
       @endif
       @if($localInfo->telf)

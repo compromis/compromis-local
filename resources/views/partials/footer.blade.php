@@ -21,7 +21,7 @@
             <li><i class="far fa-building"></i> <strong>Grup municipal</strong>: {{ $localInfo->address_grup }}</li>
           @endif
           @if($localInfo->email)
-            <li><i class="far fa-envelope"></i> <a href="mailto:{{ $localInfo->email }}">{{ $localInfo->email }}</a></li>
+            <li><i class="far fa-envelope"></i> <a href="mailto:{!! antispambot($localInfo->email) !!}">{!! antispambot($localInfo->email) !!}</a></li>
           @endif
           @if($localInfo->telf)
             <li><i class="far fa-phone"></i> {{ $localInfo->telf }}</li>
