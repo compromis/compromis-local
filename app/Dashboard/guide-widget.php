@@ -45,7 +45,7 @@ function xarxa_guide_render () {
         </p>
         <p>
             És possible que algun contingut no s'haja transferit correctament a la nova web.
-            Si és el cas i el voleu recuperar, contacteu amb <a href="mailto:tecnic@compromis.net">tecnic@compromis.net</a>
+            Si és el cas i el voleu recuperar, contacteu amb <a href="mailto:web@compromis.net">web@compromis.net</a>
         </p>
     </div>
     <div class="xarxa-section xarxa-collectiu">
@@ -62,13 +62,13 @@ function xarxa_guide_render () {
             A la pestanya <a href="edit.php?post_type=regidor">Perfils</a> podeu
             afegir els regidors/es del col·lectiu. Per mostrar-los a la web, heu
             de <a href="post-new.php?post_type=page">crear una nova pàgina</a> amb
-            <i>Llistat de perfils</i>.
+            amb la plantilla <i>Llistat de perfils</i>.
         </p>
     </div>
     <div class="xarxa-section xarxa-help">
         <h4>🤔 Ajuda tècnica</h4>
         Si teniu qualsevol dubte o incidència tècnica, podeu contactar amb
-        <a href="mailto:tecnic@compromis.net">tecnic@compromis.net</a>
+        <a href="mailto:web@compromis.net">web@compromis.net</a>
     </div>
 <?php
 }
