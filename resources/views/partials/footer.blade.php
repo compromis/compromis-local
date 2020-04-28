@@ -1,6 +1,3 @@
-@php
-  $localInfo = App::get_localinfo();
-@endphp
 <footer class="footer">
   <div class="container">
     @php dynamic_sidebar('sidebar-footer') @endphp
@@ -12,40 +9,40 @@
         </a>
       </div>
       <div class="footer-address">
-        <p class="footer-address-title"><strong>Compromís per {{ $localInfo->name }}</strong></p>
+        <p class="footer-address-title"><strong>Compromís per {{ $local->name }}</strong></p>
         <ul>
-          @if($localInfo->address_seu)
-            <li><i class="far fa-home"></i> <strong>Seu local</strong>: {{ $localInfo->address_seu }}</li>
+          @if($local->address_seu)
+            <li><i class="far fa-home"></i> <strong>Seu local</strong>: {{ $local->address_seu }}</li>
           @endif
-          @if($localInfo->address_grup)
-            <li><i class="far fa-building"></i> <strong>Grup municipal</strong>: {{ $localInfo->address_grup }}</li>
+          @if($local->address_grup)
+            <li><i class="far fa-building"></i> <strong>Grup municipal</strong>: {{ $local->address_grup }}</li>
           @endif
-          @if($localInfo->email)
-            <li><i class="far fa-envelope"></i> <a href="mailto:{!! antispambot($localInfo->email) !!}">{!! antispambot($localInfo->email) !!}</a></li>
+          @if($local->email)
+            <li><i class="far fa-envelope"></i> <a href="mailto:{!! antispambot($local->email) !!}">{!! antispambot($local->email) !!}</a></li>
           @endif
-          @if($localInfo->telf)
-            <li><i class="far fa-phone"></i> {{ $localInfo->telf }}</li>
+          @if($local->telf)
+            <li><i class="far fa-phone"></i> {{ $local->telf }}</li>
           @endif
-          @if($localInfo->facebook)
+          @if($local->facebook)
             <li>
                 <i class="fab fa-facebook"></i>
-                <a href="{{ $localInfo->facebook }}" target="_blank" rel="noopener">Compromís {{ $localInfo->name }}</a>
+                <a href="{{ $local->facebook }}" target="_blank" rel="noopener">Compromís {{ $local->name }}</a>
               </a>
             </li>
           @endif
-          @if($localInfo->twitter)
+          @if($local->twitter)
             <li>
               <i class="fab fa-twitter"></i>
-              <a href="https://twitter.com/{{ $localInfo->twitter }}" target="_blank" rel="noopener">
-                {{ '@' . $localInfo->twitter }}</li>
+              <a href="https://twitter.com/{{ $local->twitter }}" target="_blank" rel="noopener">
+                {{ '@' . $local->twitter }}</li>
               </a>
             </li>
           @endif
-          @if($localInfo->instagram)
+          @if($local->instagram)
           <li>
             <i class="fab fa-instagram"></i>
-            <a href="https://instagram.com/{{ $localInfo->instagram }}" target="_blank" rel="noopener">
-              {{ '@' . $localInfo->instagram }}</li>
+            <a href="https://instagram.com/{{ $local->instagram }}" target="_blank" rel="noopener">
+              {{ '@' . $local->instagram }}</li>
             </a>
           </li>
           @endif

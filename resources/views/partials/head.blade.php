@@ -1,6 +1,3 @@
-@php
-  $localInfo = App::get_localinfo();
-@endphp
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,12 +20,12 @@
 
   <!-- Metatags -->
   <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="compromis, {{ $localInfo->name }}, valencianisme, municipalisme, ecologisme, ecosocialisme, elecciones, eleccions, locales, locals, municipales, municipals" />
+  <meta name="keywords" content="compromis, {{ $local->name }}, valencianisme, municipalisme, ecologisme, ecosocialisme, elecciones, eleccions, locales, locals, municipales, municipals" />
 
   <!-- Open Graph & Twitter -->
   <meta property="og:locale" content="{{ get_locale() }}" />
-  <meta property="og:site_name" content="Compromís per {{ $localInfo->name }}" />
-  <meta property="twitter:site" content="{{ '@' }}{{ $localInfo->twitter ?: 'compromis' }}" />
+  <meta property="og:site_name" content="Compromís per {{ $local->name }}" />
+  <meta property="twitter:site" content="{{ '@' }}{{ $local->twitter ?: 'compromis' }}" />
   <meta property="twitter:card" content="summary_large_image" />
 
   @if(is_single() || is_page())
@@ -41,10 +38,10 @@
     <meta property="twitter:url" content="{!! get_permalink() !!}" />
   @else
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="A Compromís {{ $localInfo->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
+    <meta property="og:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
     <meta property="og:image" content="@asset('images/og-image.png')" />
     <meta property="og:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
-    <meta property="twitter:description" content="A Compromís {{ $localInfo->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
+    <meta property="twitter:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
     <meta property="twitter:image" content="@asset('images/og-image.png')" />
     <meta property="twitter:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
   @endif
