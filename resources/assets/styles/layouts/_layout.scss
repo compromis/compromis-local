@@ -19,8 +19,13 @@ body:not(.sidebar-primary):not(.page):not(.single) {
     grid-template-areas: "sidebar content filler";
   }
 
-  .banner-local-name h1 {
-    margin-bottom: 4rem;
+  .banner-local-name {
+    max-width: 900px;
+    margin: 0 auto;
+
+    h1 {
+      margin-bottom: 4rem;
+    }
   }
 }
 

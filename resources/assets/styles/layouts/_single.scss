@@ -2,7 +2,6 @@
 .page:not(.page-arxiu-data),
 .post-type-archive { // find better solution to this
   .banner-local-name {
-    height: calc(18rem + 14vh);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -53,7 +52,7 @@
 
     position: relative;
     z-index: 10;
-    margin-top: -6rem;
+    margin-top: -5.5rem;
     padding: var(--card-padding);
 
     @extend .card;
