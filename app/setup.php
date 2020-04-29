@@ -196,6 +196,7 @@ add_action('after_setup_theme', function () {
  * Register regidors custom post type
  */
 include 'CustomPostTypes/regidor.php';
+include 'CustomPostTypes/legislatura.php';
 
 /**
  * Register custom fields

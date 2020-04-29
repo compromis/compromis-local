@@ -1,5 +1,6 @@
 .single,
-.page:not(.page-arxiu-data) { // find better solution to this
+.page:not(.page-arxiu-data),
+.post-type-archive { // find better solution to this
   .banner-local-name {
     height: calc(18rem + 14vh);
     display: flex;
@@ -12,6 +13,24 @@
     }
   }
 
+  .banner-sup {
+    font-size: 1.1rem;
+    color: $white;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+
+    a {
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.single,
+.page:not(.page-arxiu-data) {
   .brand-local-hidden {
     opacity: 1 !important;
   }
@@ -28,7 +47,8 @@
 
   .post,
   .page-card,
-  .regidor {
+  .regidor,
+  .legislatura {
     --card-padding: 2rem;
 
     position: relative;
@@ -237,7 +257,8 @@
   }
 
   .single,
-  .page:not(.page-arxiu-data) {
+  .page:not(.page-arxiu-data),
+  .post-type-archive {
     .post,
     .page-card,
     .regidor {

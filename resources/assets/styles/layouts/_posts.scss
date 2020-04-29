@@ -262,10 +262,70 @@
   .entry-bottom {
     grid-area: bottom;
   }
+
+  .legislatura {
+    a {
+      @extend .card;
+
+      position: relative;
+      padding-left: 5rem;
+      transition: 0.25s ease-in-out;
+
+      .entry-title {
+        width: fit-content;
+        color: var(--text-default);
+      }
+
+      .entry-bottom {
+        display: flex;
+        color: var(--text-muted);
+      }
+
+      .entry-more {
+        margin-left: auto;
+      }
+
+      &:hover {
+        text-decoration: none;
+        transform: translateY(-0.15rem);
+
+        .entry-title {
+          background: $gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &::before {
+        display: flex;
+        position: absolute;
+        content: "\f15c";
+        font-family: "Font Awesome 5 Pro", sans-serif;
+        font-size: 3rem;
+        top: 0;
+        bottom: 0;
+        left: 1.5rem;
+        align-items: center;
+        color: var(--gray-300);
+      }
+    }
+
+    .entry-excerpt {
+      display: none;
+    }
+  }
 }
 
 .compromis-posts {
   margin-top: 5rem;
+}
+
+.post-type-archive-legislatura {
+  .archive-posts {
+    margin-top: -8rem;
+    z-index: 100;
+    position: relative;
+  }
 }
 
 @include media-breakpoint-down(lg) {
