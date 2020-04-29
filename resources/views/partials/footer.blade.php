@@ -9,7 +9,7 @@
         </a>
       </div>
       <div class="footer-address">
-        <p class="footer-address-title"><strong>Compromís per {{ $local->name }}</strong></p>
+        <p class="footer-address-title"><strong>{{ get_bloginfo('name') }}</strong></p>
         <ul>
           @if($local->address_seu)
             <li><i class="far fa-home"></i> <strong>Seu local</strong>: {{ $local->address_seu }}</li>

@@ -31,9 +31,8 @@ class App extends Controller
         return get_the_title();
     }
 
-    public function local($prop = null) {
+    public function local() {
         global $wpdb, $blog_id;
-
         return $wpdb->get_row($wpdb->prepare('SELECT * FROM webs_locals WHERE blogid = %d LIMIT 1', $blog_id));
     }
 }

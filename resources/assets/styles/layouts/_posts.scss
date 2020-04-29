@@ -251,7 +251,7 @@
     margin: -1rem 1rem -1rem -1rem;
 
     img {
-      height: 250px;
+      height: 100%;
     }
   }
 
@@ -310,6 +310,10 @@
 
     .entry-thumbnail {
       margin: -1rem -1rem 1rem -1rem;
+
+      img {
+        height: 230px;
+      }
     }
 
     .entry-excerpt {

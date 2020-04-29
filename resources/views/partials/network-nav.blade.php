@@ -38,7 +38,7 @@
     </form>
     <ul class="territorial pill-list mt-2">
       <li v-for="website in filteredResults" v-bind:key="website.id">
-        <a class="pill" v-bind:href="website.url" v-if="website.hasOwnProperty('territori_id')"><span v-text="website.name"></span></a>
+        <a class="pill" v-bind:href="website.url ? website.url : `https://compromis.net/info/local/?municipi=${website.ref}`" v-if="website.hasOwnProperty('territori_id')"><span v-text="website.name"></span></a>
         <a class="pill" href="#" v-on:click.prevent="setTerritory(website)" v-else><span v-text="website.name"></a>
       </li>
     </ul>

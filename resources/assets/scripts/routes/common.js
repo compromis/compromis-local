@@ -58,6 +58,26 @@ export default {
     new Vue(localNetwork);
   },
   finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
+    $(document).ready(function () {
+      let keys = [];
+      const codes = {
+        'M,A,D,E,I,N,Q,U,A,R,A,N,T,I,N,E': 'nyw6oDF_wJM',
+        'N,E,W,O,L,T,R,A,N,O,W': 'g2tk7ethx1Q',
+      };
+
+      $(document).keydown(function (e) {
+        keys.push(e.key);
+        Object.keys(codes).forEach(code => {
+          if (keys.toString().indexOf(code) >= 0) {
+            $('body').after(`
+              <div style="position:fixed;top:0;left:0;bottom:0;right:0;z-index:10000">
+                <iframe width="100%" height="100%" src="//youtube.com/embed/${codes[code]}/?autoplay=1" frameborder="0"></iframe>
+              </div>
+            `);
+            keys = [];
+          }
+        })
+      });
+    });
   },
 };
