@@ -1,6 +1,3 @@
-@php
-  $isArchive = true;
-@endphp
 @extends('layouts.app')
 
 @section('content')
@@ -15,7 +12,7 @@
   <ul class="archive-posts">
   @while (have_posts()) @php the_post() @endphp
     <li>
-      @include('partials.content-'.get_post_type())
+      @include('partials.content-'.get_post_type(), ['isArchive' => true])
     </li>
   @endwhile
   </ul>
