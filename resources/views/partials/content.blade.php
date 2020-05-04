@@ -7,7 +7,7 @@
         </div>
       @endif
       <div class="entry-info">
-        <h2 class="entry-title">{!! get_the_title() !!}</h2>
+        <h3 class="entry-title">{!! get_the_title() !!}</h3>
         @if(!has_post_thumbnail() || isset($isArchive))
           <p class="entry-excerpt">{!! wp_trim_excerpt() !!}</p>
         @endif

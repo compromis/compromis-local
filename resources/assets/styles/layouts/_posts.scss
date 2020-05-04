@@ -1,157 +1,83 @@
 .post {
-  &-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &-link {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    color: $text-default;
-    padding: var(--card-padding, 1rem);
-    transition: 0.25s ease-in-out;
-    margin-bottom: 1rem;
-    height: 100%;
-    min-height: 125px;
-
-    @extend .card;
-
-    &:hover {
-      text-decoration: none;
-      transform: translateY(-0.25rem);
-      box-shadow: $raised-shadow;
-
-      h5 {
-        background: $gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-
-    &:active {
-      transform: translateY(0.25rem);
-      box-shadow: $raised-shadow;
-    }
-
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 4px rgba($primary, 0.5), $raised-shadow;
-      border-radius: 4px;
-    }
-  }
-
-  &-title {
-    margin-bottom: 0;
-    font-weight: bold;
-    letter-spacing: -0.03em;
-    font-size: 1.35rem;
-    line-height: 1.5;
-  }
-
-  &-excerpt {
-    font-size: 0.9rem;
-    color: $text-muted;
-
-    p {
-      margin: 0;
-    }
-  }
-
-  &-thumbnail {
-    margin: -1rem 1rem -1rem -1rem;
-    background: var(--gray-300);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    color: $text-supermuted;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .entry-link {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    color: $text-default;
-    padding: var(--card-padding, 1rem);
-    transition: 0.25s ease-in-out;
-    height: 100%;
-
-    @extend .card;
-
-    header {
+  .entry {
+    &-link {
+      position: relative;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
+      color: $text-default;
+      padding: var(--card-padding, 1rem);
+      transition: 0.25s ease-in-out;
       height: 100%;
-    }
 
-    &:hover {
-      text-decoration: none;
-      transform: translateY(-0.25rem);
-      box-shadow: $raised-shadow;
+      @extend .card;
 
-      .entry-title {
-        background: $gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      header {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      &:hover {
+        text-decoration: none;
+        transform: translateY(-0.25rem);
+        box-shadow: $raised-shadow;
+
+        .entry-title {
+          background: $gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &:active {
+        transform: translateY(0.15rem);
+        box-shadow: $raised-shadow;
+      }
+
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 4px rgba($primary, 0.5), $raised-shadow;
+        border-radius: 4px;
       }
     }
 
-    &:active {
-      transform: translateY(0.15rem);
-      box-shadow: $raised-shadow;
+    &-title {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      letter-spacing: -0.03em;
     }
 
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 4px rgba($primary, 0.5), $raised-shadow;
-      border-radius: 4px;
+    &-thumbnail {
+      margin: -1rem -1rem 1rem -1rem;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+      }
     }
-  }
 
-  .entry-title {
-    margin-bottom: 1rem;
-    font-weight: bold;
-    letter-spacing: -0.03em;
-  }
-
-  .entry-thumbnail {
-    margin: -1rem -1rem 1rem -1rem;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 300px;
+    &-excerpt {
+      margin-bottom: 1rem;
+      color: $text-muted;
     }
-  }
 
-  .entry-excerpt {
-    margin-bottom: 1rem;
-    color: $text-muted;
-  }
+    &-bottom {
+      display: flex;
+      margin-top: auto;
 
-  .entry-bottom {
-    display: flex;
-    margin-top: auto;
-
-    .entry-more {
-      margin-left: auto;
+      .entry-more {
+        margin-left: auto;
+      }
     }
-  }
 
-  .updated {
-    color: $text-muted;
+    .updated {
+      color: $text-muted;
+    }
   }
 }
 
+// Home posts
 .home-posts {
   margin: 0;
   padding: 0;
@@ -170,6 +96,7 @@
   }
 }
 
+// Posts in archive
 .archive-posts {
   margin: 0;
   padding: 0;
@@ -258,10 +185,90 @@
   }
 }
 
+// Compromis.net posts
 .compromis-posts {
   margin-top: 5rem;
 }
 
+// Post lists
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .post-link {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    color: $text-default;
+    padding: var(--card-padding, 1rem);
+    transition: 0.25s ease-in-out;
+    margin-bottom: 1rem;
+    height: 100%;
+    min-height: 125px;
+
+    @extend .card;
+
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-0.25rem);
+      box-shadow: $raised-shadow;
+
+      h5 {
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &:active {
+      transform: translateY(0.25rem);
+      box-shadow: $raised-shadow;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 4px rgba($primary, 0.5), $raised-shadow;
+      border-radius: 4px;
+    }
+  }
+
+  .post-title {
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    font-size: 1.35rem;
+    line-height: 1.5;
+  }
+
+  .post-excerpt {
+    font-size: 0.9rem;
+    color: $text-muted;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .post-thumbnail {
+    margin: -1rem 1rem -1rem -1rem;
+    background: var(--gray-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: $text-supermuted;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Legislatura posts
 .post-type-archive-legislatura {
   .archive-posts {
     margin-top: -7.5rem;
@@ -270,11 +277,10 @@
   }
 }
 
-@include media-breakpoint-up(xl) {
-  .home-has-highlight li:first-child {
-    grid-column: 1/-1;
-
-    .entry-link {
+// Highlighted entry
+@mixin highlighted-entry {
+  .entry {
+    &-link {
       min-height: 250px;
       background-color: $gray-800;
 
@@ -285,7 +291,7 @@
       }
     }
 
-    .entry-thumbnail {
+    &-thumbnail {
       margin: -1.75rem;
 
       &::after {
@@ -304,7 +310,7 @@
       }
     }
 
-    .entry-info {
+    &-info {
       position: absolute;
       color: $white;
       bottom: 2rem;
@@ -312,7 +318,7 @@
       right: 1rem;
     }
 
-    .entry-bottom {
+    &-bottom {
       position: absolute;
       color: $white;
       bottom: 1rem;
@@ -324,10 +330,22 @@
       }
     }
 
-    .entry-excerpt {
+    &-excerpt {
       display: none;
     }
   }
+}
+
+@include media-breakpoint-up(xl) {
+  .home-has-highlight li:first-child {
+    grid-column: 1/-1;
+
+    @include highlighted-entry;
+  }
+}
+
+.parl-posts {
+  @include highlighted-entry;
 }
 
 @include media-breakpoint-down(lg) {

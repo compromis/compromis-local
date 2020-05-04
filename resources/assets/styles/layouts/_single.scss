@@ -1,5 +1,5 @@
 .single,
-.page:not(.page-arxiu-data),
+.page:not(.page-arxiu-data):not(.template-parl),
 .post-type-archive { // find better solution to this
   .banner-local-name {
     display: flex;
@@ -29,7 +29,7 @@
 }
 
 .single,
-.page:not(.page-arxiu-data) {
+.page:not(.page-arxiu-data):not(.template-parl) {
   .brand-local-hidden {
     opacity: 1 !important;
   }

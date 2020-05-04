@@ -1,13 +1,15 @@
 .template-parl {
-  .card-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+  h2 {
+    font-weight: 500;
+    font-size: 2.25rem;
+    color: var(--text-muted);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
-@include media-breakpoint-down(md) {
-  .card-list {
-    grid-template-columns: 1fr;
+@include media-breakpoint-up(lg) {
+  .parl-posts {
+    grid-template-columns: 1fr 1fr !important;
   }
 }
