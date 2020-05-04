@@ -29,7 +29,8 @@
     li {
       flex-shrink: 0;
       margin-right: 1rem;
-      color: $text-muted;
+      color: var(--text-muted);
+      max-width: 100%;
     }
 
     a {

@@ -1,5 +1,6 @@
 .tnp {
-  &-email {
+  &-email,
+  &-firstname {
     background: var(--white) !important;
     border-radius: $border-radius;
     margin-bottom: 0.5rem;

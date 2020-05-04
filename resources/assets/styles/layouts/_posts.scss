@@ -168,64 +168,6 @@
       width: 100%;
     }
   }
-
-  &.home-has-highlight li:first-child {
-    grid-column: 1/-1;
-
-    .entry-link {
-      min-height: 250px;
-      background-color: $gray-800;
-
-      &:hover {
-        .entry-title {
-          -webkit-text-fill-color: $white;
-        }
-      }
-    }
-
-    .entry-thumbnail {
-      margin: -1.75rem;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 60%);
-      }
-
-      img {
-        height: 350px;
-        object-fit: cover;
-      }
-    }
-
-    .entry-info {
-      position: absolute;
-      color: $white;
-      bottom: 2rem;
-      left: 1rem;
-      right: 1rem;
-    }
-
-    .entry-bottom {
-      position: absolute;
-      color: $white;
-      bottom: 1rem;
-      left: 1rem;
-      right: 1rem;
-
-      .updated {
-        color: rgba($white, 0.75);
-      }
-    }
-
-    .entry-excerpt {
-      display: none;
-    }
-  }
 }
 
 .archive-posts {
@@ -325,6 +267,66 @@
     margin-top: -7.5rem;
     z-index: 10;
     position: relative;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .home-has-highlight li:first-child {
+    grid-column: 1/-1;
+
+    .entry-link {
+      min-height: 250px;
+      background-color: $gray-800;
+
+      &:hover {
+        .entry-title {
+          -webkit-text-fill-color: $white;
+        }
+      }
+    }
+
+    .entry-thumbnail {
+      margin: -1.75rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 60%);
+      }
+
+      img {
+        height: 350px;
+        object-fit: cover;
+      }
+    }
+
+    .entry-info {
+      position: absolute;
+      color: $white;
+      bottom: 2rem;
+      left: 1rem;
+      right: 1rem;
+    }
+
+    .entry-bottom {
+      position: absolute;
+      color: $white;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+
+      .updated {
+        color: rgba($white, 0.75);
+      }
+    }
+
+    .entry-excerpt {
+      display: none;
+    }
   }
 }
 

@@ -20,7 +20,7 @@
 
       &--nav {
         margin: 0;
-        max-height: calc(100vh - 100px);
+        max-height: calc(100vh - 200px);
         border-top: 1px var(--gray-200) solid;
       }
     }
@@ -331,7 +331,7 @@
     }
 
     &-band-row--nav {
-      max-height: calc(100vh - 110px);
+      max-height: calc(100vh - 240px);
     }
   }
 }
@@ -367,6 +367,11 @@
     h1 {
       font-size: 4rem;
     }
+  }
+
+  .territorial {
+    min-height: 300px;
+    align-content: start;
   }
 }
 
