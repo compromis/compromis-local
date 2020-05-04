@@ -1,0 +1,13 @@
+.template-parl {
+  .card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
