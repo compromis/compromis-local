@@ -7,4 +7,5 @@
 @section('content')
   @include('partials.parl.contact')
   @include('partials.parl.posts')
+  @include('partials.parl.representatives')
 @endsection
