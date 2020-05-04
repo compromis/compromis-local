@@ -9,9 +9,9 @@
   @endif
   <div class="card-regidor-info">
     @if(!isset($hide_name) || !$hide_name)
-      <h2 class="card-regidor-info-name">
+      <h3 class="card-regidor-info-name">
         <a href="{{ get_permalink($regidor->ID) }}">{{ $regidor->post_title }}</a>
-      </h2>
+      </h3>
     @endif
     @if(isset($postMeta['_regidor_description']) && $postMeta['_regidor_description'][0])
       <p class="card-regidor-info-description">

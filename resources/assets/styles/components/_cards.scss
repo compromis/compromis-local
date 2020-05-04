@@ -113,10 +113,17 @@
 
 @include media-breakpoint-down(sm) {
   .card-regidor {
-    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
 
-    a {
-      justify-self: center;
+    a:first-child {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 75px;
+      height: 75px;
     }
   }
 
