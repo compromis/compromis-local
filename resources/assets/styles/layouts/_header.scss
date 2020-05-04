@@ -109,6 +109,15 @@
     overflow: hidden;
   }
 
+  &-institution {
+    height: 1.875rem;
+    margin-left: 0.5rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
   &-compact {
     .brand-local {
       opacity: 0;

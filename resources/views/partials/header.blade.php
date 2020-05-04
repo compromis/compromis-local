@@ -8,12 +8,10 @@
         <div class="banner-band-row">
           <a class="brand {{ !is_single() && !is_page() ? 'brand-compact' : '' }}" href="{{ home_url('/') }}">
             <span class="brand-logo">
-              @include('partials/logo')
+              @include('partials.logo')
               <span class="sr-only">Compromís</span>
             </span>
-            <span class="brand-local {{ strlen($local->name) > 14 && count(explode(' ', $local->name)) > 1 ? 'brand-local--long' : '' }}">
-              {{ $local->name }}
-            </span>
+            @include('partials.sublogos')
           </a>
           <nav class="nav-shortcut d-none d-lg-flex">
             @if (has_nav_menu('primary_navigation'))

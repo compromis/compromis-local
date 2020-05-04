@@ -5,7 +5,7 @@ export default {
   init() {
     // Nav
     const brand = $('.brand');
-    const isSingle = $('body').hasClass('single') || $('body').hasClass('page');
+    const isSingle = $('body').hasClass('single') || ($('body').hasClass('page') && !$('body').hasClass('home'));
 
     $(document).scroll(function() {
       if ($(document).scrollTop() >= 200) {
