@@ -6,13 +6,7 @@
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
-          <a class="brand {{ !is_single() && !is_page() ? 'brand-compact' : '' }}" href="{{ home_url('/') }}">
-            <span class="brand-logo">
-              @include('partials.logo')
-              <span class="sr-only">Compromís</span>
-            </span>
-            @include('partials.sublogos')
-          </a>
+          @include('partials.logo')
           <nav class="nav-shortcut d-none d-lg-flex">
             @if (has_nav_menu('primary_navigation'))
               {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
