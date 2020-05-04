@@ -4,6 +4,33 @@
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
+
+  .contact-nav {
+    @extend .archive-nav;
+
+    padding: 0 0.75rem !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+
+    &-link {
+      font-size: 1.5rem;
+      padding: 2rem 2rem;
+      background: transparent;
+      transition: 0.25 ease-out;
+
+      &:hover {
+        background: $gray-800;
+      }
+    }
+
+    i {
+      margin-right: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-default;
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
