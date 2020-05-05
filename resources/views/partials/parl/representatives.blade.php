@@ -1,6 +1,6 @@
 @if(!empty($regidors))
   <section>
-    <h2>Representats</h2>
+    <h2>{{ __('Representants', 'sage') }}</h2>
     <ul class="card-list card-list-regidors mt-0">
       @foreach($regidors as $regidor)
         @include('partials.regidor')
