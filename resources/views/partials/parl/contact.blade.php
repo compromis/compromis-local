@@ -1,16 +1,16 @@
 <div class="card contact-nav">
   <div class="contact-nav-name">
-    Oficina <br>Parlamentaria 
+    Oficina <br>Parlamentària 
   </div>
   <div class="contact-nav-address">
-    <a class="contact-nav-link" href="#" target="_blank" rel="noopener">
-      <i class="far fa-home"></i> Carrer Corts Fals, 123
+  <a class="contact-nav-link" href="https://www.google.com/maps/search/{{ $local->address_seu }}" target="_blank" rel="noopener">
+      <i class="far fa-home"></i> {{ $local->address_seu }}
     </a>
-    <a class="contact-nav-link" href="#" target="_blank" rel="noopener">
-      <i class="far fa-phone"></i> 96 218 1892
+    <a class="contact-nav-link" href="tel:{{ str_replace(' ', '', $local->telf) }}" target="_blank" rel="noopener">
+      <i class="far fa-phone"></i> {{ $local->telf }}
     </a>
-    <a class="contact-nav-link" href="#" target="_blank" rel="noopener">
-      <i class="far fa-envelope"></i> corts@compromis.net
+    <a class="contact-nav-link" href="mailto:{!! antispambot($local->email) !!}" target="_blank" rel="noopener">
+      <i class="far fa-envelope"></i> {!! antispambot($local->email) !!}
     </a>
   </div>
   <div class="contact-nav-network">
@@ -21,7 +21,7 @@
     @endif
     @if($local->facebook)
     <a class="contact-nav-link" href="{{ $local->facebook }}" target="_blank" rel="noopener">
-      <i class="fab fa-facebook"></i> Facebook
+      <i class="fab fa-facebook"></i> Compromís {{ $local->name }}
     </a>
     @endif
     @if($local->facebook)

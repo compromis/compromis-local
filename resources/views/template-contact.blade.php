@@ -20,7 +20,7 @@
         <li>
           <i class="far fa-phone"></i>
           <span class="sr-only">{{ __('Telèfon', 'sage') }}</span>
-          <span>{{ $local->telf }}</span>
+          <a class="apple-link" href="tel:{{ str_replace(' ', '', $local->telf) }}"><span>{{ $local->telf }}</span></a>
         </li>
       @endif
       @if($local->facebook)
