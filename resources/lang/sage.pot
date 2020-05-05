@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-05 10:44+0200\n"
+"POT-Creation-Date: 2020-05-05 16:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -163,8 +163,40 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
+#: resources/views/partials/parl/videos.blade.php:2
+msgid "Intervencions"
+msgstr ""
+
+#: resources/views/partials/parl/videos.blade.php:36
+msgid "Més intervencions"
+msgstr ""
+
+#: resources/views/partials/parl/posts.blade.php:1
+msgid "Notícies"
+msgstr ""
+
+#: resources/views/partials/parl/posts.blade.php:15
+msgid "Més notícies"
+msgstr ""
+
+#: resources/views/partials/parl/programes.blade.php:2
+msgid "Programes electorals"
+msgstr ""
+
+#: resources/views/partials/parl/programes.blade.php:15
+msgid "Tots els programes de Compromís"
+msgstr ""
+
+#: resources/views/partials/parl/representatives.blade.php:3
+msgid "Representants"
+msgstr ""
+
 #: resources/views/partials/parl/representatives.blade.php:11
 msgid "Més representants"
+msgstr ""
+
+#: resources/views/partials/parl/contact.blade.php:34
+msgid "Contacta"
 msgstr ""
 
 #: resources/views/partials/social.blade.php:7
