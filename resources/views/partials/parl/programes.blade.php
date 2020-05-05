@@ -1,7 +1,7 @@
 @if(isset($programes[$local->ref]))
   <h2>{{ __('Programes electorals', 'sage') }}</h2>
 
-  <ul class="programes">
+  <ul class="programes card-list">
     @foreach($programes[$rels[$local->ref]] as $programa)
       <li class="programa">
         <a href="{{ $programa['url'] }}" target="_blank">

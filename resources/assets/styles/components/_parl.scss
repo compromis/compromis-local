@@ -7,6 +7,32 @@
     margin-bottom: 1rem;
   }
 
+  .programes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 1rem;
+
+    .programa {
+      overflow: hidden;
+      border-radius: $card-radius;
+      box-shadow: $default-shadow;
+      border: 0;
+      transition: 0.25s ease-in-out;
+
+      img {
+        height: 350px;
+        width: 250px;
+        object-fit: cover;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.5rem);
+        box-shadow: $raised-shadow;
+      }
+    }
+  }
+
   .contact-nav {
     @extend .archive-nav;
 
@@ -32,7 +58,6 @@
     &-link {
       margin: 0 0 0.5rem 0;
       text-decoration: none;
-      color: $primary;
     }
 
     &-button {
@@ -135,6 +160,19 @@
     .contact-nav {
       grid-template-columns: 1fr !important;
       gap: 0;
+    }
+
+    .programes {
+      grid-template-columns: 1fr;
+
+      .programa {
+        img {
+          height: 250px;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
     }
   }
 }
