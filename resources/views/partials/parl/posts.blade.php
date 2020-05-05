@@ -1,6 +1,6 @@
 <h2>{{ __('Notícies', 'sage') }}</h2>
 
-<ul class="home-posts parl-posts">
+<ul class="home-posts highlighted-posts parl-posts">
   @php global $post @endphp
   @foreach($posts as $post)
     @php setup_postdata($post) @endphp

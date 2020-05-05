@@ -21,4 +21,12 @@ class TemplateParl extends Controller
             'numberposts' => 6
         ]);
     }
+
+    public function videos()
+    {
+        return get_posts([
+            'category_name' => 'intervencions',
+            'numberposts' => 3
+        ]);
+    }
 }
