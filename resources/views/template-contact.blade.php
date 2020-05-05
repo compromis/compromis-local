@@ -54,7 +54,7 @@
             <div class="address-list-item">
               <i class="far fa-home"></i> 
               <address>
-                <strong>{{ __('Seu local', 'sage') }}</strong>
+                <strong>{{ $local->type === 'local' ? __('Seu local', 'sage') : __('Adreça', 'sage') }}</strong>
                 <p>{{ $local->address_seu }}</p>
               </address>
             </div>

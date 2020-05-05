@@ -15,6 +15,6 @@
     </a>
   @endif
   <a class="contact-nav-link" href="/contacta">
-    <i class="far fa-paper-plane"></i> Contacta
+    <i class="far fa-paper-plane"></i> {{ __('Contacta', 'sage') }}
   </a>
 </div>

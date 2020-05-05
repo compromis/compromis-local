@@ -175,6 +175,11 @@ add_action('after_setup_theme', function () {
     add_theme_support('custom-header', $args);
 
     /**
+     * Multilanguage support
+     */
+    load_theme_textdomain('sage', get_template_directory() . '/lang');
+
+    /**
      * Create archive page
      */
     $archive_exists = get_page_by_path('noticies');

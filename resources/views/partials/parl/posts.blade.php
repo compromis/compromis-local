@@ -1,4 +1,4 @@
-<h2>Notícies</h2>
+<h2>{{ __('Notícies', 'sage') }}</h2>
 
 <ul class="home-posts parl-posts">
   @php global $post @endphp
@@ -12,5 +12,5 @@
 </ul>
 
 <a href="/noticies" class="apple-link">
-  <span>Més notícies</span>
+  <span>{{ __('Més notícies', 'sage') }}</span>
 </a>

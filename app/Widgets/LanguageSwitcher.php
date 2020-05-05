@@ -33,13 +33,13 @@ class WP_Widget_LanguageSwitcher extends WP_Widget {
     if (isset($instance['val'])) {
       $val = $instance['val'];
     } else {
-      $val = __('', 'sage');
+      $val = '';
     }
 
     if (isset($instance['cas'])) {
       $cas = $instance['cas'];
     } else {
-      $cas = __('', 'cas');
+      $cas = '';
     }
 
     // Widget admin form
