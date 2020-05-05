@@ -3,6 +3,8 @@ import localNetwork from '../components/local-network.js';
 
 export default {
   init() {
+    $('[data-toggle="tooltip"]').tooltip();
+
     // Nav
     const brand = $('.brand');
     const isSingle = $('body').hasClass('single') || ($('body').hasClass('page') && !$('body').hasClass('home'));

@@ -2,8 +2,6 @@ import ClipboardJS from 'clipboard'
 
 export default {
   init() {
-    $('[data-toggle="tooltip"]').tooltip();
-
     $('#copy-link').on('click', function (e) {
       e.preventDefault();
       $(this).attr('data-original-title', 'Enllaç copiat!').tooltip('show');

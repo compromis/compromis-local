@@ -5,7 +5,7 @@
     @foreach($programes[$rels[$local->ref]] as $programa)
       <li class="programa">
         <a href="{{ $programa['url'] }}" target="_blank">
-          <img src="{{ $programa['image'] }}" title="{{ $programa['title'] }}" alt="" />
+          <img src="{{ $programa['image'] }}" title="{{ $programa['title'] }}" data-toggle="tooltip" data-placement="bottom" alt="" />
         </a>
       </li>
     @endforeach

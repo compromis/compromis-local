@@ -9,7 +9,8 @@ class TemplateParl extends Controller
     public function posts()
     {
         return get_posts([
-            'numberposts' => 2
+            'numberposts' => 2,
+            'category_name' => 'blog,premsa-arxiu,general,noticies'
         ]);
     }
 

@@ -10,10 +10,12 @@
       Aquesta plantilla està reservada per a oficines parlamentàries
     </p>
   @else
-    @include('partials.parl.contact')
-    @include('partials.parl.posts')
-    @include('partials.parl.representatives')
-    @include('partials.parl.videos')
-    @include('partials.parl.programes')
+    <div class="parl">
+      @include('partials.parl.contact')
+      @include('partials.parl.posts')
+      @include('partials.parl.representatives')
+      @include('partials.parl.videos')
+      @include('partials.parl.programes')
+    </div>
   @endif
 @endsection
