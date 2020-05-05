@@ -21,7 +21,7 @@
             <li><i class="far fa-envelope"></i> <a href="mailto:{!! antispambot($local->email) !!}">{!! antispambot($local->email) !!}</a></li>
           @endif
           @if($local->telf)
-            <li><i class="far fa-phone"></i> {{ $local->telf }}</li>
+            <li><i class="far fa-phone"></i> <a href="tel:{{ str_replace(' ', '', $local->telf) }}">{{ $local->telf }}</a></li>
           @endif
           @if($local->facebook)
             <li>
