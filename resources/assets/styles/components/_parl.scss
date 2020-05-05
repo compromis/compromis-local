@@ -19,21 +19,21 @@
     &-network {
       display: flex;
       flex-direction: column;
-      font-size: 1.15rem;
-      margin: 0.75rem 0 0.25rem 0;
+      font-size: 1rem;
+      margin: 1rem 0 0.5rem 0;
     }
 
     &-name {
       font-size: 1.5rem;
       padding-left: 1.5rem;
       margin: 0.75rem 0 0.25rem 0;
+      line-height: 1.35;
     }
 
     &-link {
       margin: 0 0 0.5rem 0;
       text-decoration: none;
       color: $primary;
-      font-size: 1rem;
 
       &:hover {
         color: $text-default;
