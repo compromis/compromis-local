@@ -1,6 +1,6 @@
 @php
   $hasVideoThumbnail = false;
-  $videoLink = get_post_meta($post->ID, 'youtube', true);
+  $videoLink = get_post_meta(get_the_ID(), 'youtube', true);
   if ($videoLink) {
     preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $videoLink, $matches);
     $videoId = $matches[0];
