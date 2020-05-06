@@ -1,9 +1,20 @@
+@php
+  $videoLink = get_post_meta($post->ID, 'youtube', true);
+  if ($videoLink) {
+    preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $videoLink, $matches);
+    $videoId = $matches[0];
+  }
+@endphp
 <article @php post_class() @endphp>
   <a href="{{ get_permalink() }}" class="entry-link">
     <header>
       @if(has_post_thumbnail())
         <div class="entry-thumbnail">
           {{ the_post_thumbnail('large') }}
+        </div>
+      @elseif($videoLink)
+        <div class="entry-thumbnail">
+          <img src="https://img.youtube.com/vi/{{ $videoId }}/maxresdefault.jpg" alt="" />
         </div>
       @endif
       <div class="entry-info">
