@@ -24,7 +24,8 @@ class TemplateParl extends Controller
         return get_posts([
             'post_type' => 'regidor',
             'orderby' => 'menu_order',
-            'numberposts' => 6
+            'numberposts' => 6,
+            'post__in' => get_option('home_regidors', false)
         ]);
     }
 
