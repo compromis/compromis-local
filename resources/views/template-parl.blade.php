@@ -12,10 +12,9 @@
   @else
     <div class="parl">
       @include('partials.parl.contact')
-      @include('partials.parl.posts')
-      @include('partials.parl.representatives')
-      @include('partials.parl.videos')
-      @include('partials.parl.programes')
+      @foreach($modules as $module)
+        @include('partials.parl.' . $module)
+      @endforeach
     </div>
   @endif
 @endsection

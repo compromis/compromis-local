@@ -6,6 +6,11 @@ use Sober\Controller\Controller;
 
 class TemplateParl extends Controller
 {
+    public function modules()
+    {
+        return explode(',', get_option('parl_modules', 'posts,representatives,videos,programes'));
+    }
+
     public function posts()
     {
         return get_posts([

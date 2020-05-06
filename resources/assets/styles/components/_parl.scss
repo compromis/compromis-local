@@ -38,6 +38,7 @@
       margin: 0 0 0.5rem 0;
       text-decoration: none;
       color: $primary;
+      white-space: nowrap;
 
       &:hover {
         color: $text-default;

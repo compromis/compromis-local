@@ -1,6 +1,6 @@
 <div class="card contact-nav">
   <div class="contact-nav-name">
-    Oficina <br>Parlamentària 
+    {!! nl2br(__("Oficina\nParlamentària", "sage")) !!}
   </div>
   <div class="contact-nav-address">
   <a class="contact-nav-link" href="https://www.google.com/maps/search/{{ $local->address_seu }}" target="_blank" rel="noopener">
