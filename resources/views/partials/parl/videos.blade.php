@@ -32,7 +32,7 @@
 @php wp_reset_postdata() @endphp
 </ul>
 
-<a href="/c/intervenions" class="apple-link">
+<a href="/c/intervencions" class="apple-link">
   <span>{{ __('Més intervencions', 'sage') }}</span>
 </a>
 @endif
