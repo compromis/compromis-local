@@ -1,11 +1,13 @@
 @php
+  $hasVideoThumbnail = false;
   $videoLink = get_post_meta($post->ID, 'youtube', true);
   if ($videoLink) {
     preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $videoLink, $matches);
     $videoId = $matches[0];
+    $hasVideoThumbnail = 'has-post-thumbnail';
   }
 @endphp
-<article @php post_class() @endphp>
+<article @php post_class($hasVideoThumbnail) @endphp>
   <a href="{{ get_permalink() }}" class="entry-link">
     <header>
       @if(has_post_thumbnail())
