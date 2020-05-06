@@ -15,7 +15,7 @@ class TemplateParl extends Controller
     {
         return get_posts([
             'numberposts' => 2,
-            'category_name' => 'blog,premsa-arxiu,general,noticies'
+            'category_name' => get_option('home_categories', 'blog,premsa,premsa-arxiu,general,noticies')
         ]);
     }
 
