@@ -58,19 +58,9 @@ class TemplateParl extends Controller
                     ],
                     'congres' => [
                         [
-                            'url' => 'http://joanbaldovi.com/programa',
-                            'image' => 'http://joanbaldovi.com/wp-content/themes/Compromis_Institucional/images/programa.png',
-                            'title' => 'Eleccions Generals 2011'
-                        ],
-                        [
-                            'url' => 'http://eselmoment.com/programa',
-                            'image' => 'https://compromis.net/wp-content/uploads/2014/10/portada-generals.jpg',
-                            'title' => 'Eleccions Generals 2015'
-                        ],
-                        [
-                            'url' => 'http://alavalenciana.org/programa',
-                            'image' => 'https://compromis.net/wp-content/uploads/2014/10/programa_val.jpg',
-                            'title' => 'Eleccions Generals 2016'
+                            'url' => 'https://mes.compromis.net/programa',
+                            'image' => 'https://compromis.net/wp-content/uploads/2019/11/programa-mescompromis.png',
+                            'title' => 'Eleccions Generals 10N 2019'
                         ],
                         [
                             'url' => 'https://imparables.compromis.net/programa',
@@ -78,9 +68,19 @@ class TemplateParl extends Controller
                             'title' => 'Eleccions Generals 28A 2019'
                         ],
                         [
-                            'url' => 'https://mes.compromis.net/programa',
-                            'image' => 'https://compromis.net/wp-content/uploads/2019/11/programa-mescompromis.png',
-                            'title' => 'Eleccions Generals 10N 2019'
+                            'url' => 'http://alavalenciana.org/programa',
+                            'image' => 'https://compromis.net/wp-content/uploads/2014/10/programa_val.jpg',
+                            'title' => 'Eleccions Generals 2016'
+                        ],
+                        [
+                            'url' => 'http://eselmoment.com/programa',
+                            'image' => 'https://compromis.net/wp-content/uploads/2014/10/portada-generals.jpg',
+                            'title' => 'Eleccions Generals 2015'
+                        ],
+                        [
+                            'url' => 'http://joanbaldovi.com/programa',
+                            'image' => 'http://joanbaldovi.com/wp-content/themes/Compromis_Institucional/images/programa.png',
+                            'title' => 'Eleccions Generals 2011'
                         ]
                     ]
                 ];

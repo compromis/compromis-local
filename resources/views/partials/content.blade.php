@@ -14,7 +14,7 @@
         </div>
       @elseif($videoLink)
         <div class="entry-thumbnail">
-          <img src="https://img.youtube.com/vi/{{ $videoId }}/maxresdefault.jpg" alt="" />
+          <img src="https://img.youtube.com/vi/{{ $videoId }}/hqdefault.jpg" alt="" />
         </div>
       @endif
       <div class="entry-info">
