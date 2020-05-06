@@ -106,13 +106,20 @@
     margin: 2rem 0;
   }
 
-  .post .entry-link header {
-    display: grid;
+  .post.has-post-thumbnail .entry-link header {
     grid-template-columns: 300px auto;
-    grid-template-rows: auto auto;
     grid-template-areas:
       "thumbnail info"
       "thumbnail bottom";
+  }
+
+  .post .entry-link header {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "info"
+      "bottom";
   }
 
   .entry-thumbnail {
