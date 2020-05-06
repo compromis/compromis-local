@@ -19,7 +19,7 @@
             <span class="video-icon" aria-hidden="true">(>)</span>
           </div>
           <div class="entry-info">
-            <h3 class="entry-title">{{ get_the_title() }}</h3>
+            <h3 class="entry-title">{!! get_the_title() !!}</h3>
           </div>
           <div class="entry-bottom">
             @include('partials/entry-meta')

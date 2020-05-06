@@ -6,7 +6,7 @@
         @include('partials.regidor')
       @endforeach
     </ul>
-    @if(count($regidors) > 6)
+    @if(count($regidors) === 6)
       <a href="/representants" class="apple-link">
         <span>{{ __('Més representants', 'sage') }}</span>
       </a>
