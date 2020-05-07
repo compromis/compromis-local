@@ -24,7 +24,6 @@ export default {
       const brand = $('.brand');
       const toggle = $('.drawer-nav-toggle');
       const expanded = toggle.attr('aria-expanded') === 'true';
-      const isSingle = $('body').hasClass('single') || $('body').hasClass('page');
 
       drawerNav.slideToggle().toggleClass('open');
       body.toggleClass('nav-open');
