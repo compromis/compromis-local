@@ -36,7 +36,7 @@
 
   .social-nav {
     font-size: 1.35rem;
-    margin-top: 0.75rem;
+    margin-top: 1rem;
     margin-bottom: 4.25rem;
 
     a {
@@ -75,6 +75,17 @@
 
     img {
       max-width: 100%;
+    }
+
+    &-thumbnail {
+      margin: 1rem calc(var(--card-padding) * -1);
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+      }
     }
 
     .wp-block-image,

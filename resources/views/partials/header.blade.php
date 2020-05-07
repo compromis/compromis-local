@@ -1,13 +1,8 @@
-@php
-  $imageUrl = ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor')
-    ? get_the_post_thumbnail_url(null, 'cover')
-    : get_header_image();
-@endphp
 @if($local->type === 'partit')
   @include('partials.partit.header')
 @else
 <header class="banner">
-  <div class="banner-local-image" style="background-image: url({{ $imageUrl }})">
+  <div class="banner-local-image" style="background-image: url({{ get_header_image() }})">
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
