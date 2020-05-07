@@ -1,11 +1,6 @@
-@php
-  $imageUrl = ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor') ? get_the_post_thumbnail_url(null, 'full') : get_header_image();
-@endphp
-@if($local->type === 'partit')
-  @include('partials.partit.header')
-@else
-<header class="banner">
-  <div class="banner-local-image" style="background-image: url({{ $imageUrl }})">
+<header class="banner banner-partit">
+  <div class="banner-local-image">
+    <div class="banner-local-image-partit" style="background-image: url({{ $imageUrl }})"></div>
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
@@ -39,11 +34,14 @@
       </div>
     </div>
     <div class="banner-local-name container">
+      @if(is_home())
+        <a href="{{ home_url('/') }}">
+          <h1><img src="@asset('images/logos/' . $local->ref . '.svg')" width="350" alt="{{ $local->name }}" /></h1>
+        </a>
+      @else
         @include('partials.header-title')
+      @endif
     </div>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
   </div>
   @yield('filter')
 </header>
-@endif

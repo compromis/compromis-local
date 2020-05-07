@@ -65,14 +65,11 @@
     &-bottom {
       display: flex;
       margin-top: auto;
+      color: $text-muted;
 
       .entry-more {
         margin-left: auto;
       }
-    }
-
-    .updated {
-      color: $text-muted;
     }
   }
 }

@@ -1,0 +1,57 @@
+/* Partit-specific styles */
+.type-partit {
+  .banner-local-image {
+    position: relative;
+    background-color: $primary;
+
+    &::before {
+      display: none;
+    }
+
+    &-partit {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.5;
+      filter: grayscale(1);
+    }
+  }
+}
+
+@each $partit, $color in $partits {
+  .ref-#{$partit} {
+    a,
+    a:hover {
+      color: $color;
+    }
+
+    a:focus,
+    .post .entry-link:focus,
+    .post-list .post-link:focus {
+      box-shadow: 0 0 0 4px rgba($color, 0.5);
+    }
+
+    .banner-local-image {
+      background-color: $color;
+    }
+
+    .post .entry-link:hover .entry-title,
+    .nav-primary a:hover,
+    .post-list .post-link:hover h5 {
+      -webkit-text-fill-color: $color;
+    }
+
+    a.brand .brand-local {
+      color: $text-supermuted;
+    }
+
+    .social-nav a:hover {
+      color: $white;
+    }
+  }
+}

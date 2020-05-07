@@ -11,6 +11,12 @@ $link-hover-color: $primary;
 $gradient-start: #d23517;
 $gradient-end: #f39128;
 $gradient: linear-gradient(var(--gradient-orientation, 45deg), $gradient-start, $gradient-end);
+$primary-iniciativa: #ad283f;
+$primary-verds: #5ab552;
+$partits: (
+  "iniciativa": $primary-iniciativa,
+  "verds": $primary-verds
+);
 
 /* Grays */
 $gray-darkest: #353949;

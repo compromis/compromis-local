@@ -1,7 +1,7 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class() @endphp>
+  <body @php body_class('type-' . $local->type . ' ref-' . $local->ref) @endphp>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ca_ES/sdk.js#xfbml=1&version=v6.0&appId=113425298767027"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
