@@ -78,13 +78,14 @@
     }
 
     &-thumbnail {
-      margin: 1rem calc(var(--card-padding) * -1);
+      float: left;
 
       img {
         width: 100%;
+        max-width: 400px;
         height: auto;
-        max-height: 400px;
-        object-fit: cover;
+        border-radius: $border-radius;
+        margin: 0 1rem 1rem 0;
       }
     }
 
@@ -254,6 +255,10 @@
 
     .blob-2 {
       top: -39rem;
+    }
+
+    .entry-content-thumbnail img {
+      max-width: 100%;
     }
   }
 }
