@@ -410,4 +410,10 @@
       display: none;
     }
   }
+
+  .highlighted-posts {
+    .post .entry-thumbnail img {
+      height: 260px;
+    }
+  }
 }

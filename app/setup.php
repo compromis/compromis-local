@@ -131,6 +131,13 @@ add_action('the_post', function ($post) {
 });
 
 /**
+ * Prevent posts from user 2 from displaying (temporary fix)
+ */
+add_action('pre_get_posts', function ($query) {
+    $query->set('author__not_in', [2]);
+});
+
+/**
  * Setup Sage options
  */
 add_action('after_setup_theme', function () {
