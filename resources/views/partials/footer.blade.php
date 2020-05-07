@@ -15,7 +15,7 @@
             <li><i class="far fa-home"></i> <strong>{{ $local->type === 'local' ? __('Seu local', 'sage') : __('Adreça', 'sage') }}</strong>: {{ $local->address_seu }}</li>
           @endif
           @if($local->address_grup)
-            <li><i class="far fa-building"></i> <strong>{{ __('Grup municipal', 'sage') }}</strong>: {{ $local->address_grup }}</li>
+            <li><i class="far fa-building"></i> <strong>{{ $local->type === 'local' ? __('Grup municipal', 'sage') : __('Adreça', 'sage') }}</strong>: {{ $local->address_grup }}</li>
           @endif
           @if($local->email)
             <li><i class="far fa-envelope"></i> <a href="mailto:{!! antispambot($local->email) !!}">{!! antispambot($local->email) !!}</a></li>

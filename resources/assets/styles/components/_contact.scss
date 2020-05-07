@@ -95,13 +95,21 @@
 @include media-breakpoint-down (sm) {
   .contact-list-social,
   .address-list {
+    grid-template-columns: 1fr;
+
     a,
     span {
       font-size: 1.2rem;
+      word-break: break-all;
     }
 
     i {
       font-size: 1.5rem;
     }
+  }
+
+  .contact-list-social,
+  .address-list li {
+    padding: 1rem;
   }
 }

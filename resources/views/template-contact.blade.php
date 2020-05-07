@@ -72,7 +72,7 @@
             <div class="address-list-item">
               <i class="far fa-building"></i> 
               <address>
-                <strong>{{ __('Grup municipal', 'sage') }}</strong>
+                <strong>{{ $local->type === 'local' ? __('Grup municipal', 'sage') : __('Adreça', 'sage') }}</strong>
                 <p>{{ $local->address_grup }}</p>
               </address>
             </div>
