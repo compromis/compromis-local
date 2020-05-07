@@ -61,7 +61,7 @@
             <iframe
               width="100%"
               height="300"
-              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=ca&amp;q={{ $local->address_seu . ', ' . $local->name . ', Espanya' }}&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=ca&amp;q={{ ($local->type === 'local') ? $local->address_seu . ', ' . $local->name . ', Espanya' : $local->address_seu }}&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
               frameborder="0"
               scrolling="no">
             </iframe>
@@ -79,7 +79,7 @@
             <iframe
               width="100%"
               height="300"
-              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=ca&amp;q={{ $local->address_grup . ', ' . $local->name . ', Espanya' }}&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=ca&amp;q={{ ($local->type === 'local') ? $local->address_grup . ', ' . $local->name . ', Espanya' : $local->address_grup }}&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
               frameborder="0"
               scrolling="no">
             </iframe>
