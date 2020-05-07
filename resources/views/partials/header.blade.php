@@ -1,5 +1,7 @@
 @php
-  $imageUrl = ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor') ? get_the_post_thumbnail_url(null, 'full') : get_header_image();
+  $imageUrl = ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor')
+    ? get_the_post_thumbnail_url(null, 'cover')
+    : get_header_image();
 @endphp
 @if($local->type === 'partit')
   @include('partials.partit.header')
