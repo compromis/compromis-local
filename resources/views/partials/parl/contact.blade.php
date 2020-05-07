@@ -3,9 +3,9 @@
     {!! nl2br(__("Oficina\nParlamentària", "sage")) !!}
   </div>
   <div class="contact-nav-address">
-    @if($local->address_seu)
-      <a class="contact-nav-link" href="https://www.google.com/maps/search/{{ $local->address_seu }}" target="_blank" rel="noopener">
-        <i class="far fa-home"></i> {{ $local->address_seu }}
+    @if($local->address_grup)
+      <a class="contact-nav-link" href="https://www.google.com/maps/search/{{ $local->address_grup }}" target="_blank" rel="noopener">
+        <i class="far fa-home"></i> {{ $local->address_grup }}
       </a>
     @endif
     @if($local->telf)
