@@ -11,6 +11,9 @@
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
+    <div class="entry-content-thumbnail">
+      @php the_post_thumbnail() @endphp
+    </div>
     @include('partials/youtube')
     @php the_content() @endphp
   </div>
