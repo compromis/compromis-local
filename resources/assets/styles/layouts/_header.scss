@@ -137,6 +137,7 @@
     margin-right: 1rem;
     display: flex;
     align-items: center;
+    transition: 0.25s ease-in-out;
 
     ul {
       display: flex;
@@ -222,6 +223,10 @@
       margin-right: 1rem;
       font-weight: normal;
     }
+  }
+
+  &-open .nav-shortcut {
+    opacity: 0;
   }
 }
 
