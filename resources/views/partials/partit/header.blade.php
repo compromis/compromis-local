@@ -4,7 +4,16 @@
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
-          @include('partials.logo')
+          <a class="brand {{ is_single() || (is_page() && !is_front_page()) ? '' : 'brand-compact' }}" href="{{ home_url('/') }}">
+            <span class="brand-local brand-partit brand-{{ $local->ref }} {{ strlen($local->name) > 14 && count(explode(' ', $local->name)) > 1 ? 'brand-local--long' : '' }}">
+              @include('partials.logos.' . $local->ref)
+            </span>
+            <span class="brand-logo">
+              @include('partials.logos.compromis')
+              <span class="sr-only">Compromís</span>
+            </span>
+          </a>
+          
           <nav class="nav-shortcut d-none d-lg-flex">
             @if (has_nav_menu('primary_navigation'))
               {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}

@@ -109,6 +109,17 @@
     overflow: hidden;
   }
 
+  &-partit {
+    margin-left: 0;
+    margin-right: 0.75rem;
+    color: $text-default !important;
+
+    &.brand-bloc {
+      position: relative;
+      top: -3px;
+    }
+  }
+
   &-institution {
     height: 1.875rem;
     margin-left: 0.5rem;
@@ -122,6 +133,10 @@
     .brand-local {
       opacity: 0;
       max-width: 0;
+    }
+
+    .brand-partit {
+      margin-right: 0;
     }
   }
 
