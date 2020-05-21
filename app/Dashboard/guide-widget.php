@@ -41,7 +41,7 @@ function xarxa_guide_render () {
     <div class="xarxa-section xarxa-welcome">
         <p class="xarxa-message">
             <span>✅</span>
-            <span>Acabem d'actualitzar aquesta web a la nova plantilla local de Compromís.</span>
+            <span>Acabem d'actualitzar aquesta web a la nova plantilla de Compromís.</span>
         </p>
         <p>
             És possible que algun contingut no s'haja transferit correctament a la nova web.
@@ -49,18 +49,18 @@ function xarxa_guide_render () {
         </p>
     </div>
     <div class="xarxa-section xarxa-collectiu">
-        <h4>ℹ️ Informació del col·lectiu</h4>
+        <h4>ℹ️ Informació de contacte</h4>
         <p>
-            A la pestanya <a href="admin.php?page=collectiu_info">Col·lectiu</a> podeu modificar
-            la informació del vostre col·lectiu (adreça, telèfon, xarxes socials, etc.)
+            A la pestanya <a href="admin.php?page=collectiu_info">Informació</a> podeu modificar
+            la informació de contacte (adreça, telèfon, xarxes socials, etc.)
             que es mostra a aquesta pàgina i al directori de compromis.net
         </p>
     </div>
     <div class="xarxa-section xarxa-collectiu">
-        <h4>👥 Regidors i regidores</h4>
+        <h4>👥 Perfils</h4>
         <p>
             A la pestanya <a href="edit.php?post_type=regidor">Perfils</a> podeu
-            afegir els regidors/es del col·lectiu. Per mostrar-los a la web, heu
+            afegir informació de representants (diputats, regidors, executiva, etc.). Per mostrar-los a la web, heu
             de <a href="post-new.php?post_type=page">crear una nova pàgina</a> amb
             amb la plantilla <i>Llistat de perfils</i>.
         </p>

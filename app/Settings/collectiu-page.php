@@ -30,7 +30,7 @@
 ?>
 <div>
 <?php screen_icon(); ?>
-<h2>Informació del col·lectiu</h2>
+<h2>Informació de la pàgina web</h2>
 
 <?php if(isset($success)): ?>
     <div id="message" class="updated notice notice-success">
@@ -38,17 +38,17 @@
     </div>
 <?php endif; ?>
 
-<p>Ací podeu modificar la informació sobre el vostre col·lectiu que es mostra a <a href="https://compromis.net">compromis.net</a> i a aquesta pàgina web.</p>
-<p>Municipi associat: <strong><?php echo $info->id . '-' . $info->ref; ?></strong></p>
+<p>Ací podeu modificar la informació que es mostra a aquesta web i a <a href="https://compromis.net">compromis.net</a> (directori de municipis).</p>
+<p>Web associada: <strong><?php echo $info->id . '-' . $info->ref; ?></strong></p>
 <hr />
 <h3><?php echo $info->name; ?></h3>
 <form method="post">
     <div class="field">
-        <label for="address_grup">Adreça del grup municipal</label>
+        <label for="address_grup">Adreça del grup municipal o oficina parlamentària</label>
         <input type="text" name="address_grup" id="address_grup" value="<?php echo $info->address_grup; ?>" size="70" />
     </div>
     <div class="field">
-        <label for="address_seu">Adreça de la seu municipal</label>
+        <label for="address_seu">Adreça de la seu municipal, comarcal o nacional</label>
         <input type="text" name="address_seu" id="address_seu" value="<?php echo $info->address_seu; ?>" size="70" />
     </div>
     <div class="field">

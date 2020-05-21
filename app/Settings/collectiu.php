@@ -7,7 +7,7 @@ function collectiu_register_settings() {
 add_action('admin_init', 'collectiu_register_settings');
 
 function collecti_register_options_page() {
-    add_menu_page('Informació de col·lectiu', 'Col·lectiu', 'manage_options', 'collectiu_info', 'collectiu_options_page', '', 61);
+    add_menu_page('Informació de col·lectiu', 'Informació', 'manage_options', 'collectiu_info', 'collectiu_options_page', '', 61);
 }
 add_action('admin_menu', 'collecti_register_options_page');
 
