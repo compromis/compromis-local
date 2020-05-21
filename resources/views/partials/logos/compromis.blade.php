@@ -11,7 +11,7 @@
 </defs>
 <g>
   <g>
-      <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="122.7341" y1="176.9938" x2="40.2201" y2="-10.7366" gradientTransform="matrix(1 0 0 -1 0 159.8646)">
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="122.7341" y1="176.9938" x2="40.2201" y2="-10.7366" gradientTransform="matrix(1 0 0 -1 0 159.8646)">
       <stop  offset="0" style="stop-color:#F29127"/>
       <stop  offset="0.2054" style="stop-color:#EC8427"/>
       <stop  offset="0.6036" style="stop-color:#DE6527"/>
