@@ -244,6 +244,10 @@
   .banner-local-name {
     height: calc(16rem + 35vh);
   }
+
+  .banner-local-image {
+    background-position: top;
+  }
 }
 
 @include media-breakpoint-down (lg) {
