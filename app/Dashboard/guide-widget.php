@@ -38,16 +38,6 @@ function xarxa_guide_render () {
     <div class="xarxa-logo">
         <img src="<?php echo get_bloginfo("stylesheet_directory") . '/assets/images/admin-logo.svg'; ?>" alt="Xarxa Compromís Local" />
     </div>
-    <div class="xarxa-section xarxa-welcome">
-        <p class="xarxa-message">
-            <span>✅</span>
-            <span>Acabem d'actualitzar aquesta web a la nova plantilla de Compromís.</span>
-        </p>
-        <p>
-            És possible que algun contingut no s'haja transferit correctament a la nova web.
-            Si és el cas i el voleu recuperar, contacteu amb <a href="mailto:web@compromis.net">web@compromis.net</a>
-        </p>
-    </div>
     <div class="xarxa-section xarxa-collectiu">
         <h4>ℹ️ Informació de contacte</h4>
         <p>
