@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <link rel="prefetch" href="{{ get_header_image() }}" />
+  <link rel="prefetch" href="{{ $header_image }}" />
   @php wp_head() @endphp
 
   <!-- Favicons -->

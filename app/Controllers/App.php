@@ -35,4 +35,10 @@ class App extends Controller
         global $wpdb, $blog_id;
         return $wpdb->get_row($wpdb->prepare('SELECT * FROM webs_locals WHERE blogid = %d LIMIT 1', $blog_id));
     }
+
+    public function headerImage() {
+        return ((is_single() || is_page()) && has_post_thumbnail() && get_post_type() != 'regidor')
+            ? get_the_post_thumbnail_url(null, 'cover')
+            : get_header_image();
+    }
 }

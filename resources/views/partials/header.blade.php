@@ -2,7 +2,7 @@
   @include('partials.partit.header')
 @else
 <header class="banner">
-  <div class="banner-local-image" style="background-image: url({{ get_header_image() }})">
+  <div class="banner-local-image" style="background-image: url({{ $header_image }});">
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
