@@ -3,6 +3,7 @@ export default {
   data: {
     territorials: [],
     territorialText: '',
+    territorialUrl: '',
     locals: [],
     filterValue: '',
     filteredResults: [],
@@ -14,6 +15,7 @@ export default {
     filterValue: function (newVal) {
       if (newVal === '') {
         this.filteredResults = this.territorials;
+        this.territorialUrl = ''
       } else {
         this.filter();
       }
@@ -21,6 +23,7 @@ export default {
     territorialText: function (newVal) {
       if (newVal === '') {
         this.filteredResults = this.territorials;
+        this.territorialUrl = ''
       }
     },
   },
@@ -39,6 +42,7 @@ export default {
     },
     setTerritory (website) {
       this.territorialText = website.name;
+      this.territorialUrl = website.url;
       this.filteredResults = this.locals.filter(local => local.territori_id == website.id);
     },
   },
