@@ -3,13 +3,14 @@
     &-link {
       position: relative;
       overflow: hidden;
-      display: flex;
       color: $text-default;
       padding: var(--card-padding, 1rem);
       transition: 0.25s ease-in-out;
       height: 100%;
 
       @extend .card;
+
+      display: block; // safari fix
 
       header {
         display: flex;
@@ -387,7 +388,8 @@
   }
 
   .archive-posts {
-    .post .entry-link header {
+    .post .entry-link header,
+    .post.has-post-thumbnail .entry-link header {
       grid-template-columns: auto;
       grid-template-areas:
         "thumbnail"
