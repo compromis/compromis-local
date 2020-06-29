@@ -4,7 +4,7 @@
 <li class="{{ (!isset($hide_name) || !$hide_name) ? 'card' : '' }} card-regidor">
   @if(has_post_thumbnail($regidor->ID))
     <a href="{{ get_permalink($regidor->ID) }}">
-      <img class="card-regidor-img" src="{{ get_the_post_thumbnail_url($regidor->ID, 'medium') }}" alt="" />
+      <img class="card-regidor-img" src="{{ get_the_post_thumbnail_url($regidor->ID, 'medium') }}" loading="lazy" alt="" />
     </a>
   @endif
   <div class="card-regidor-info">

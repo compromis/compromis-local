@@ -12,11 +12,11 @@
     <header>
       @if(has_post_thumbnail())
         <div class="entry-thumbnail">
-          {{ the_post_thumbnail('large') }}
+          {{ the_post_thumbnail('large', ['loading' => 'lazy']) }}
         </div>
       @elseif($videoLink)
         <div class="entry-thumbnail">
-          <img src="https://img.youtube.com/vi/{{ $videoId }}/hqdefault.jpg" alt="" />
+          <img src="https://img.youtube.com/vi/{{ $videoId }}/hqdefault.jpg" loading="lazy" alt="" />
         </div>
       @endif
       <div class="entry-info">
