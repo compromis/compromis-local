@@ -1,6 +1,6 @@
 <header class="banner banner-partit">
   <div class="banner-local-image">
-    <div class="banner-local-image-partit" style="background-image: url({{ get_header_image() }})"></div>
+    <div class="banner-local-image-partit" style="background-image: url({{ $header_image }})"></div>
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
