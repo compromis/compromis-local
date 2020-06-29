@@ -5,7 +5,7 @@ function icons_custom_field($item_id, $item) {
         'document', 'inici', 'info', 'representant', 'suma',
         'noticies', 'arxiu', 'contacte', 'participa', 'agenda',
         'videos', 'enquesta', 'misc', 'bandera', 'urna', 'megafon',
-        'transparencia'
+        'transparencia', 'mapa', 'transport', 'mon', 'diners'
     ];
     ?>
     <p class="menu-icon description description-wide">
