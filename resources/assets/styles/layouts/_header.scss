@@ -10,7 +10,8 @@
   }
 
   &-band {
-    background: var(--white);
+    background: var(--nav-background);
+    backdrop-filter: blur(10px);
     border-radius: 0 0 $border-radius $border-radius;
     box-shadow: $default-shadow;
     overflow: hidden;
@@ -20,7 +21,7 @@
 
       &--nav {
         margin: 0;
-        max-height: calc(100vh - 200px);
+        max-height: calc(100vh - 150px);
         border-top: 1px var(--gray-200) solid;
       }
     }
@@ -287,7 +288,7 @@
   }
 
   &-toggle {
-    background: var(--white);
+    background: transparent;
     border: 0;
     border-left: 1px var(--gray-200) solid;
     color: $text-muted;

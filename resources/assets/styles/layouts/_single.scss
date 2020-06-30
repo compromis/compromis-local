@@ -240,6 +240,16 @@
   }
 }
 
+.single {
+  .banner-local-name {
+    height: calc(16rem + 35vh);
+  }
+
+  .banner-local-image {
+    background-position: center 30%;
+  }
+}
+
 @include media-breakpoint-down (lg) {
   .single,
   .page:not(.page-arxiu-data) {
