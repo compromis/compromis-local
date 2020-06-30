@@ -16,6 +16,7 @@
     --gray-900: #{$gray-100};
     --white: #{$gray-900};
     --black: #{$white};
+    --nav-background: #{rgba($gray-900, 0.9)};
   }
 
   .dark-only {
