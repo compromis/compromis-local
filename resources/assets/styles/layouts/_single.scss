@@ -255,7 +255,7 @@
   .page:not(.page-arxiu-data) {
     .banner-local-name {
       h1 {
-        font-size: calc(var(--font-size) * 0.65rem);
+        font-size: calc(var(--font-size) * 0.6rem) !important;
       }
     }
 
