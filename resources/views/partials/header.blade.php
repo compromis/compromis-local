@@ -12,10 +12,10 @@
               {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
             @endif
           </nav>
-          <button class="drawer-nav-toggle ml-auto ml-lg-0" href="#" aria-expanded="false">
+          <button class="drawer-nav-toggle ml-auto ml-lg-0" aria-expanded="false">
             <i class="far fa-bars"></i>
             <i class="far fa-times"></i>
-            <span class="sr-only">Menú</span>
+            <span class="sr-only">{{ __('Menú', 'sage') }}</span>
           </button>
         </div>
         <div class="banner-band-row banner-band-row--nav">
