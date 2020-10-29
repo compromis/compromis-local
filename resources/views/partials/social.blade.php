@@ -10,7 +10,7 @@
     <i class="fab fa-twitter"></i>
     <span class="sr-only">{{ __('Comparteix per Twitter', 'sage') }}</span>
   </a>
-  <a href="whatsapp://send?text=http://www.example.com">
+  <a href="whatsapp://send?text={{ get_the_permalink() }}">
     <i class="fab fa-whatsapp"></i>
     <span class="sr-only">{{ __('Comparteix per Whatsapp', 'sage') }}</span>
   </a>
