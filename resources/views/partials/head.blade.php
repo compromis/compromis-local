@@ -32,10 +32,10 @@
   @if(is_single() || is_page())
     <meta property="og:type" content="article" />
     <meta property="og:description" content="{!! get_the_excerpt() !!}" />
-    <meta property="og:image" content="{!! get_the_post_thumbnail_url() !!}" />
+    <meta property="og:image" content="{!! get_the_post_thumbnail_url(null, 'large') !!}" />
     <meta property="og:url" content="{!! get_permalink() !!}" />
     <meta property="twitter:description" content="{!! get_the_excerpt() !!}" />
-    <meta property="twitter:image" content="{!! get_the_post_thumbnail_url() !!}" />
+    <meta property="twitter:image" content="{!! get_the_post_thumbnail_url(null, 'large') !!}" />
     <meta property="twitter:url" content="{!! get_permalink() !!}" />
   @else
     <meta property="og:type" content="website" />
