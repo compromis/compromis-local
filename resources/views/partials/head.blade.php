@@ -4,6 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
   <link rel="prefetch" href="{{ $header_image }}" />
   <meta name="color-scheme" content="dark light">
+  <script>
+    // Render blocking js to avoid FOUC in dark theme
+    var storedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    var prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    var isDark = storedTheme ? storedTheme === 'dark' : prefersDarkScheme.matches;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  </script>
   @php wp_head() @endphp
 
   <!-- Favicons -->
