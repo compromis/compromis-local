@@ -1,4 +1,7 @@
-<h2 class="network-name"><a href="https://compromis.net">compromís.net</a></h2>
+<div class="d-flex">
+  <h2 class="network-name"><a href="https://compromis.net">compromís.net</a></h2>
+  @include('partials.darkmodeswitch')
+</div>
 
 <div class="row">
   <div class="col-lg-3 col-md-6">

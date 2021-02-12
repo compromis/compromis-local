@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import localNetwork from '../components/local-network.js';
+import darkModeSwitch from '../components/dark-mode-switch.js';
 
 export default {
   init() {
@@ -57,6 +58,9 @@ export default {
 
     // Local network
     new Vue(localNetwork);
+    // Dark mode switch
+    new Vue({ el: '#dark-mode-switch', ...darkModeSwitch });
+    new Vue({ el: '#dark-mode-switch-footer', ...darkModeSwitch });
   },
   finalize() {
     $(document).ready(function () {
@@ -75,7 +79,7 @@ export default {
         Object.keys(codes).forEach(code => {
           if (keys.toString().indexOf(code) >= 0) {
             $('body').after(`
-              <div style="position:fixed;top:0;left:0;bottom:0;right:0;z-index:10000">
+              <div style="position:fixed; top:0; left:0; bottom:0; right:0; z-index: 10000;">
                 <iframe width="100%" height="100%" src="${codes[code]}" frameborder="0"></iframe>
               </div>
             `);

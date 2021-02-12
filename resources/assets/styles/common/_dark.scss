@@ -1,23 +1,21 @@
 /* stylelint-disable */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-default: #{$white};
-    --text-muted: #{$gray-300};
-    --text-supermuted: #{$gray-400};
-    --gray-lightest: #{darken($gray-900, 7)};
-    --gray-100: #{mix($gray-lightest, $gray-900, 5%)};
-    --gray-200: #{$gray-800};
-    --gray-300: #{$gray-700};
-    --gray-400: #{$gray-600};
-    --gray-500: #{$gray-500};
-    --gray-600: #{$gray-400};
-    --gray-700: #{$gray-300};
-    --gray-800: #{$gray-200};
-    --gray-900: #{$gray-100};
-    --white: #{$gray-900};
-    --black: #{$white};
-    --nav-background: #{rgba($gray-900, 0.9)};
-  }
+[data-theme='dark'] {
+  --text-default: #{$white};
+  --text-muted: #{$gray-300};
+  --text-supermuted: #{$gray-400};
+  --gray-lightest: #{darken($gray-900, 7)};
+  --gray-100: #{mix($gray-lightest, $gray-900, 5%)};
+  --gray-200: #{$gray-800};
+  --gray-300: #{$gray-700};
+  --gray-400: #{$gray-600};
+  --gray-500: #{$gray-500};
+  --gray-600: #{$gray-400};
+  --gray-700: #{$gray-300};
+  --gray-800: #{$gray-200};
+  --gray-900: #{$gray-100};
+  --white: #{$gray-900};
+  --black: #{$white};
+  --nav-background: #{rgba($gray-900, 0.9)};
 
   .dark-only {
     display: block;

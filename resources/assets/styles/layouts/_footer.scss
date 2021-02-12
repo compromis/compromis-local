@@ -45,9 +45,14 @@
 
   &-logo {
     display: flex;
+    flex-direction: column;
     order: 1;
     margin-left: auto;
     align-items: flex-end;
+
+    .dark-mode-switch {
+      margin-bottom: auto;
+    }
 
     img {
       width: 180px;

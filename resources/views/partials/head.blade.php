@@ -3,6 +3,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
   <link rel="prefetch" href="{{ $header_image }}" />
+  <meta name="color-scheme" content="dark light">
   @php wp_head() @endphp
 
   <!-- Favicons -->

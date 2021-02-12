@@ -4,6 +4,7 @@
 
     <section class="footer-info">
       <div class="footer-logo">
+        @include('partials.darkmodeswitch', ['append' => '-footer'])
         <a href="https://compromis.net">
           <img src="https://compromis.net/wp-content/themes/Compromis/images/logo-mono.svg" alt="Compromís" />
         </a>

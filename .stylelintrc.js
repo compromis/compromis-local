@@ -4,6 +4,7 @@ module.exports = {
     'no-empty-source': null,
     'no-descending-specificity': null,
     'string-quotes': 'double',
+    'selector-pseudo-class-no-unknown': null,
     'at-rule-no-unknown': [
       true,
       {
