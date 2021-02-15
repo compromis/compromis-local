@@ -1,3 +1,6 @@
+import SwitchOff from '../../audio/switch-off.mp3';
+import SwitchOn from '../../audio/switch-on.mp3';
+
 export default {
   data: {
     isDark: false,
@@ -22,13 +25,16 @@ export default {
     this.setTheme(isDark, true);
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      if (!storedTheme) this.setTheme(e.matches, true)
+      if (!storedTheme) this.setTheme(e.matches, true);
     });
   },
 
   methods: {
     toggleDark () {
-      this.setTheme(!this.isDark)
+      this.setTheme(!this.isDark);
+      const sound = this.isDark ? SwitchOff : SwitchOn;
+      var audio = new Audio(sound);
+      audio.play();
     },
 
     setTheme (isDark, doNotStore = false) {
