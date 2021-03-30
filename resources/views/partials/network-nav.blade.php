@@ -30,6 +30,11 @@
       <li><a href="https://dipcas.compromis.net">Diputació de Castelló</a></li>
       <li><a href="https://fvmp.compromis.net">FVMP</a></li>
     </li>
+    <h3>MEMBRES</h3>
+    <ul>
+      <li><a href="https://compromis.net/espai">Espai Compromís</a></li>
+      <li><a href="https://sumat.compromis.net">Suma't a Compromís</a></li>
+    </li>
   </div>
   <div class="col-lg-6 col-md-12 mt-2 mt-md-0" id="locals">
     <h3>COMPROMÍS AL TEU MUNICIPI</h3>
