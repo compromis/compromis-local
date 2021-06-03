@@ -1,4 +1,4 @@
-@if(isset($programes[$local->ref]))
+@if(isset($programes[$rels[$local->ref]]))
   <h2>{{ __('Programes electorals', 'sage') }}</h2>
 
   <ul class="programes card-list">
