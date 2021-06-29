@@ -58,7 +58,7 @@ class TemplateParl extends Controller
             ],
             'congres' => [
                 [
-                    'url' => 'https://mes.compromis.net/programa',
+                    'url' => 'https://n10.compromis.net/programa',
                     'image' => 'https://compromis.net/wp-content/uploads/2019/11/programa-mescompromis.png',
                     'title' => 'Eleccions Generals 10N 2019'
                 ],

@@ -7,7 +7,7 @@
   <div class="col-lg-3 col-md-6">
     <h3>PARTITS</h3>
     <ul>
-      <li><a href="https://bloc.compromis.net">BLOC</a></li>
+      <li><a href="https://mes.compromis.net">Més-Compromís</a></li>
       <li><a href="https://iniciativa.compromis.net">Iniciativa</a></li>
       <li><a href="https://verds.compromis.net">Verds</a></li>
     </ul>
