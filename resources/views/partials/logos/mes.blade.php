@@ -1,9 +1,9 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 269.6 153.73" style="enable-background:new 0 0 269.6 153.73;" xml:space="preserve">
+	 viewBox="0 0 269.6 153.73" style="enable-background:new 0 0 269.6 153.73;width:48px" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:currentColor;}
+	.mes-logo-path{fill:currentColor;}
 </style>
-<path class="st0" d="M118.28,20.79l0,112.08l-20.74,3.66L97.5,55.39l-28.22,86.12l-20.26,3.57l-28.8-76.07l-0.1,81.16L0,153.73
+<path class="mes-logo-path" d="M118.28,20.79l0,112.08l-20.74,3.66L97.5,55.39l-28.22,86.12l-20.26,3.57l-28.8-76.07l-0.1,81.16L0,153.73
 	L0,41.65l29.53-5.21l29.2,76.48l28.61-86.68L118.28,20.79z M146.67,75.23c0.35-9.94,5.99-18.39,16.52-20.24
 	c11.62-2.05,19.28,3.73,20.87,13.65L146.67,75.23 M206.15,80.94c0.15-3.75,0.02-9.07-0.76-13.47
 	c-3.91-22.15-20.96-34.37-44.84-30.16c-27.65,4.87-38.89,31.15-34.87,53.93c4.57,25.92,23.01,37.73,47.83,33.35
