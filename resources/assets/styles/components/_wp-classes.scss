@@ -23,6 +23,13 @@
   height: auto;
 }
 
+.size-full {
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
 @include media-breakpoint-up(sm) {
   .alignleft {
     float: left;
