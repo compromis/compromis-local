@@ -38,8 +38,6 @@
     <div class="banner-local-name container">
         @include('partials.header-title')
     </div>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
   </div>
   @yield('filter')
 </header>

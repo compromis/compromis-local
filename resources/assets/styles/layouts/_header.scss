@@ -41,7 +41,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+      background: linear-gradient(var(--gradient-orientation,120deg),rgba(210,53,23,.95),rgba(243,145,40,.6),rgba(243,145,40,.4),rgba(243,145,40,0));
       z-index: 2;
     }
   }

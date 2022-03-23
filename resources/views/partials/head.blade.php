@@ -23,8 +23,8 @@
   <link rel="apple-touch-icon" sizes="120x120" href="@asset('images/favicons/apple-icon-120x120.png')">
   <link rel="apple-touch-icon" sizes="152x152" href="@asset('images/favicons/apple-icon-152x152.png')">
   <link rel="apple-touch-icon" sizes="180x180" href="@asset('images/favicons/apple-icon-180x180.png')">
-  <link rel="icon" type="image/png" sizes="192x192"  href="@asset('images/favicons/android-icon-192x192.png')">
-  <link rel="icon" type="image/png" sizes="192x192"  href="@asset('images/favicons/android-chrome-192x192.png')">
+  <link rel="icon" type="image/png" sizes="192x192" href="@asset('images/favicons/android-icon-192x192.png')">
+  <link rel="icon" type="image/png" sizes="192x192" href="@asset('images/favicons/android-chrome-192x192.png')">
   <meta name="msapplication-TileImage" content="@asset('images/favicons/msapplication-icon-144x144.png')">
 
   <!-- Metatags -->
