@@ -211,6 +211,11 @@ include 'CustomPostTypes/regidor.php';
 include 'CustomPostTypes/legislatura.php';
 
 /**
+ * Register second thumbnail
+ */
+include 'CustomFields/second-thumbnail.php';
+
+/**
  * Register custom fields
  */
 include 'CustomFields/menu.php';
