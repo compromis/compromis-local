@@ -1,5 +1,16 @@
 @php
+  $secondThumbnail = false;
+  $secondThumbnailIsPrimary = false;
   $hasVideoThumbnail = false;
+
+  $hasThumbnail = has_post_thumbnail();
+  $secondThumbnailIsPrimary = get_post_meta(get_the_ID(), '_second_thumbnail_is_primary', true);
+
+  if (!$hasThumbnail || $secondThumbnailIsPrimary) {
+    $secondThumbnail = get_post_meta(get_the_ID(), '_second_thumbnail', true);
+    $secondThumbnailAlt = get_post_meta(get_the_ID(), '_second_thumbnail_alt', true);
+  }
+  
   $videoLink = get_post_meta(get_the_ID(), 'youtube', true);
   if ($videoLink) {
     preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $videoLink, $matches);
@@ -10,9 +21,13 @@
 <article @php post_class($hasVideoThumbnail) @endphp>
   <a href="{{ get_permalink() }}" class="entry-link">
     <header>
-      @if(has_post_thumbnail())
+      @if($hasThumbnail && !$secondThumbnailIsPrimary)
         <div class="entry-thumbnail">
           {{ the_post_thumbnail('large', ['loading' => 'lazy']) }}
+        </div>
+      @elseif($secondThumbnail)
+        <div class="entry-thumbnail">
+          <img src="{{ $secondThumbnail }}" alt="{{ $secondThumbnailAlt }}" loading="lazy" />
         </div>
       @elseif($videoLink)
         <div class="entry-thumbnail">

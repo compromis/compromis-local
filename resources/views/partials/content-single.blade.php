@@ -11,6 +11,18 @@
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
+    @php
+      $secondThumbnail = get_post_meta(get_the_ID(), '_second_thumbnail', true);
+      $secondThumbnailAlt = get_post_meta(get_the_ID(), '_second_thumbnail_alt', true);
+      $info = getimagesize($secondThumbnail);
+      $isVertical = $info[0] < $info[1];
+    @endphp
+    @if($secondThumbnail)
+      <figure class="entry-second-thumbnail {{ $isVertical ? 'entry-second-thumbnail--vertical' : '' }}">
+        <img src="{{ $secondThumbnail }}" alt="{{ $secondThumbnailAlt }}" />
+        <figcaption>{{ $secondThumbnailAlt }}</figcaption>
+      </figure>
+    @endif
     @include('partials/youtube')
     @php the_content() @endphp
   </div>

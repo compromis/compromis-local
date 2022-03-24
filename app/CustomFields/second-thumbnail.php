@@ -23,6 +23,8 @@ add_action('add_meta_boxes', 'register_second_thumbnail_metabox');
 function second_thumbnail_metabox_callback ($post) {
     wp_nonce_field('second_thumbnail_save_meta_box_data', 'second_thumbnail_meta_box_nonce' );
     $second_thumbnail = get_post_meta($post->ID, '_second_thumbnail', true);
+    $second_thumbnail_alt = get_post_meta($post->ID, '_second_thumbnail_alt', true);
+    $second_thumbnail_is_primary = get_post_meta($post->ID, '_second_thumbnail_is_primary', true);
 
     echo '
       <style>
@@ -40,7 +42,8 @@ function second_thumbnail_metabox_callback ($post) {
           margin-bottom: .5rem;
         }
 
-        .metabox-field input {
+        .metabox-field input[type=text],
+        .metabox-field input[type=url] {
           width: 100%;
         }
       </style>
@@ -54,6 +57,16 @@ function second_thumbnail_metabox_callback ($post) {
     echo '<button class="upload-second-thumbnail button button-secondary" style="margin-right: 10px;">Pujar foto</button>';
     echo '<input type="url" placeholder="https://" name="_second_thumbnail" id="_second_thumbnail" value="' . $second_thumbnail . '" />';
     echo '</div>';
+    echo '</div>';
+
+    echo '<div class="metabox-field">';
+    echo '<label for="_second_thumbnail_alt">Text descriptiu</label>';
+    echo '<input type="text" placeholder="Regidor de..." name="_second_thumbnail_alt" id="_second_thumbnail_alt" value="' . $second_thumbnail_alt . '" />';
+    echo '</div>';
+
+    $checked = ($second_thumbnail_is_primary) ? 'checked' : '';
+    echo '<div class="metabox-field">';
+    echo '<label><input type="checkbox" name="_second_thumbnail_is_primary" value="true" ' . $checked . ' /> Utilitzar com a foto principal</label>';
     echo '</div>';
     ?>
     <script>
@@ -91,5 +104,7 @@ function second_thumbnail_metabox_save ($post_id) {
     }
 
     update_post_meta($post_id, '_second_thumbnail', sanitize_text_field($_POST['_second_thumbnail']));
+    update_post_meta($post_id, '_second_thumbnail_alt', sanitize_text_field($_POST['_second_thumbnail_alt']));
+    update_post_meta($post_id, '_second_thumbnail_is_primary', sanitize_text_field($_POST['_second_thumbnail_is_primary']));
 }
 add_action('save_post', 'second_thumbnail_metabox_save');

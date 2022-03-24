@@ -58,6 +58,24 @@
       }
     }
 
+    &-second-thumbnail {
+      img {
+        border-radius: 1rem;
+        width: 100%;
+      }
+
+      figcaption {
+        opacity: 0.75;
+        margin-top: 0.5rem;
+      }
+
+      &--vertical {
+        float: left;
+        width: 40%;
+        margin: 0 1rem 1rem 0;
+      }
+    }
+
     &-excerpt {
       margin-bottom: 1rem;
       color: $text-muted;
