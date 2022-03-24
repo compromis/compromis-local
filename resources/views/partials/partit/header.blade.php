@@ -4,16 +4,16 @@
     <div class="container banner-container">
       <div class="banner-band">
         <div class="banner-band-row">
-          <a class="brand {{ is_single() || (is_page() && !is_front_page()) ? '' : 'brand-compact' }}" href="{{ home_url('/') }}">
-            <span class="brand-local brand-partit brand-{{ $local->ref }} {{ strlen($local->name) > 14 && count(explode(' ', $local->name)) > 1 ? 'brand-local--long' : '' }}">
+          <div class="brand {{ is_single() || (is_page() && !is_front_page()) ? '' : 'brand-compact' }}">
+            <a class="brand-local brand-partit brand-{{ $local->ref }} {{ strlen($local->name) > 14 && count(explode(' ', $local->name)) > 1 ? 'brand-local--long' : '' }}" href="{{ home_url('/') }}">
               @include('partials.logos.' . $local->ref)
-            </span>
-            <span class="brand-logo">
+            </a>
+            <a class="brand-logo" href="https://compromis.net">
               @include('partials.logos.compromis')
               <span class="sr-only">Compromís</span>
-            </span>
-          </a>
-          
+            </a>
+          </div>
+
           <nav class="nav-shortcut d-none d-lg-flex">
             @if (has_nav_menu('primary_navigation'))
               {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}

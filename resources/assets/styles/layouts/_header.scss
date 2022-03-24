@@ -2,17 +2,28 @@
   margin: 0;
 
   &-container {
-    position: fixed;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
     left: 0;
     right: 0;
-    top: 0;
-    z-index: 100;
+    margin: 24px auto 0 auto;
+
+    &--scrolled {
+      position: fixed;
+      top: 0;
+      margin-top: 0;
+
+      .banner-band {
+        border-radius: 0 0 $card-radius $card-radius;
+      }
+    }
   }
 
   &-band {
     background: var(--nav-background);
     backdrop-filter: blur(10px);
-    border-radius: 0 0 $border-radius $border-radius;
+    border-radius: $border-radius;
     box-shadow: $default-shadow;
     overflow: hidden;
 
@@ -41,7 +52,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(var(--gradient-orientation,120deg),rgba(210,53,23,.95),rgba(243,145,40,.6),rgba(243,145,40,.4),rgba(243,145,40,0));
+      background: linear-gradient(var(--gradient-orientation, 120deg), rgba(210, 53, 23, 0.95), rgba(243, 145, 40, 0.6), rgba(243, 145, 40, 0.4), rgba(243, 145, 40, 0));
       z-index: 2;
     }
   }
@@ -94,9 +105,14 @@
       width: auto;
       height: 1.75rem;
     }
+
+    &:hover {
+      color: white;
+    }
   }
 
   &-local {
+    color: $text-supermuted;
     display: inline-block;
     font-size: 1.25rem;
     letter-spacing: -0.3px;
@@ -108,6 +124,11 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    &:hover {
+      text-decoration: none;
+      color: $text-muted;
+    }
   }
 
   &-partit {
@@ -362,12 +383,12 @@
 /* admin bar */
 .admin-bar {
   .banner {
-    &-container {
-      top: 32px;
-    }
-
     &-band-row--nav {
       max-height: calc(100vh - 240px);
+    }
+
+    &-container--scrolled {
+      top: 32px;
     }
   }
 }

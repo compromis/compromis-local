@@ -8,14 +8,19 @@ export default {
 
     // Nav
     const brand = $('.brand');
+    const nav = $('.banner-container');
     const isSingle = $('body').hasClass('single') || ($('body').hasClass('page') && !$('body').hasClass('home'));
 
     $(document).scroll(function() {
-      if ($(document).scrollTop() >= 200) {
+      const scrollTop = $(document).scrollTop()
+
+      if (scrollTop >= 200) {
         brand.removeClass('brand-compact');
       } else if (!$('body').hasClass('nav-open') && !isSingle) {
         brand.addClass('brand-compact');
       }
+
+      nav.toggleClass('banner-container--scrolled', scrollTop > 24)
     });
 
     $('.drawer-nav-toggle, .banner-overlay').on('click', function (e) {
