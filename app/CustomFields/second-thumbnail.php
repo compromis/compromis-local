@@ -53,6 +53,11 @@ function second_thumbnail_metabox_callback ($post) {
 
     echo '<div class="metabox-field">';
     echo '<label for="_second_thumbnail">Foto</label>';
+    echo '<div id="thumbnail-preview">';
+    if ($second_thumbnail) {
+      echo '<img id="thumbnail-preview-img" src="' . $second_thumbnail . '" alt="" width="100%" />';
+    }
+    echo '</div>';
     echo '<div style="display: flex;">';
     echo '<button class="upload-second-thumbnail button button-secondary" style="margin-right: 10px;">Pujar foto</button>';
     echo '<input type="url" placeholder="https://" name="_second_thumbnail" id="_second_thumbnail" value="' . $second_thumbnail . '" />';
@@ -81,7 +86,14 @@ function second_thumbnail_metabox_callback ($post) {
                 multiple: false
             }).on('select', function() {
                 var attachment = aw_uploader.state().get('selection').first().toJSON();
+                var thumbnailPreview = $('#thumbnail-preview-img');
+                console.log(thumbnailPreview.length)
                 $('#_second_thumbnail').val(attachment.url);
+                if (thumbnailPreview.length) {
+                  thumbnailPreview.attr('src', attachment.url);
+                } else {
+                  $('#thumbnail-preview').append('<img id="thumbnail-preview-img" src="' + attachment.url + '" alt="" width="100%" />');
+                }
             })
             .open();
         });
