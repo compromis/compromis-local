@@ -18,7 +18,8 @@ class TemplateRegidors extends Controller
 
         return get_posts([
             'post_type' => 'regidor',
-            'orderby' => 'menu_order',
+            'order' => 'asc',
+            'orderby' => 'menu_order title',
             'nopaging' => true,
             'tax_query' => $tax_query
         ]);
