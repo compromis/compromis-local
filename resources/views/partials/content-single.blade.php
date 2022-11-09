@@ -14,7 +14,7 @@
     @php
       $secondThumbnail = get_post_meta(get_the_ID(), '_second_thumbnail', true);
       $secondThumbnailAlt = get_post_meta(get_the_ID(), '_second_thumbnail_alt', true);
-      $info = getimagesize($secondThumbnail);
+      $info = ($secondThumbnail) ? getimagesize($secondThumbnail) : null;
       $isVertical = $info[0] < $info[1];
     @endphp
     @if($secondThumbnail)
