@@ -78,8 +78,8 @@ class TemplateParl extends Controller
                     'title' => 'Eleccions Generals 2015'
                 ],
                 [
-                    'url' => 'http://joanbaldovi.com/programa',
-                    'image' => 'https://joanbaldovi.com/wp-content/themes/Compromis_Institucional/images/programa.png',
+                    'url' => 'http://programa2011.compromis.net',
+                    'image' => 'http://programa2011.compromis.net/portada.png',
                     'title' => 'Eleccions Generals 2011'
                 ]
             ]
