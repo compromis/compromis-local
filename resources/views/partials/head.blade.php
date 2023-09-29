@@ -38,18 +38,22 @@
   <meta property="twitter:card" content="summary_large_image" />
 
   @if(is_single() || is_page())
+    <meta property="og:title" content="{!! get_the_title() !!}" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="{!! get_the_excerpt() !!}" />
     <meta property="og:image" content="{!! get_the_post_thumbnail_url(null, 'large') !!}" />
     <meta property="og:url" content="{!! get_permalink() !!}" />
+    <meta property="twitter:title" content="{!! get_the_title() !!}" />
     <meta property="twitter:description" content="{!! get_the_excerpt() !!}" />
     <meta property="twitter:image" content="{!! get_the_post_thumbnail_url(null, 'large') !!}" />
     <meta property="twitter:url" content="{!! get_permalink() !!}" />
   @else
+    <meta property="og:title" content="Compromís per {{ $local->name }}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
     <meta property="og:image" content="@asset('images/og-image.png')" />
     <meta property="og:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
+    <meta property="twitter:title" content="Compromís per {{ $local->name }}" />
     <meta property="twitter:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
     <meta property="twitter:image" content="@asset('images/og-image.png')" />
     <meta property="twitter:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
