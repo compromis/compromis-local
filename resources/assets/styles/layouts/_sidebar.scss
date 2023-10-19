@@ -124,6 +124,11 @@
     line-height: 1.25;
     align-items: center;
     transition: 0.1s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--primary);
+    }
   }
 
   li:not(:last-child) a {

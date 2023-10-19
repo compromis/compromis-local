@@ -3,7 +3,7 @@
 </div>
 
 @if($local->facebook || $local->twitter || $local->instagram || $local->tiktok)
-<ul class="social-network-list">
+<ul class="social-network-list list-unstyled">
   @if($local->facebook)
   <li>
     <a href="{{ $local->facebook }}" target="_blank" rel="noopener" title="Facebook">
