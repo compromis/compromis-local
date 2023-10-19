@@ -2,7 +2,7 @@
 	@php dynamic_sidebar('sidebar-language') @endphp
 </div>
 
-@if($local->facebook || $local->twitter || $local->instagram || $local->tiktok)
+@if($local->facebook || $local->twitter || $local->instagram || $local->tiktok || $local->whatsapp || $local->telegram)
 <ul class="social-network-list list-unstyled">
   @if($local->facebook)
   <li>
@@ -21,7 +21,7 @@
   @if($local->instagram)
 	<li>
 	  <a href="https://instagram.com/{{ $local->instagram }}" target="_blank" rel="noopener" title="Instagram">
-		  <i class="fab fa-instagram"></i> {{ '@' . $local->instagram }}</li>
+		  <i class="fab fa-instagram"></i> {{ '@' . $local->instagram }}
 	  </a>
 	</li>
   @endif
@@ -29,6 +29,20 @@
 	<li>
 	  <a href="https://instagram.com/{{ $local->tiktok }}" target="_blank" rel="noopener" title="TikTok">
 		  <i class="fab fa-tiktok"></i> {{ '@' . $local->tiktok }}
+	  </a>
+	</li>
+  @endif
+  @if($local->whatsapp)
+	<li>
+	  <a href="{{ $local->whatsapp }}" target="_blank" rel="noopener" title="TikTok">
+		  <i class="fab fa-whatsapp"></i> WhatsApp
+	  </a>
+	</li>
+  @endif
+  @if($local->telegram)
+	<li>
+	  <a href="https://instagram.com/{{ $local->telegram }}" target="_blank" rel="noopener" title="TikTok">
+		  <i class="fab fa-telegram"></i> Telegram
 	  </a>
 	</li>
   @endif
