@@ -109,6 +109,32 @@
   }
 }
 
+.social-network-list {
+  margin-bottom: 2rem;
+
+  a {
+    margin: 0;
+    display: flex;
+    gap: .25em;
+    box-shadow: none;
+    border: 1px var(--gray-300) solid;
+    border-radius: 0;
+    padding: 1.25rem;
+  }
+
+  li:not(:last-child) a {
+    border-bottom: 0;
+  }
+
+  li:first-child a {
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  li:last-child a {
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .hero-banner {
     .widget_media_image h3 {

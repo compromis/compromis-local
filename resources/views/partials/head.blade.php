@@ -12,6 +12,8 @@
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   </script>
   @php wp_head() @endphp
+  
+  <script src="https://kit.fontawesome.com/02517b44a5.js" crossorigin="anonymous"></script>
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="@asset('images/favicons/favicon.ico')">

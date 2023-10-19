@@ -9,6 +9,9 @@
         $facebook = htmlspecialchars(trim($_POST['facebook']));
         $twitter = htmlspecialchars(trim($_POST['twitter']));
         $instagram = htmlspecialchars(trim($_POST['instagram']));
+        $tiktok = htmlspecialchars(trim($_POST['tiktok']));
+        $telegram = htmlspecialchars(trim($_POST['telegram']));
+        $whatsapp = htmlspecialchars(trim($_POST['whatsapp']));
     
         $wpdb->query($wpdb->prepare("
             UPDATE webs_locals 
@@ -18,9 +21,12 @@
                 email=%s,
                 facebook=%s,
                 twitter=%s,
-                instagram=%s
+                instagram=%s,
+                tiktok=%s,
+                telegram=%s,
+                whatsapp=%s
             WHERE blogid=%d
-        ", $address_grup, $address_seu, $telf, $email, $facebook, $twitter, $instagram, $blog_id));
+        ", $address_grup, $address_seu, $telf, $email, $facebook, $twitter, $instagram, $tiktok, $telegram, $whatsapp, $blog_id));
 
         $success = true;
     }
@@ -71,6 +77,19 @@
         <label for="instagram">Usuari de Instagram</label>
         @<input type="text" placeholder="compromisVLC" name="instagram" id="instagram" value="<?php echo $info->instagram; ?>" size="40" />
     </div>
+    <div class="field">
+        <label for="tiktok">Usuari de TikTok</label>
+        @<input type="text" placeholder="compromisVLC" name="tiktok" id="tiktok" value="<?php echo $info->tiktok; ?>" size="40" />
+    </div>
+    <div class="field">
+        <label for="telegram">Grup de Telegram</label>
+        <input type="url" placeholder="https://t.me/compromis" name="telegram" id="telegram" value="<?php echo $info->telegram; ?>" size="70" />
+    </div>
+    <div class="field">
+        <label for="whatsapp">Grup de Whatsapp</label>
+        <input type="url" placeholder="https://chat.whatsapp.com/..." name="whatsapp" id="whatsapp" value="<?php echo $info->whatsapp; ?>" size="70" />
+    </div>
+
     <?php submit_button(); ?>
 </form>
 </div>
