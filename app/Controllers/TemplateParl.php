@@ -41,6 +41,11 @@ class TemplateParl extends Controller
         return [
             'corts' => [
                 [
+                    'url' => 'https://28m.compromis.net/programa/',
+                    'image' => 'https://compromis.net/wp-content/uploads/2023/05/portada-programa-28m.png',
+                    'title' => 'Eleccions a Corts 2023'
+                ],
+                [
                     'url' => 'https://imparables.compromis.net/programa',
                     'image' => 'https://compromis.net/wp-content/uploads/2019/05/portada-genaut.jpg',
                     'title' => 'Eleccions a Corts 2019'
@@ -57,6 +62,11 @@ class TemplateParl extends Controller
                 ]
             ],
             'congres' => [
+                [
+                    'url' => 'https://sumar.compromis.net/#Programa',
+                    'image' => 'https://compromis.net/wp-content/uploads/2023/07/programa-compromis-sumar.png',
+                    'title' => 'Eleccions Generals 2023'
+                ],
                 [
                     'url' => 'https://n10.compromis.net/programa',
                     'image' => 'https://compromis.net/wp-content/uploads/2019/11/programa-mescompromis.png',
