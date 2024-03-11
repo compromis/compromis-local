@@ -69,6 +69,14 @@
   @extend .embed-responsive-16by9;
 }
 
+.wp-embed-aspect-4-3 .wp-block-embed__wrapper {
+  @extend .embed-responsive-4by3;
+}
+
+.wp-embed-aspect-1-1 .wp-block-embed__wrapper {
+  @extend .embed-responsive-1by1;
+}
+
 .wp-block-embed__wrapper iframe {
   @extend .embed-responsive-item;
 }
