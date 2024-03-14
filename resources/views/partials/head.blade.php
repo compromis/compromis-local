@@ -50,14 +50,26 @@
     <meta property="twitter:image" content="{!! get_the_post_thumbnail_url(null, 'large') !!}" />
     <meta property="twitter:url" content="{!! get_permalink() !!}" />
   @else
-    <meta property="og:title" content="Compromís per {{ $local->name }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
-    <meta property="og:image" content="@asset('images/og-image.png')" />
-    <meta property="og:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
-    <meta property="twitter:title" content="Compromís per {{ $local->name }}" />
-    <meta property="twitter:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
-    <meta property="twitter:image" content="@asset('images/og-image.png')" />
-    <meta property="twitter:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
+    @if($local->type === 'partit')
+      <meta property="og:title" content="{{ $local->name }}" />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content="A {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
+      <meta property="og:image" content="@asset('images/ogimages/' . $local->ref . '.png')" />
+      <meta property="og:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
+      <meta property="twitter:title" content="{{ $local->name }}" />
+      <meta property="twitter:description" content="A {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
+      <meta property="twitter:image" content="@asset('images/ogimages/' . $local->ref . '.png')" />
+      <meta property="twitter:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
+    @else
+      <meta property="og:title" content="Compromís per {{ $local->name }}" />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
+      <meta property="og:image" content="@asset('images/og-image.png')" />
+      <meta property="og:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
+      <meta property="twitter:title" content="Compromís per {{ $local->name }}" />
+      <meta property="twitter:description" content="A Compromís {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
+      <meta property="twitter:image" content="@asset('images/og-image.png')" />
+      <meta property="twitter:url" content="{!! 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] !!}" />
+    @endif
   @endif
 </head>
