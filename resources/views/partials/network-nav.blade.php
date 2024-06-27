@@ -24,6 +24,7 @@
     <ul>
       <li><a href="https://corts.compromis.net">Corts Valencianes</a></li>
       <li><a href="https://congres.compromis.net">Congrés</a></li>
+      <li><a href="https://europarl.compromis.net">Parlament Europeu</a></li>
       <li><a href="https://senat.compromis.net">Senat</a></li>
       <li><a href="https://dipval.compromis.net">Diputació de València</a></li>
       <li><a href="https://dipalc.compromis.net">Diputació d'Alacant</a></li>
