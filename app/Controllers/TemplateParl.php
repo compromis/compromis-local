@@ -92,6 +92,23 @@ class TemplateParl extends Controller
                     'image' => 'http://programa2011.compromis.net/portada.png',
                     'title' => 'Eleccions Generals 2011'
                 ]
+            ],
+            'europarl' => [
+                [
+                    'url' => 'https://europa.compromis.net/#programa',
+                    'image' => 'http://europarl.compromis.net/files/2024/06/Programa_Eleccions_Europees_24.jpg',
+                    'title' => 'Eleccions Europees 2024'
+                ],
+                [
+                    'url' => 'https://imparables.compromis.net/docs/programa_europa_val.pdf',
+                    'image' => 'https://compromis.net/wp-content/uploads/2019/05/portada-eur.jpg',
+                    'title' => 'Eleccions Europees 2019'
+                ],
+                [
+                    'url' => 'https://euparl14.compromis.net/programa/',
+                    'image' => 'https://europarl.compromis.net/wp-content/themes/Compromis_Corts/images/programaeuropees.jpg',
+                    'title' => 'Eleccions Europees 2014'
+                ],
             ]
         ];
     }
