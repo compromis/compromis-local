@@ -121,7 +121,8 @@ class TemplateParl extends Controller
             'dipcas' => 'corts',
             'fvmp' => 'corts',
             'congres' => 'congres',
-            'senat' => 'congres'
+            'senat' => 'congres',
+            'europarl' => 'europarl'
         ];
     }
 }
