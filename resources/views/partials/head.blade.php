@@ -51,7 +51,7 @@
     <meta property="twitter:url" content="{!! get_permalink() !!}" />
   @else
     @if($local->type === 'partit')
-      <meta property="og:title" content="{{ $local->name }}" />
+      <meta property="og:title" content="{{ $local->name }} - Compromís" />
       <meta property="og:type" content="website" />
       <meta property="og:description" content="A {{ $local->name }} compartim una nova manera de fer política. Junts podem aconseguir els canvis que el nostre poble necessita." />
       <meta property="og:image" content="@asset('images/ogimages/' . $local->ref . '.png')" />
